@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const Title = () => <h1>Hello, World</h1>;
+import App from './app';
 
-const titleContainer = document.getElementById('title-container');
-ReactDOM.render(<Title />, titleContainer);
+ReactDOM.render(<App />, document.body);
