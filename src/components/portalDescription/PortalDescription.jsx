@@ -2,8 +2,13 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography, Grid, SvgIcon } from '@material-ui/core';
 
+import UsedTechnology from '../usedTechnology';
+
 import belorusianLandscape from './assets/belorusian-landscape.jpg';
 import svgIcons from './assets/svg-icons';
+import reactIcon from './assets/react-icon.png';
+import reduxIcon from './assets/redux-icon.png';
+import materialUiIcon from './assets/material-ui-icon.png';
 
 const useStyles = makeStyles({
   topSection: {
@@ -17,11 +22,16 @@ const useStyles = makeStyles({
   aboutSection: {
     height: '30vh',
 
-    boxShadow: '0 -7px 15px #00000080'
+    boxShadow: '0 -22px 15px #00000080'
   },
   arrowDownIcon: {
     height: '3.5vw',
     width: '3.5vw'
+  },
+  usedTecnologiesContainer: {
+    height: '35vw',
+
+    background: 'linear-gradient(#ffffff, #eeeeee)'
   }
 });
 
@@ -50,12 +60,29 @@ const PortalDescription = () => {
         justify="space-around"
         alignItems="center"
       >
-        <Typography variant="h4" component="p">
+        <Typography variant="h4" color="textSecondary" component="p">
           Find info about your favorite belarusian poets with ease !
         </Typography>
         <SvgIcon className={classes.arrowDownIcon}>
           <path d={svgIcons.reading} />
         </SvgIcon>
+      </Grid>
+
+      {/* Section with used technologies info */}
+      <Grid
+        className={classes.usedTecnologiesContainer}
+        container
+        justify="space-around"
+        alignItems="center"
+      >
+        <Typography variant="h4" color="textSecondary" component="p">
+          Portal Uses
+        </Typography>
+        <Grid container justify="space-around" alignItems="center">
+          <UsedTechnology tecnologyImg={reactIcon} tecnologyName="React" />
+          <UsedTechnology tecnologyImg={reduxIcon} tecnologyName="Redux" />
+          <UsedTechnology tecnologyImg={materialUiIcon} tecnologyName="Material-UI" />
+        </Grid>
       </Grid>
     </React.Fragment>
   );
