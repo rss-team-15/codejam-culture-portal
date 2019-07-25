@@ -27,6 +27,10 @@ const useStyles = makeStyles({
   profileSocials: {
     height: '4vw'
   },
+  profileSocialIcon: {
+    height: '1.25vw',
+    width: '1.25vw'
+  },
   profileTasksCreatedArea: {
     height: '3.25vw'
   },
@@ -37,7 +41,7 @@ const useStyles = makeStyles({
     borderRadius: '100%',
 
     color: '#50c878',
-    border: '2px solid #50c878'
+    border: '0.1vw solid #50c878'
   },
   profileTasksCreatedWrapper_warning: {
     height: '2.7vw',
@@ -46,7 +50,7 @@ const useStyles = makeStyles({
     borderRadius: '100%',
 
     color: '#ffae42',
-    border: '2px solid #ffae42'
+    border: '0.1vw solid #ffae42'
   },
   profileTasksCreated: {
     fontSize: '1vw'
