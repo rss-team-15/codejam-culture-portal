@@ -107,7 +107,7 @@ const GithubProfile = props => {
       >
         <Grid
           className={
-            tasksAll / teamMembers < tasksCreated
+            tasksAll / (teamMembers + 1) < tasksCreated
               ? classes.profileTasksCreatedWrapper_ok
               : classes.profileTasksCreatedWrapper_warning
           }
