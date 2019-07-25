@@ -6,7 +6,7 @@ import icons from './assets/svg-icons';
 
 const useStyles = makeStyles({
   githubCard: {
-    width: '17vw'
+    width: '15vw'
   },
   githubCardContent: {
     height: '20vw'
@@ -28,20 +28,28 @@ const useStyles = makeStyles({
     height: '4vw'
   },
   profileTasksCreatedArea: {
-    height: '2.5vw'
+    height: '3.25vw'
+  },
+  profileTasksCreatedWrapper_ok: {
+    height: '2.7vw',
+    width: '2.7vw',
+
+    borderRadius: '100%',
+
+    color: '#50c878',
+    border: '2px solid #50c878'
+  },
+  profileTasksCreatedWrapper_warning: {
+    height: '2.7vw',
+    width: '2.7vw',
+
+    borderRadius: '100%',
+
+    color: '#ffae42',
+    border: '2px solid #ffae42'
   },
   profileTasksCreated: {
-    fontSize: '1.1vw'
-  },
-  profileTasksCreated_ok: {
-    color: '#50c878'
-  },
-  profileTasksCreated_warning: {
-    color: '#ffae42'
-  },
-  profileSocialIcon: {
-    height: '1.3vw',
-    width: '1.3vw'
+    fontSize: '1vw'
   }
 });
 
@@ -97,18 +105,25 @@ const GithubProfile = props => {
         justify="center"
         alignItems="center"
       >
-        <Typography
-          className={`${classes.profileTasksCreated} ${
-            tasksAll / teamMembers > tasksCreated
-              ? classes.profileTasksCreated_warning
-              : classes.profileTasksCreated_ok
-          }`}
-          variant="body2"
-          color="textSecondary"
-          component="p"
+        <Grid
+          className={
+            tasksAll / teamMembers < tasksCreated
+              ? classes.profileTasksCreatedWrapper_ok
+              : classes.profileTasksCreatedWrapper_warning
+          }
+          container
+          justify="center"
+          alignItems="center"
         >
-          {((tasksCreated / tasksAll) * 100).toFixed(0)}%
-        </Typography>
+          <Typography
+            className={classes.profileTasksCreated}
+            align="center"
+            variant="body2"
+            component="p"
+          >
+            {((tasksCreated / tasksAll) * 100).toFixed(0)}%
+          </Typography>
+        </Grid>
       </Grid>
       <CardActionArea href={contactLink}>
         <Grid className={classes.profileSocials} container justify="center" alignItems="center">
