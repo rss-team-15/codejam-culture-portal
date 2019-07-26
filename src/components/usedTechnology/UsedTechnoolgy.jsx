@@ -16,7 +16,9 @@ const useStyles = makeStyles({
   technologyCardNameBlock: {
     height: '10vw'
   },
-  technologyCardNameBlock__technologyName: {}
+  technologyCardNameBlock__technologyName: {
+    fontSize: '1.6vw'
+  }
 });
 
 const UsedTechnology = props => {
@@ -39,7 +41,11 @@ const UsedTechnology = props => {
         justify="center"
         alignItems="center"
       >
-        <Typography variant="h5" component="p">
+        <Typography
+          className={classes.technologyCardNameBlock__technologyName}
+          variant="h5"
+          component="p"
+        >
           {tecnologyName}
         </Typography>
       </Grid>

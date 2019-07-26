@@ -21,10 +21,16 @@ const useStyles = makeStyles({
     backgroundImage: `url(${belorusianLandscape})`,
     backgroundPosition: 'center 60%'
   },
+  topSection__topSectionHeader: {
+    fontSize: '4.25vw'
+  },
   aboutSection: {
     height: '30vh',
 
     boxShadow: '0 -22px 15px #00000080'
+  },
+  aboutSection__aboutSectionHeader: {
+    fontSize: '2.25vw'
   },
   arrowDownIcon: {
     height: '3.5vw',
@@ -35,15 +41,22 @@ const useStyles = makeStyles({
 
     background: 'linear-gradient(#ffffff, #eeeeee)'
   },
+  usedTecnologiesContainer__usedTecnologiesHeader: {
+    fontSize: '2.25vw'
+  },
   openSourceSection: {
     height: '20vw',
 
     background: 'linear-gradient(#eeeeee, #ffffff)'
   },
+  openSourceSection__openSourceSectionHeader: {
+    fontSize: '2.25vw'
+  },
   openSourceSection__repositoryLinkButton: {
     padding: '0.8vw 1.5vw',
 
     color: '#ffffff',
+    fontSize: '1.5vw',
     fontWeight: 'bold'
   }
 });
@@ -60,7 +73,12 @@ const PortalDescription = () => {
         justify="center"
         alignItems="center"
       >
-        <Typography gutterBottom variant="h2" component="h2">
+        <Typography
+          className={classes.topSection__topSectionHeader}
+          gutterBottom
+          variant="h1"
+          component="h1"
+        >
           Belarusian Poetry Portal
         </Typography>
       </Grid>
@@ -73,7 +91,12 @@ const PortalDescription = () => {
         justify="space-around"
         alignItems="center"
       >
-        <Typography variant="h4" color="textSecondary" component="p">
+        <Typography
+          className={classes.aboutSection__aboutSectionHeader}
+          variant="h4"
+          color="textSecondary"
+          component="p"
+        >
           Find info about your favorite belarusian poets with ease !
         </Typography>
         <SvgIcon className={classes.arrowDownIcon}>
@@ -88,7 +111,12 @@ const PortalDescription = () => {
         justify="space-around"
         alignItems="center"
       >
-        <Typography variant="h4" color="textSecondary" component="p">
+        <Typography
+          className={classes.usedTecnologiesContainer__usedTecnologiesHeader}
+          variant="h4"
+          color="textSecondary"
+          component="p"
+        >
           Portal Uses
         </Typography>
         <Grid container justify="space-around" alignItems="center">
@@ -106,7 +134,12 @@ const PortalDescription = () => {
         justify="space-around"
         alignItems="center"
       >
-        <Typography variant="h4" color="textSecondary" component="p">
+        <Typography
+          className={classes.openSourceSection__openSourceSectionHeader}
+          variant="h4"
+          color="textSecondary"
+          component="p"
+        >
           All the code is open source and available on the GitHub
         </Typography>
 
