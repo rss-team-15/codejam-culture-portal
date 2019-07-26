@@ -14,7 +14,7 @@ import constants from './constants';
 
 const useStyles = makeStyles({
   topSection: {
-    height: '70vh',
+    height: '40vw',
 
     color: 'white',
 
@@ -25,7 +25,7 @@ const useStyles = makeStyles({
     fontSize: '4.25vw'
   },
   aboutSection: {
-    height: '30vh',
+    height: '15vw',
 
     boxShadow: '0 -22px 15px #00000080'
   },
