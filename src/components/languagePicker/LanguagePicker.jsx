@@ -1,45 +1,49 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import React, { Component } from 'react';
+import { withStyles } from '@material-ui/core/styles';
 import { Select, MenuItem } from '@material-ui/core';
 
 import { supportedLanguages } from './constants';
 
-const useStyles = makeStyles({
+const styles = {
   languagePicker: {
-    top: '1vw',
-    left: '2vw',
+    fontSize: '1vw',
 
-    position: 'absolute'
+    color: '#ffffff'
   }
-});
-
-const LanguagePicker = () => {
-  const [values, setValues] = React.useState({
-    currentLanguage: supportedLanguages[0]
-  });
-
-  const classes = useStyles();
-
-  function handleState(event) {
-    setValues(oldValues => ({
-      ...oldValues,
-      currentLanguage: event.target.value
-    }));
-  }
-
-  return (
-    <Select
-      className={classes.languagePicker}
-      value={values.currentLanguage}
-      onChange={handleState}
-    >
-      {supportedLanguages.map(supportedLanguage => (
-        <MenuItem key={supportedLanguage} value={supportedLanguage}>
-          {supportedLanguage}
-        </MenuItem>
-      ))}
-    </Select>
-  );
 };
 
-export default LanguagePicker;
+class LanguagePicker extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      currentLanguage: supportedLanguages[0]
+    };
+
+    this.handleState = this.handleState.bind(this);
+  }
+
+  handleState(event) {
+    this.setState({ currentLanguage: event.target.value });
+  }
+
+  render() {
+    const { classes } = this.props;
+    const { currentLanguage } = this.state;
+    return (
+      <Select
+        className={classes.languagePicker}
+        value={currentLanguage}
+        onChange={this.handleState}
+      >
+        {supportedLanguages.map(supportedLanguage => (
+          <MenuItem key={supportedLanguage} value={supportedLanguage}>
+            {supportedLanguage}
+          </MenuItem>
+        ))}
+      </Select>
+    );
+  }
+}
+
+export default withStyles(styles)(LanguagePicker);
