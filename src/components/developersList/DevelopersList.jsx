@@ -15,7 +15,8 @@ const useStyles = makeStyles({
   developersListContainer: {
     height: '40vw',
 
-    background: 'linear-gradient(#ffffff 0%, #b751fb 25%, #fd1d1d 50%, #fcb045 90%, #ffffff 100%)',
+    background:
+      'linear-gradient(#ffffff 0%, #aee3ee70 25%, #16e9c950 50%, #aee3ee70 90%, #ffffff 100%)',
     backgroundSize: '100% 100%'
   },
 
@@ -83,7 +84,7 @@ const DevelopersList = () => {
           surname="Piskun"
           githubLink="https://github.com/sannnao"
           githubNickname="Sannnao"
-          contactLink=""
+          contactLink="https://t.me/sannnao"
           tasksCreated={7}
           tasksAll={25}
           teamMembers={6}
