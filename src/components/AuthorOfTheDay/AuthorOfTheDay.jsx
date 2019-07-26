@@ -6,6 +6,7 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
+import Divider from '@material-ui/core/Divider';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
@@ -17,10 +18,13 @@ const styles = {
   },
   mediaContainer: {
     display: "flex",
+    width: "100%",
+    height: "50vh",
   },
   photo: {
     width: "100%",
-    height: 400,
+    height: "50vh",
+    backgroundPosition: "center 0%",
   },
 };
 
@@ -64,7 +68,9 @@ class AuthorOfTheDay extends React.Component {
     const date = new Date();
     const day = date.getDay();
 
-    this.setState({ author: authorsDB[day] });
+    this.setState({
+      author: authorsDB[day],
+    });
   }
 
   componentDidMount() {
@@ -82,7 +88,9 @@ class AuthorOfTheDay extends React.Component {
       const { author } = this.state;
 
       if (author.name !== authorsDB[day].name) {
-        this.setState({ author: authorsDB[day] });
+        this.setState({
+          author: authorsDB[day],
+        });
       }
     }, 1000);
   }
@@ -98,16 +106,18 @@ class AuthorOfTheDay extends React.Component {
 
     return (
       <Card className={classes.card}>
-        <CardHeader
-          title="Author Of The Day"
-          subheader={`${month} ${dayNumber},${day} ${year}`}
-        />
+
         <CardActionArea className={classes.mediaContainer}>
           <CardMedia
             className={classes.photo}
             image={author.photo}
             title="Author"
-          />
+          >
+            <CardHeader
+              title="Author Of The Day"
+              subheader={`${month} ${dayNumber},${day} ${year}`}
+            />
+          </CardMedia>
         </CardActionArea>
         <CardContent>
           <Typography gutterBottom variant="h4">
@@ -116,15 +126,19 @@ class AuthorOfTheDay extends React.Component {
           <Typography variant="h6">
             {author.yearsOfLife}
           </Typography>
+        </CardContent>
+        <Divider variant="middle" />
+        <CardContent>
           <Typography component="p">
             {`${author.biography[0].content}...`}
           </Typography>
         </CardContent>
 
+
         <CardActions>
-          <Button size="small" color="primary">
+          <Button variant="contained" size="small" color="primary">
             Learn More
-            </Button>
+          </Button>
         </CardActions>
       </Card>
     );
