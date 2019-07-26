@@ -1,61 +1,53 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import { Card, CardActionArea, Typography, Grid, Avatar, SvgIcon } from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardHeader from '@material-ui/core/CardHeader';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
 
 import authorsDB from '../../utils/AuthorsEng';
 
-const useStyles = makeStyles({
-  githubCard: {
-    width: '15vw',
+const styles = {
+  card: {
+    width: "100%",
+  },
+  mediaContainer: {
+    display: "flex",
+  },
+  photo: {
+    width: "100%",
+    height: 400,
+  },
+};
 
-    display: 'inline-block'
-  },
-  githubCardContent: {
-    height: '20vw'
-  },
-  githubCardContent__profileImage: {
-    height: '9vw',
-    width: '9vw'
-  },
-  githubCardContent__profileNickname: {
-    marginTop: '1vw',
-    marginBottom: 0,
+const daysOfWeek = [
+  'Sunday',
+  'Monday',
+  'Tuesday',
+  'Wednesday',
+  'Thursday',
+  'Friday',
+  'Saturday',
+];
 
-    fontSize: '1.4vw'
-  },
-  githubCardContent__profileName: {
-    fontSize: '0.81vw'
-  },
-  profileTasksCreatedArea: {
-    height: '3.25vw'
-  },
-  profileTasksCreatedWrapper: {
-    height: '2.7vw',
-    width: '2.7vw',
-
-    borderRadius: '100%'
-  },
-  profileTasksCreatedWrapper_ok: {
-    color: '#50c878',
-    border: '0.1vw solid #50c878'
-  },
-  profileTasksCreatedWrapper_warning: {
-    color: '#ffae42',
-    border: '0.1vw solid #ffae42'
-  },
-  profileTasksCreatedWrapper__profileTasksCreated: {
-    fontSize: '1vw'
-  },
-  profileSocials: {
-    height: '4vw'
-  },
-  profileSocials__profileSocialIcon: {
-    height: '1.25vw',
-    width: '1.25vw'
-  }
-});
-
-const classes = useStyles();
+const months = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
+]
 
 class AuthorOfTheDay extends React.Component {
   constructor(props) {
@@ -97,16 +89,46 @@ class AuthorOfTheDay extends React.Component {
 
   render() {
     const { author } = this.state;
+    const { classes } = this.props;
+    const date = new Date();
+    const day = daysOfWeek[date.getDay()];
+    const dayNumber = date.getDate();
+    const month = months[date.getMonth()];
+    const year = date.getFullYear();
 
     return (
-      <div className="mdc-card authorContainer">
-        <h2 className="authorName">{author.name}</h2>
-        <img src={author.photo} alt="auhtor" />
-        <p className="yearsOfLife">{author.yearsOfLife}</p>
-        <p className="biography">{author.biography[0].content}</p>
-      </div>
+      <Card className={classes.card}>
+        <CardHeader
+          title="Author Of The Day"
+          subheader={`${month} ${dayNumber},${day} ${year}`}
+        />
+        <CardActionArea className={classes.mediaContainer}>
+          <CardMedia
+            className={classes.photo}
+            image={author.photo}
+            title="Author"
+          />
+        </CardActionArea>
+        <CardContent>
+          <Typography gutterBottom variant="h4">
+            {author.name}
+          </Typography>
+          <Typography variant="h6">
+            {author.yearsOfLife}
+          </Typography>
+          <Typography component="p">
+            {`${author.biography[0].content}...`}
+          </Typography>
+        </CardContent>
+
+        <CardActions>
+          <Button size="small" color="primary">
+            Learn More
+            </Button>
+        </CardActions>
+      </Card>
     );
   }
 }
 
-export default AuthorOfTheDay;
+export default withStyles(styles)(AuthorOfTheDay);
