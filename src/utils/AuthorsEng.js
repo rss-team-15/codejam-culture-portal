@@ -1,7 +1,9 @@
+import pashkevich1 from './assets/pashkevich1.jpg';
+
 export default [
   {
     name: 'Alaiza Pashkevich',
-    photo: './assets/pashkevich1.jpg',
+    photo: pashkevich1,
     yearsOfLife: 'July 15, 1876 – November 5, 1916',
     biography: [
       {

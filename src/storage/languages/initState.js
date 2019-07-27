@@ -18,6 +18,8 @@ import {
 
 const poetOfTheDay = poetsList[Math.floor(Math.random() * poetsList.length)];
 
+const poetMedia = poetOfTheDay.media;
+
 const date = new Date();
 const dayNumber = date.getDate();
 const year = date.getFullYear();
@@ -214,5 +216,6 @@ export default {
     russian: russianContent,
     belarusian: {}
   },
-  activeLanguage: englishContent
+  activeLanguage: englishContent,
+  poetMedia,
 };

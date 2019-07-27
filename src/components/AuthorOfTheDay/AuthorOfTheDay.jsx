@@ -43,17 +43,18 @@ const AuthorOfTheDay = props => {
 
   const {
     poetOfTheDay: {
-      poetInfo: { name, surname, photo, yearsOfLife, biography },
+      poetInfo: { name, surname, yearsOfLife, biography },
       poetOfTheDayCardTitle,
       curDateTitle,
       learnMoreBtn
-    }
+    },
+    authorPhoto,
   } = props;
 
   return (
     <Card className={classes.card}>
       <CardActionArea className={classes.mediaContainer}>
-        <CardMedia className={classes.photo} image={photo} title={`${name} ${surname}`}>
+        <CardMedia className={classes.photo} image={authorPhoto} title={`${name} ${surname}`}>
           <CardHeader
             className={classes.poetOfTheDayCardTitle}
             title={poetOfTheDayCardTitle}
