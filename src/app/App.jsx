@@ -17,8 +17,6 @@ export default class App extends Component {
     return (
       <React.Fragment>
         <NavBar />
-        <Home />
-        <AuthrosList />
       </React.Fragment>
     );
   }
