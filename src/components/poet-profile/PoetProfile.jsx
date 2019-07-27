@@ -8,9 +8,6 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
-import authorsDB from '../../utils/AuthorsEng';
-
-
 const useStyles = makeStyles({
   card: {
     display: 'flex',
@@ -42,38 +39,33 @@ const useStyles = makeStyles({
   },
 });
 
-export default function PoetProfile() {
+export default function PoetProfile(props) {
   const classes = useStyles();
-  const { name, yearsOfLife, photo } = authorsDB[0];
+  const { name, yearsOfLife, photo } = props;
 
 
   return (
-    <ul>
-      <li>
-        <Card className={classes.card}>
-          <CardActionArea>
-            <CardMedia
-              className={classes.media}
-              image={photo}
-              title={name}
-            />
-          </CardActionArea>
-          <CardContent className={classes.description}>
-            <Typography gutterBottom variant="h5" component="h2" className={classes.textName}>
-              {name}
-            </Typography>
-            <Typography variant="body2" color="textSecondary" component="p" className={classes.textYears}>
-              {yearsOfLife}
-            </Typography>
-            <CardActions className={classes.wrapperButton}>
-              <Button variant="contained" size="small" color="primary">
-                Learn More
-              </Button>
-            </CardActions>
-          </CardContent>
-        </Card>
-
-      </li>
-    </ul>
+    <Card className={classes.card}>
+      <CardActionArea>
+        <CardMedia
+          className={classes.media}
+          image={photo}
+          title={name}
+        />
+      </CardActionArea>
+      <CardContent className={classes.description}>
+        <Typography gutterBottom variant="h5" component="h2" className={classes.textName}>
+          {name}
+        </Typography>
+        <Typography variant="body2" color="textSecondary" component="p" className={classes.textYears}>
+          {yearsOfLife}
+        </Typography>
+        <CardActions className={classes.wrapperButton}>
+          <Button variant="contained" size="small" color="primary">
+            Learn More
+          </Button>
+        </CardActions>
+      </CardContent>
+    </Card>
   );
 }
