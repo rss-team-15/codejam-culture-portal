@@ -257,4 +257,94 @@ export default [
     ],
   },
 
+  {
+    name: 'Piatrus Brovka',
+    photo: './assets/brouka1.jpg',
+    yearsOfLife: 'June 25, 1905 [O.S.June, 12] – March 24, 1980',
+    biography: [
+      {
+        date: '1926-1927',
+        content: 'Brovka\'s first published works were printed in 1926, and the young poet briefly served as executive secretary of a local newspaper in 1927.'
+      },
+      {
+        date: '1941-1945',
+        content: 'During the Second World War, Brovka\'s mother was among the Belarusian people sent to Auschwitz by the occupying Nazi forces. Brovka himself wrote for the partisan press and published in the army newspapers, lauding the fighting effort of the Soviet people.'
+      },
+      {
+        date: '1960s-1970s',
+        content: 'Я Brovka reputation as a Soviet and Belarusian poet continued to grow during Brovka\'s subsequent decades in Minsk after the war. The fullest apex of his literary talents is considered to be his final decades in the 1960s and 1970s.'
+      },
+      {
+        date: '1962',
+        content: 'Brovka was awarded the prestigious Lenin Prize after his completion of the poetry volume And Time Goes On in 1962.'
+      },
+      {
+        date: '1966',
+        content: ' In 1966, Brovka edited the first volume of the Byelorussian Soviet Encyclopedia, the year he was given the title of People\'s Poet of the Byelorussian Soviet Socialist Republic. He was elected a full member of the Belarusian Academy of Sciences in 1966.'
+      },
+      {
+        date: '1972',
+        content: 'Brovka was awarded the title Hero of Socialist Labor in 1972.'
+      },
+      {
+        date: '1980',
+        content: 'Minsk\'s Literary Museum of Petrus Brovka was established in his honor in 1980, when Brovka died at age 74.'
+      },
+    ],
+    listOfWorks: [
+      {
+        date: '1934',
+        work: 'Selected poems',
+      },
+      {
+        date: '1935',
+        work: 'The Coming of the hero',
+      },
+      {
+        date: '1937',
+        work: 'Spring homeland',
+      },
+      {
+        date: '1940',
+        work: 'Ways boroviki',
+      },
+      {
+        date: '1943',
+        work: 'Belarus',
+      },
+      {
+        date: '1946',
+        work: 'Bread',
+      },
+    ],
+    gallery: {
+      authorsPicture: './assets/brouka2.jpg',
+      worksPictures: [
+        {
+          name: 'Petrus Brovka',
+          img: './assets/brouka3.jpg',
+        },
+        {
+          name: 'Collected Works',
+          img: './assets/brouka4.jpg',
+        },
+        {
+          name: 'A monument to Petrus Brovka',
+          img: './assets/brouka5.jpg',
+        },
+      ],
+    },
+    youtubeVideos: {
+      aboutAuthor: 'https://www.youtube.com/watch?v=7xHGTr4EbK4',
+      aboutWorks: 'https://www.youtube.com/watch?v=6m-Fb7vaZuM',
+      biographyVideo: 'https://www.youtube.com/watch?v=y7q6WXFqP2I',
+    },
+    placesOfActivity: [
+      {
+        activity: 'Literary Museum of Petrus Brovka',
+        mapSrc: 'https://www.google.com/maps/place/%D0%9B%D0%B8%D1%82%D0%B5%D1%80%D0%B0%D1%82%D1%83%D1%80%D0%BD%D1%8B%D0%B9+%D0%BC%D1%83%D0%B7%D0%B5%D0%B9+%D0%9F%D0%B5%D1%82%D1%80%D1%83%D1%81%D1%8F+%D0%91%D1%80%D0%BE%D0%B2%D0%BA%D0%B8/@53.9075836,27.5704226,15z/data=!4m8!1m2!2m1!1z0J_QsNC80Y_RgtC90LjQuiDQn9C10YLRgNGD0YHRjiDQkdGA0L7QstC60LUg!3m4!1s0x46dbcfc17d85a9ad:0xc02659e9771bc5ec!8m2!3d53.8993429!4d27.5608658',
+      }
+    ],
+  },
+
 ];
