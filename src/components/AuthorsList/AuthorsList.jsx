@@ -1,5 +1,8 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
+
+import PoetCart from '../PoetCart';
+
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
@@ -101,33 +104,7 @@ class AuthorsList extends React.Component {
             authorsDB.map((author, i) => {
               return (
                 <ListItem key={i} className={classes.listItem}>
-                  <ListItemAvatar>
-                    <Avatar alt={author.name} src={author.photo} />
-                  </ListItemAvatar>
-                  <ListItemText
-                    primary={author.name}
-                  />
-                  <Typography
-                    component="span"
-                    variant="body2"
-                    color="textPrimary"
-                  >
-                    {author.biography[0].content}
-                  </Typography>
-                  <ExpansionPanel>
-                    <ExpansionPanelSummary
-                      aria-controls="panel1a-content"
-                      id="panel1a-header"
-                    >
-                      <Typography>Gallery</Typography>
-                    </ExpansionPanelSummary>
-                    <ExpansionPanelDetails>
-                      <Typography>
-                        Wait author component Wait author componentWait author componentWait author componentWait author componentWait author componentWait author componentWait author componentWait author componentWait author componentWait author componentWait author componentWait author component
-                      </Typography>
-                    </ExpansionPanelDetails>
-                  </ExpansionPanel>
-
+                  <PoetCart author={author} />
                   <Divider variant="inset" />
                 </ListItem>
               );
