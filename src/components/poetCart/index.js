@@ -1,3 +1,3 @@
-import poetCart from './poetCart';
+import PoetCart from './PoetCart';
 
-export default poetCart;
+export default PoetCart;
