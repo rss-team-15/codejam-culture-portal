@@ -519,5 +519,89 @@ export default [
     ],
   },
 
-
+  {
+    name: 'Ryhor Baradulin',
+    photo: './assets/baradulin4.jpg',
+    yearsOfLife: 'February 24, 1935 – March 2, 2014',
+    biography: [
+      {
+        date: '1953',
+        content: 'Ryhor Baradulin started publishing his works in 1953. His first poems appeared in the newspaper "Chyrvonaya zmiena".'
+      },
+      {
+        date: '1954-1959',
+        content: 'Ryhor Baradulin graduated from a school in Ushachy in 1954, and continued his education at the Belarusian State University in Minsk, from which he graduated in 1959.'
+      },
+      {
+        date: '1959',
+        content: 'The first book of poems, "Maladzik nad stepam" appeared in 1959. All in all Ryhor Baradulin published around 70 books of poems (including poems for children, satiric and humorous poems), articles, essays, translations.'
+      },
+      {
+        date: '1990-1999',
+        content: 'Baradulin was a member of the Belarusian Writer\'s Union and the Belarusian PEN-center (and was President of the center during 1990-1999), a member of the BPF Party.'
+      },
+      {
+        date: '1992',
+        content: 'Baradulin was the last Belarusian who received the title of the People\'s Poet'
+      },
+      {
+        date: '2006',
+        content: 'In 2006, Baradulin was nominated for the Nobel Prize in Literature for his book of poems called Ksty.'
+      },
+    ],
+    listOfWorks: [
+      {
+        date: '1959',
+        work: 'Maladzik nad stepam',
+      },
+      {
+        date: '1969',
+        work: 'Date Line',
+      },
+      {
+        date: '1972',
+        work: 'Return to the first snow',
+      },
+      {
+        date: '1975',
+        work: 'Bee\'s holiday',
+      },
+      {
+        date: '1978',
+        work: 'Region',
+      },
+      {
+        date: '1983',
+        work: 'Amplitude of courage',
+      },
+    ],
+    gallery: {
+      authorsPicture: './assets/baradulin5.jpg',
+      worksPictures: [
+        {
+          name: 'Ryhor Baradulin',
+          img: './assets/baradulin1.jpg',
+        },
+        {
+          name: 'The ABC Book',
+          img: './assets/baradulin2.jpg',
+        },
+        {
+          name: 'Diaries and recordsn',
+          img: './assets/baradulin3.jpg',
+        },
+      ],
+    },
+    youtubeVideos: {
+      aboutAuthor: 'https://www.youtube.com/watch?v=qDzp2NuLy-Q',
+      aboutWorks: 'https://www.youtube.com/watch?v=mywFhAvJbAY',
+      biographyVideo: 'https://www.youtube.com/watch?v=xXXaSXWLpsc',
+    },
+    placesOfActivity: [
+      {
+        activity: 'Place of Birth',
+        mapSrc: 'https://www.google.com/maps/place/%D0%A3%D1%88%D0%B0%D1%87%D0%B8/@55.1753999,28.5808859,13z/data=!3m1!4b1!4m5!3m4!1s0x46c4b87803535efd:0x7a89cfa5f3082377!8m2!3d55.1795157!4d28.6137424',
+      }
+    ],
+  },
 ];
