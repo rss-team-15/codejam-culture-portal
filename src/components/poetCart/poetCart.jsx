@@ -44,21 +44,20 @@ const useStyles = makeStyles({
 
 export default function PoetCart(props) {
   const classes = useStyles();
-  const { author: { name, yearsOfLife, photo } } = props;
-
+  const { authorInfo: { name, surname, yearsOfLife }, authorPhoto } = props;
 
   return (
     <Card className={classes.card}>
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image={photo}
+          image={authorPhoto}
           title={name}
         />
       </CardActionArea>
       <CardContent className={classes.description}>
         <Typography gutterBottom variant="h5" component="h2" className={classes.textName}>
-          {name}
+          {name} {surname}
         </Typography>
         <Typography variant="body2" color="textSecondary" component="p" className={classes.textYears}>
           {yearsOfLife}
@@ -66,7 +65,7 @@ export default function PoetCart(props) {
         <CardActions className={classes.wrapperButton}>
           <Button variant="contained" size="small" color="primary">
             Learn More
-              </Button>
+          </Button>
         </CardActions>
       </CardContent>
     </Card>
