@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Home from '../components/home';
+import LanguagePicker from '../components/languagePicker';
 
 export default class App extends Component {
   constructor(props) {
@@ -12,6 +13,11 @@ export default class App extends Component {
   }
 
   render() {
-    return <Home />;
+    return (
+      <React.Fragment>
+        <LanguagePicker />
+        <Home />
+      </React.Fragment>
+    );
   }
 }
