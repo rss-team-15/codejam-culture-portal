@@ -25,6 +25,7 @@ const useStyles = makeStyles({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'flex-end',
+    width: '60%',
   },
   textName: {
     color: '#fff',
