@@ -27,6 +27,7 @@ const useStyles = makeStyles({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'flex-end',
+    width: '60%',
   },
   textName: {
     color: '#fff',
@@ -41,9 +42,9 @@ const useStyles = makeStyles({
   },
 });
 
-export default function poetCart(props) {
+export default function PoetCart(props) {
   const classes = useStyles();
-  const { name, yearsOfLife, photo } = props;
+  const { author: { name, yearsOfLife, photo } } = props;
 
 
   return (
