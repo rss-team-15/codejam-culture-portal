@@ -61,7 +61,16 @@ const useStyles = makeStyles({
   }
 });
 
-const PortalDescription = () => {
+const PortalDescription = props => {
+  const {
+    textContent: {
+      topSectionHeader,
+      aboutSectionHeader,
+      usedTechnologies,
+      openSourceSectionHeader,
+      openSourceSectionButton
+    }
+  } = props;
   const classes = useStyles();
   return (
     <React.Fragment>
@@ -79,7 +88,7 @@ const PortalDescription = () => {
           variant="h1"
           component="h1"
         >
-          Belarusian Poetry Portal
+          {topSectionHeader}
         </Typography>
       </Grid>
 
@@ -97,7 +106,7 @@ const PortalDescription = () => {
           color="textSecondary"
           component="p"
         >
-          Find info about your favorite belarusian poets with ease !
+          {aboutSectionHeader}
         </Typography>
         <SvgIcon className={classes.arrowDownIcon}>
           <path d={svgIcons.reading} />
@@ -117,7 +126,7 @@ const PortalDescription = () => {
           color="textSecondary"
           component="p"
         >
-          Portal Uses
+          {usedTechnologies}
         </Typography>
         <Grid container justify="space-around" alignItems="center">
           <UsedTechnology tecnologyImg={reactIcon} tecnologyName="React" />
@@ -140,7 +149,7 @@ const PortalDescription = () => {
           color="textSecondary"
           component="p"
         >
-          All the code is open source and available on the GitHub
+          {openSourceSectionHeader}
         </Typography>
 
         <Button
@@ -149,7 +158,7 @@ const PortalDescription = () => {
           className={classes.openSourceSection__repositoryLinkButton}
           href={constants.repositoryGithubLink}
         >
-          Jump Into Sources!
+          {openSourceSectionButton}
         </Button>
       </Grid>
     </React.Fragment>
