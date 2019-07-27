@@ -5,6 +5,31 @@ import sergmitminProfileImage from './assets/sergmitmin.jpg';
 import ekater1naProfileImage from './assets/ekater1na.jpg';
 import grenborkProfileImage from './assets/grenbork.jpg';
 
+import poetsList from '../../utils/poetsList';
+
+import {
+  daysOfWeekEng,
+  daysOfWeekRus,
+  daysOfWeekBel,
+  monthsEng,
+  monthsRus,
+  monthsBel
+} from '../../utils/dateStuff';
+
+const poetOfTheDay = poetsList[Math.floor(Math.random() * poetsList.length)];
+
+const date = new Date();
+const dayNumber = date.getDate();
+const year = date.getFullYear();
+
+const dayEng = daysOfWeekEng[date.getDay()];
+const dayRus = daysOfWeekRus[date.getDay()];
+const dayBel = daysOfWeekBel[date.getDay()];
+
+const monthEng = monthsEng[date.getMonth()];
+const monthRus = monthsRus[date.getMonth()];
+const monthBel = monthsBel[date.getMonth()];
+
 const englishContent = {
   home: {
     portalDescription: {
@@ -13,6 +38,12 @@ const englishContent = {
       usedTechnologies: 'Portal Uses',
       openSourceSectionHeader: 'All the code is open source and available on the GitHub',
       openSourceSectionButton: 'Jump Into Sources!'
+    },
+    poetOfTheDay: {
+      poetOfTheDayCardTitle: 'Author Of The Day',
+      curDateTitle: `${monthEng} ${dayNumber}, ${dayEng} ${year}`,
+      poetInfo: poetOfTheDay.englishInfo,
+      learnMoreBtn: 'Learn More'
     },
     developersList: {
       developersListHeader: 'Project was created by the team of six developers',
@@ -96,6 +127,12 @@ const russianContent = {
       usedTechnologies: 'Портал Использует',
       openSourceSectionHeader: 'Исходный код в открытом доступе и доступен на GitHub',
       openSourceSectionButton: 'Заглянуть в Исходники!'
+    },
+    poetOfTheDay: {
+      poetOfTheDayCardTitle: 'Автор Дня',
+      curDateTitle: `${monthRus} ${dayNumber}, ${dayRus} ${year}`,
+      poetInfo: poetOfTheDay.russianInfo,
+      learnMoreBtn: 'Узнать Больше'
     },
     developersList: {
       developersListHeader: 'Над проектом работала команда из шести разработчиков',
