@@ -57,7 +57,8 @@ export default function PoetCart(props) {
       </CardActionArea>
       <CardContent className={classes.description}>
         <Typography gutterBottom variant="h5" component="h2" className={classes.textName}>
-          {name} {surname}
+          {name}
+          {surname}
         </Typography>
         <Typography variant="body2" color="textSecondary" component="p" className={classes.textYears}>
           {yearsOfLife}
