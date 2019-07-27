@@ -123,23 +123,11 @@ class AuthorsList extends React.Component {
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails>
                       <Typography>
-                        Image list here  Image list here Image list here Image list here Image list here Image list here Image list here Image list here Image list here Image list here Image list here Image list here Image list here Image list here Image list here
+                        Wait author component Wait author componentWait author componentWait author componentWait author componentWait author componentWait author componentWait author componentWait author componentWait author componentWait author componentWait author componentWait author component
                       </Typography>
                     </ExpansionPanelDetails>
                   </ExpansionPanel>
-                  <ExpansionPanel>
-                    <ExpansionPanelSummary
-                      aria-controls="panel1a-content"
-                      id="panel1a-header"
-                    >
-                      <Typography>Biography</Typography>
-                    </ExpansionPanelSummary>
-                    <ExpansionPanelDetails>
-                      <Typography>
-                        TimeList here TimeList here   TimeList here TimeList here  TimeList here TimeList here  TimeList here TimeList here  TimeList here TimeList here  TimeList here TimeList here  TimeList here TimeList here  TimeList here TimeList here  TimeList here TimeList here
-                      </Typography>
-                    </ExpansionPanelDetails>
-                  </ExpansionPanel>
+
                   <Divider variant="inset" />
                 </ListItem>
               );
