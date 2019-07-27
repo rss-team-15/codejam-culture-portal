@@ -1,102 +1,79 @@
-import React, { Component } from 'react';
-import userImg from './asset/userImg.jpg';
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
 
-class PoetProfile extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      poet: {
-        name: 'Ivanov Ivan Ivanovich',
-        img: userImg,
-        bio: [
-          {
-            data: '1999',
-            title: 'born',
-            description: 'some text some text some text'
-          },
-          {
-            data: '1999',
-            title: 'born',
-            description: 'some text some text some text'
-          },
-          {
-            data: '1999',
-            title: 'born',
-            description: 'some text some text some text'
-          }
-        ],
-        works: [
-          {
-            titleRu: 'some poem',
-            titleEn: 'some poem',
-            titleBy: 'some poem',
-            age: 'xxx age'
-          },
-          {
-            titleRu: 'some poem',
-            titleEn: 'some poem',
-            titleBy: 'some poem',
-            age: 'xxx age'
-          }
-        ],
-        galerey: [
-          {
-            photo: 'src/'
-          },
-          {
-            photo: 'src/'
-          },
-          {
-            photo: 'src/'
-          }
-        ],
-        video: [
-          {
-            video: 'link you-tube'
-          },
-          {
-            video: 'link you-tube'
-          },
-          {
-            video: 'link you-tube'
-          }
-        ],
-        map: {
-          x: 'dd',
-          y: 'ff',
-        }
-      },
-      mainHeaders: {
-        bio: 'Биография',
-        biblio: 'Список произведений',
-        gallery: 'Галерея',
-        video: 'Видео',
-        map: 'Карта'
-      },
-    };
-  }
+import authorsDB from '../../utils/AuthorsEng';
 
 
-  render() {
-    const { poet, mainHeaders } = this.state;
+const useStyles = makeStyles({
+  card: {
+    display: 'flex',
+    maxWidth: 600,
+    margin: '0 auto',
+    marginTop: '5%',
+    marginBottom: '5%',
+    borderRadius: '2%',
+  },
+  media: {
+    height: 240,
+  },
+  description: {
+    background: '#787878',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'flex-end',
+  },
+  textName: {
+    color: '#fff',
+  },
+  textYears: {
+    color: '#fff',
+    fontStyle: 'italic',
+    marginBottom: '25px',
+  },
+  wrapperButton: {
+    paddingLeft: 0,
+  },
+});
 
-    return (
-      <div className="cart__poet">
-        <div className="container__photo">
-          <img src={poet.img} alt="" />
-        </div>
-        <div className="poen__name"><p>{poet.name}</p></div>
-        <div className="works">
-          <h2>{mainHeaders.biblio}</h2>
-          <div className="table">
-            <div className="left-colum"><p>{poet.works[0].titleBy}</p></div>
-            <div className="right-colum"><p>{poet.works[0].age}</p></div>
-          </div>        
-        </div>
-      </div>
-    );
-  }
+export default function PoetProfile() {
+  const classes = useStyles();
+  const { name, yearsOfLife, photo } = authorsDB[0];
+
+
+  return (
+    <ul>
+      <li>
+        <Card className={classes.card}>
+          <CardActionArea>
+            <CardMedia
+              className={classes.media}
+              image={photo}
+              title={name}
+            />
+          </CardActionArea>
+          <CardContent className={classes.description}>
+            <Typography gutterBottom variant="h5" component="h2" className={classes.textName}>
+              {name}
+            </Typography>
+            <Typography variant="body2" color="textSecondary" component="p" className={classes.textYears}>
+              {yearsOfLife}
+            </Typography>
+            <CardActions className={classes.wrapperButton}>
+              <Button variant="contained" size="small" color="primary">
+                Learn More
+              </Button>
+            </CardActions>
+          </CardContent>
+        </Card>
+
+      </li>
+    </ul>
+  );
 }
-
-export default PoetProfile;
