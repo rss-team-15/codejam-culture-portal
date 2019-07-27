@@ -1,21 +1,13 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 
-import PoetCart from '../PoetCart';
-
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
-import Typography from '@material-ui/core/Typography';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import Divider from '@material-ui/core/Divider';
-import ListItemText from '@material-ui/core/ListItemText';
-import ListItemAvatar from '@material-ui/core/ListItemAvatar';
-import Avatar from '@material-ui/core/Avatar';
-import ExpansionPanel from '@material-ui/core/ExpansionPanel';
-import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
-import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import Button from '@material-ui/core/Button';
+
+import PoetCart from '../PoetCart';
 
 import authorsDB from '../../utils/AuthorsEng';
 
@@ -58,7 +50,6 @@ class AuthorsList extends React.Component {
       const keyEnter = 13;
       if (e.keyCode === keyEnter) {
         this.handleSubmit();
-        console.log(this.state.search);
       }
     });
   }
@@ -105,7 +96,6 @@ class AuthorsList extends React.Component {
               return (
                 <ListItem key={i} className={classes.listItem}>
                   <PoetCart author={author} />
-                  <Divider variant="inset" />
                 </ListItem>
               );
             })
