@@ -171,4 +171,90 @@ export default [
     ],
   },
 
+  {
+    name: 'Yanka Kupala',
+    photo: './assets/kupala1.jpg',
+    yearsOfLife: 'July 7 [O.S. June 25], 1882 - June 28, 1942',
+    biography: [
+      {
+        date: '1902-1908',
+        content: 'During six years (1902-1908) in order to support the family after his father\'s death in 1902, Ivan had not only to work on his homestead but was also looking for jobs in other places. He used to be a home tutor, a steward at the landlord\'s manor, a manual labourer, and for three years he had been working as an assistant brewer. This was the period of his first literary attempts.'
+      },
+      {
+        date: '1904',
+        content: 'The earliest among the poet\'s well-known works in Belarusian, "My Destiny" (June 15, 1904) expresses psychological sentiments of an ordinary man, his oppression, and predestination of the course of his life.'
+      },
+      {
+        date: '1905',
+        content: 'On May 15, 1905 the Minsk-based Russian newspaper Severo-Zapadny Krai (The North-Western Land) published the poem "A peasant", the first printed work of the poet, which touches upon the topics of human dignity and self-affirmation of the labouring villager.'
+      },
+      {
+        date: '1908-1909',
+        content: 'In 1908 and 1909 Yanka Kupala lived in Vilna (Vilnius), contributed to Nasha Niva, and worked as librarian in a private library. During this time he produced the poems "To Pilipauka" and "Why" based around the tragic events from the life of the Belarusian villagers.'
+      },
+      {
+        date: '1913-1915',
+        content: 'Between October 1913 and August 1915 Kupala again lived in Vilna, worked at the Belarusian Publishing Association, and contributed to Nasha Niva; as an editor of this newspaper he was subjected to legal prosecution by the tsar\'s authorities. '
+      },
+      {
+        date: '1937-1939',
+        content: 'In 1937 Kupala again found himself in the list of repression victims, but the local repressive organs, though they appealed to the higher authorities for his arrest, received no sanction. At the same time simultaneously, in January 1939, Kupala was decorated with the Order of Lenin.'
+      },
+    ],
+    listOfWorks: [
+      {
+        date: '1905-1907',
+        work: 'The Payment of Love',
+      },
+      {
+        date: '1908',
+        work: 'The Little Flute',
+      },
+      {
+        date: '1909',
+        work: 'Eternal Song',
+      },
+      {
+        date: '1910',
+        work: 'Dream on a Barrow',
+      },
+      {
+        date: '1913',
+        work: 'The Lion\'s Grave',
+      },
+      {
+        date: '1918',
+        work: 'Heritage',
+      },
+    ],
+    gallery: {
+      authorsPicture: './assets/kupala2.jpg',
+      worksPictures: [
+        {
+          name: 'House where Janka Kupala was born',
+          img: './assets/kupala3.jpg',
+        },
+        {
+          name: 'Janka Kupala during his study under professor A. Charniaev in Saint Petersburg',
+          img: './assets/kupala4.jpg',
+        },
+        {
+          name: 'A monument to Yanka Kupala in Ashdod, Israel',
+          img: './assets/kupala5.jpg',
+        },
+      ],
+    },
+    youtubeVideos: {
+      aboutAuthor: 'https://www.youtube.com/watch?v=Q4ZkjFIF3tE',
+      aboutWorks: 'https://www.youtube.com/watch?v=R9Sx1WcSbiI',
+      biographyVideo: 'https://www.youtube.com/watch?v=9FZehV2qJTk',
+    },
+    placesOfActivity: [
+      {
+        activity: 'Yanka Kupala State Literary Museum',
+        mapSrc: 'https://www.google.com/maps/place/%D0%93%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9+%D0%BB%D0%B8%D1%82%D0%B5%D1%80%D0%B0%D1%82%D1%83%D1%80%D0%BD%D1%8B%D0%B9+%D0%BC%D1%83%D0%B7%D0%B5%D0%B9+%D0%AF%D0%BD%D0%BA%D0%B8+%D0%9A%D1%83%D0%BF%D0%B0%D0%BB%D1%8B/@53.8813227,27.4621734,12z/data=!4m8!1m2!2m1!1z0Y_QvdC60LAg0LrRg9C_0LDQu9Cw!3m4!1s0x46dbcfbfb87d11ad:0x88709ade33477086!8m2!3d53.9061114!4d27.5651102',
+      }
+    ],
+  },
+
 ];
