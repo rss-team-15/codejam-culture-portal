@@ -1,8 +1,94 @@
 export default [
   {
+    name: 'Alaiza Pashkevich',
+    photo: './assets/pashkevich1.jpg',
+    yearsOfLife: 'July 15, 1876 – November 5, 1916',
+    biography: [
+      {
+        date: '1902-1904',
+        content: 'After moving to Saint Petersburg, in 1902, she graduated externally from the Gymnasium Alexandria for girls and joined a school for physical education teachers, Lieshafta AF'
+      },
+      {
+        date: '1904',
+        content: 'Pashkievich was one of the founders of the Belarusian Socialist Assembly. In 1904, she gave up teaching and returned to Vilnius. She organized workers\' groups, wrote and promoted anti-government proclamations, and took part in debates and political meetings.'
+      },
+      {
+        date: '1908-1909',
+        content: 'In 1908–1909 she lived in Krakow and studied at the Jagiellonian University\'s Faculty of humanities..'
+      },
+      {
+        date: '1911',
+        content: 'In 1911, she married Steponas Kairys, a Lithuanian engineer and social democracy activist. In the same year, she returned to Belarus and joined national educational activities.'
+      },
+      {
+        date: '1914-1915',
+        content: 'During World War I, Alaiza Pashkievich worked as a Sister of Charity in a military hospital in Vilnius.'
+      },
+      {
+        date: '1916',
+        content: 'At the beginning of 1916, she traveled to her parents and helped villagers sick with typhoid. She also fell ill with typhus and died 5 February 1916.'
+      },
+    ],
+    listOfWorks: [
+      {
+        date: '1904',
+        work: 'Man hasn\'t changed',
+      },
+      {
+        date: '1905',
+        work: 'Faith of a Belarusian',
+      },
+      {
+        date: '1905',
+        work: 'On the New Year\'s Eve',
+      },
+      {
+        date: '1906',
+        work: 'Belarusian violin',
+      },
+      {
+        date: '1906',
+        work: 'Cross to the freedom',
+      },
+      {
+        date: '1906',
+        work: 'With the banner',
+      },
+    ],
+    gallery: {
+      authorsPicture: './assets/pashkevich2.jpg',
+      worksPictures: [
+        {
+          name: 'Alaiza Pashkevich',
+          img: './assets/pashkevich3.jpg',
+        },
+        {
+          name: 'Belarusian violin',
+          img: './assets/pashkevich4.jpg',
+        },
+        {
+          name: 'A monument to Alaiza Pashkevich',
+          img: './assets/pashkevich5.jpg',
+        },
+      ],
+    },
+    youtubeVideos: {
+      aboutAuthor: 'https://www.youtube.com/watch?v=GlYYLSkqG90',
+      aboutWorks: 'https://www.youtube.com/watch?v=5ImuYkCOD30',
+      biographyVideo: 'https://www.youtube.com/watch?v=L7zlDkZhU_Q',
+    },
+    placesOfActivity: [
+      {
+        activity: 'A monument to Alaiza Pashkevich',
+        mapSrc: 'https://www.google.com/maps/place/%D0%9F%D0%B0%D0%BC%D1%8F%D1%82%D0%BD%D0%B8%D0%BA+%D0%90%D0%BB%D0%BE%D0%B8%D0%B7%D0%B5+%D0%9F%D0%B0%D1%88%D0%BA%D0%B5%D0%B2%D0%B8%D1%87/@53.6086,24.7405113,17z/data=!4m13!1m7!3m6!1s0x0:0x0!2zNTPCsDM2JzMxLjAiTiAyNMKwNDQnMzMuNyJF!3b1!8m2!3d53.6086!4d24.7427!3m4!1s0x46dfad2b098aff67:0x3cb26a2d925612b1!8m2!3d53.6067679!4d24.7416468',
+      }
+    ],
+  },
+
+  {
     name: 'Yakub Kolas',
-    photo: 'https://upload.wikimedia.org/wikipedia/commons/a/af/Yakub_Kolas_in_office.jpg',
-    yearsOfLife: 'November 3 [O.S. October 22] 1882 - August 13, 1956',
+    photo: './assets/kolas1.jpg',
+    yearsOfLife: 'November 3 [O.S. October 22], 1882 - August 13, 1956',
     biography: [
       {
         date: '1895-1897',
@@ -56,11 +142,19 @@ export default [
       },
     ],
     gallery: {
-      authorsPicture: 'https://upload.wikimedia.org/wikipedia/commons/c/c7/Belarus-Minsk-Yakub_Kolas_Square-2.jpg',
+      authorsPicture: './assets/kolas4.jpg',
       worksPictures: [
         {
-          name: 'kolas',
-          img: 'https://upload.wikimedia.org/wikipedia/commons/a/af/Yakub_Kolas_in_office.jpg',
+          name: 'Yakub Kolas',
+          img: './assets/kolas5.jpg',
+        },
+        {
+          name: 'Images of cute native land',
+          img: './assets/kolas2.jpg',
+        },
+        {
+          name: 'A monument to Yakub Kolas',
+          img: './assets/kolas3.jpg',
         },
       ],
     },
@@ -73,230 +167,8 @@ export default [
       {
         activity: 'Yakub Kolas Manor Museum',
         mapSrc: 'https://www.google.com/maps/place/%D0%BC%D1%83%D0%B7%D0%B5%D0%B9-%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0+%D0%AF%D0%BA%D1%83%D0%B1%D0%B0+%D0%9A%D0%BE%D0%BB%D0%B0%D1%81%D0%B0/@53.4638026,26.7758654,15z/data=!4m5!3m4!1s0x0:0xc3379081b1ecec27!8m2!3d53.4638026!4d26.7758654',
+      }
+    ],
+  },
 
-      }
-    ],
-  },
-  {
-    name: 'vasia pupkin',
-    photo: 'src',
-    yearsOfLife: '',
-    biography: [
-      {
-        date: '1970',
-        content: 'Я родился в москве в 70х, на краю города...'
-      },
-    ],
-    listOfWorks: [
-      {
-        date: 'date',
-        work: 'work',
-      },
-    ],
-    gallery: {
-      authorsPicture: 'src',
-      worksPictures: [
-        {
-          name: 'name',
-          img: 'src',
-        },
-      ],
-    },
-    youtubeVideos: {
-      aboutAuthor: 'src',
-      aboutWorks: 'src',
-      biographyVideo: 'src',
-    },
-    placesOfActivity: [
-      {
-        activity: 'name',
-        mapSrc: 'google, please',
-      }
-    ],
-  },
-  {
-    name: 'vasia pupkin',
-    photo: 'src',
-    yearsOfLife: '',
-    biography: [
-      {
-        date: '1970',
-        content: 'Я родился в москве в 70х, на краю города...'
-      },
-    ],
-    listOfWorks: [
-      {
-        date: 'date',
-        work: 'work',
-      },
-    ],
-    gallery: {
-      authorsPicture: 'src',
-      worksPictures: [
-        {
-          name: 'name',
-          img: 'src',
-        },
-      ],
-    },
-    youtubeVideos: {
-      aboutAuthor: 'src',
-      aboutWorks: 'src',
-      biographyVideo: 'src',
-    },
-    placesOfActivity: [
-      {
-        activity: 'name',
-        mapSrc: 'google, please',
-      }
-    ],
-  },
-  {
-    name: 'vasia pupkin',
-    photo: 'src',
-    yearsOfLife: '',
-    biography: [
-      {
-        date: '1970',
-        content: 'Я родился в москве в 70х, на краю города...'
-      },
-    ],
-    listOfWorks: [
-      {
-        date: 'date',
-        work: 'work',
-      },
-    ],
-    gallery: {
-      authorsPicture: 'src',
-      worksPictures: [
-        {
-          name: 'name',
-          img: 'src',
-        },
-      ],
-    },
-    youtubeVideos: {
-      aboutAuthor: 'src',
-      aboutWorks: 'src',
-      biographyVideo: 'src',
-    },
-    placesOfActivity: [
-      {
-        activity: 'name',
-        mapSrc: 'google, please',
-      }
-    ],
-  },
-  {
-    name: 'vasia pupkin',
-    photo: 'src',
-    yearsOfLife: '',
-    biography: [
-      {
-        date: '1970',
-        content: 'Я родился в москве в 70х, на краю города...'
-      },
-    ],
-    listOfWorks: [
-      {
-        date: 'date',
-        work: 'work',
-      },
-    ],
-    gallery: {
-      authorsPicture: 'src',
-      worksPictures: [
-        {
-          name: 'name',
-          img: 'src',
-        },
-      ],
-    },
-    youtubeVideos: {
-      aboutAuthor: 'src',
-      aboutWorks: 'src',
-      biographyVideo: 'src',
-    },
-    placesOfActivity: [
-      {
-        activity: 'name',
-        mapSrc: 'google, please',
-      }
-    ],
-  },
-  {
-    name: 'vasia pupkin',
-    photo: 'src',
-    yearsOfLife: '',
-    biography: [
-      {
-        date: '1970',
-        content: 'Я родился в москве в 70х, на краю города...'
-      },
-    ],
-    listOfWorks: [
-      {
-        date: 'date',
-        work: 'work',
-      },
-    ],
-    gallery: {
-      authorsPicture: 'src',
-      worksPictures: [
-        {
-          name: 'name',
-          img: 'src',
-        },
-      ],
-    },
-    youtubeVideos: {
-      aboutAuthor: 'src',
-      aboutWorks: 'src',
-      biographyVideo: 'src',
-    },
-    placesOfActivity: [
-      {
-        activity: 'name',
-        mapSrc: 'google, please',
-      }
-    ],
-  },
-  {
-    name: 'vasia pupkin',
-    photo: 'src',
-    yearsOfLife: '',
-    biography: [
-      {
-        date: '1970',
-        content: 'Я родился в москве в 70х, на краю города...'
-      },
-    ],
-    listOfWorks: [
-      {
-        date: 'date',
-        work: 'work',
-      },
-    ],
-    gallery: {
-      authorsPicture: 'src',
-      worksPictures: [
-        {
-          name: 'name',
-          img: 'src',
-        },
-      ],
-    },
-    youtubeVideos: {
-      aboutAuthor: 'src',
-      aboutWorks: 'src',
-      biographyVideo: 'src',
-    },
-    placesOfActivity: [
-      {
-        activity: 'name',
-        mapSrc: 'google, please',
-      }
-    ],
-  },
 ];
