@@ -1,8 +1,8 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 
-import actions from './languages/actions';
-import languagesState from './languages/initState';
+import actions from './actions';
+import languagesState from './initState';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
@@ -12,9 +12,9 @@ const enhancer = composeEnhancers(applyMiddleware(...middlewares));
 
 function rootReducer(state = languagesState, act) {
   switch (act.type) {
-    case actions.getLanguage: {
-      const works = state[act.language];
-      return { ...state, works };
+    case actions.updateLanguage: {
+      const activeLanguage = state.contents[act.language];
+      return { ...state, activeLanguage };
     }
     default: {
       return state;

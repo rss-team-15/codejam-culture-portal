@@ -1,3 +1,3 @@
 export default {
-  getLanguage: 'GET_LANGUAGE'
+  updateLanguage: 'UPDATE_LANGUAGE'
 };
