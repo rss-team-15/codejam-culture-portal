@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
+import NavBar from '../components/navBar';
 import Home from '../components/home';
-import LanguagePicker from '../components/languagePicker';
 import AuthrosList from '../components/AuthorsList';
 
 export default class App extends Component {
@@ -16,7 +16,7 @@ export default class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <LanguagePicker />
+        <NavBar />
         <Home />
         <AuthrosList />
       </React.Fragment>
