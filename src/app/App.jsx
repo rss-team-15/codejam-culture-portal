@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import Button from '@material-ui/core/Button';
+
+import Home from '../components/home';
+import LanguagePicker from '../components/languagePicker';
 
 export default class App extends Component {
   constructor(props) {
@@ -12,11 +14,10 @@ export default class App extends Component {
 
   render() {
     return (
-      <div>
-        <Button variant="contained" color="primary">
-          Anime
-        </Button>
-      </div>
+      <React.Fragment>
+        <LanguagePicker />
+        <Home />
+      </React.Fragment>
     );
   }
 }
