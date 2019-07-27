@@ -4,13 +4,6 @@ import { Grid, Typography } from '@material-ui/core';
 
 import GithubProfile from '../github-profile';
 
-import slnchnProfileImage from './assets/slnchn.png';
-import igor82bvProfileImage from './assets/igor82bv.jpg';
-import sannaoProfileImage from './assets/sannnao.jpg';
-import sergmitminProfileImage from './assets/sergmitmin.jpg';
-import ekater1naProfileImage from './assets/ekater1na.jpg';
-import grenborkProfileImage from './assets/grenbork.jpg';
-
 const useStyles = makeStyles({
   developersListContainer: {
     height: '40vw',
@@ -29,7 +22,10 @@ const useStyles = makeStyles({
   }
 });
 
-const DevelopersList = () => {
+const DevelopersList = props => {
+  const {
+    developers: { developersListHeader, developers }
+  } = props;
   const classes = useStyles();
   return (
     <Grid
@@ -46,7 +42,7 @@ const DevelopersList = () => {
         variant="h5"
         component="h2"
       >
-        Project was created by the team of six developers
+        {developersListHeader}
       </Typography>
       <Grid
         className={classes.developersListContainer__developersList}
@@ -54,77 +50,20 @@ const DevelopersList = () => {
         justify="space-around"
         alignItems="center"
       >
-        <GithubProfile
-          githubImg={slnchnProfileImage}
-          name="Aliaksandr"
-          surname="Kavalenka"
-          githubLink="https://github.com/Slnchn"
-          githubNickname="Slnchn"
-          contactLink="https://t.me/addicted2y0u"
-          tasksCreated={7}
-          tasksAll={25}
-          teamMembers={6}
-        />
-
-        <GithubProfile
-          githubImg={igor82bvProfileImage}
-          name="Ihar"
-          surname="Baranau"
-          githubLink="https://github.com/igor82bv"
-          githubNickname="igor82bv"
-          contactLink=""
-          tasksCreated={7}
-          tasksAll={25}
-          teamMembers={6}
-        />
-
-        <GithubProfile
-          githubImg={sannaoProfileImage}
-          name="Aleksandr"
-          surname="Piskun"
-          githubLink="https://github.com/sannnao"
-          githubNickname="Sannnao"
-          contactLink="https://t.me/sannnao"
-          tasksCreated={7}
-          tasksAll={25}
-          teamMembers={6}
-        />
-
-        <GithubProfile
-          githubImg={sergmitminProfileImage}
-          name="Siarhei"
-          surname="Mitasau"
-          githubLink="https://github.com/sergmitmin"
-          githubNickname="SergMitMin"
-          contactLink=""
-          tasksCreated={7}
-          tasksAll={25}
-          teamMembers={6}
-        />
-
-        <GithubProfile
-          githubImg={ekater1naProfileImage}
-          name="Ekaterina"
-          surname="Lysiuk"
-          githubLink="https://github.com/ekater1na"
-          githubNickname="ekater1na"
-          contactLink="https://t.me/ObsssQ"
-          tasksCreated={7}
-          tasksAll={25}
-          teamMembers={6}
-        />
-
-        <GithubProfile
-          githubImg={grenborkProfileImage}
-          name="Nikolay"
-          surname="Shishkin"
-          githubLink="https://github.com/grenbork"
-          githubNickname="grenbork"
-          contactLink=""
-          tasksCreated={7}
-          tasksAll={25}
-          teamMembers={6}
-        />
+        {developers.map(developer => (
+          <GithubProfile
+            key={developer.githubNickname}
+            githubImg={developer.githubImg}
+            name={developer.name}
+            surname={developer.surname}
+            githubLink={developer.githubLink}
+            githubNickname={developer.githubNickname}
+            contactLink={developer.contactLink}
+            tasksCreated={developer.tasksCreated}
+            tasksAll={developer.tasksAll}
+            teamMembers={developer.teamMembers}
+          />
+        ))}
       </Grid>
     </Grid>
   );
