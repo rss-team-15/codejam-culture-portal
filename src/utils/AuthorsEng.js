@@ -433,4 +433,91 @@ export default [
     ],
   },
 
+  {
+    name: 'Nil Hilevich',
+    photo: 'https://upload.wikimedia.org/wikipedia/commons/2/27/Nil_Hilevich.jpg',
+    yearsOfLife: 'September 30, 1931 – March 29, 2016',
+    biography: [
+      {
+        date: '1960-1986',
+        content: 'During 1960-1986 he was working at the university, and later on became a professor.'
+      },
+      {
+        date: '1958',
+        content: 'In 1958 he started to work for a newspaper Zvyazda'
+      },
+      {
+        date: '1978-1980',
+        content: 'In 1978 Hilevich joined the Communist Party. In 1980 he became the executive secretary of the Writer\'s Union of BSSR, and held that position for 9 years. '
+      },
+      {
+        date: '1989',
+        content: 'In 1989 he became a chairperson of the Frantsishak Skaryna Belarusian Language Society. He also was the chief editor of the Society\'s bulletin "Our Word"'
+      },
+      {
+        date: '1991',
+        content: 'In 1991 Nil Hilevich received a People\'s Poet of Belarus nomination. He has also received some other awards in literature.'
+      },
+      {
+        date: '2009',
+        content: 'In 2009 his chosen works were published in a book in Mensk. The book has 600 pages and contains the most important works of Hilevich'
+      },
+    ],
+    listOfWorks: [
+      {
+        date: '1961',
+        work: 'The Jack of Diamonds',
+      },
+      {
+        date: '1963',
+        work: 'To New Wreaths',
+      },
+      {
+        date: '1970',
+        work: 'A Sin or Two',
+      },
+      {
+        date: '1974',
+        work: 'How I Learnt to Live',
+      },
+      {
+        date: '1974',
+        work: 'Mermaid in the Narač',
+      },
+      {
+        date: '1979',
+        work: 'In Good Agreement',
+      },
+    ],
+    gallery: {
+      authorsPicture: './assets/gilevich1.jpg',
+      worksPictures: [
+        {
+          name: 'Nil Hilevich',
+          img: './assets/gilevich2.jpg',
+        },
+        {
+          name: 'A monument to Nil Hilevich',
+          img: './assets/gilevich3.jpg',
+        },
+        {
+          name: ' Nil Hilevich\'s books',
+          img: './assets/gilevich4.jpg',
+        },
+      ],
+    },
+    youtubeVideos: {
+      aboutAuthor: 'https://www.youtube.com/watch?v=sWPk3sk6m6k',
+      aboutWorks: 'https://www.youtube.com/watch?v=j9FC-l66ymo',
+      biographyVideo: 'https://www.youtube.com/watch?v=BsylylXD9kA',
+    },
+    placesOfActivity: [
+      {
+        activity: 'Place of death',
+        mapSrc: 'https://www.google.com/maps/place/%D0%9A%D0%B0%D0%BB%D1%8C%D0%B2%D0%B0%D1%80%D0%B8%D0%B9%D1%81%D0%BA%D0%BE%D0%B5+%D0%BA%D0%BB%D0%B0%D0%B4%D0%B1%D0%B8%D1%89%D0%B5/@53.9081635,27.5022413,17z/data=!3m1!4b1!4m5!3m4!1s0x46dbc55aa7756d03:0xf3710a32010134a4!8m2!3d53.9081635!4d27.50443',
+      }
+    ],
+  },
+
+
 ];
