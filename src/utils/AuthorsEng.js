@@ -347,4 +347,90 @@ export default [
     ],
   },
 
+  {
+    name: 'Maksim Tank',
+    photo: './assets/tank1.jpg',
+    yearsOfLife: 'Septemberc 17, 1912 – August 7, 1995',
+    biography: [
+      {
+        date: '1930s',
+        content: 'In early 1930s, Maksim Tank (real name Jaŭhien Skurko) participated in the Belarusian underground communist activism, writing for Belarusian and Polish underground publications. In 1932, he was arrested and placed in the Lukiškės Prison in Wilno.'
+      },
+      {
+        date: '19320',
+        content: 'In late 1932, he illegally crossed the border with the Soviet Union and joined Belarusian underground group in Minsk. He was eventually arrested by the Soviet authorities, interrogated by the NKVD[2] and deported to Poland.'
+      },
+      {
+        date: '1936',
+        content: 'In 1936, Skurko was admitted into the underground Communist Party of West Belarus.'
+      },
+      {
+        date: '1945-1948',
+        content: 'In 1945 – 1948, Skurko worked as editor at the satirical magazine Vozhyk.'
+      },
+      {
+        date: '1947-1941',
+        content: 'In 1947–1971 Jaŭhien Skurko was member of the Supreme Soviet of Belarus; of which he was chairman in 1963–1971.'
+      },
+      {
+        date: '1969-1989',
+        content: 'In 1969–1989 Jaŭhien Skurko was member of the Supreme Soviet of the USSR.'
+      },
+    ],
+    listOfWorks: [
+      {
+        date: '1936',
+        work: 'On Stages',
+      },
+      {
+        date: '1938',
+        work: 'Under the Mast',
+      },
+      {
+        date: '1945',
+        work: 'Sharpen the Arms',
+      },
+      {
+        date: '1951',
+        work: 'On the Stone, Iron and Gold',
+      },
+      {
+        date: '1990',
+        work: 'Listen, the Spring is Coming',
+      },
+      {
+        date: '1994',
+        work: 'My Arch',
+      },
+    ],
+    gallery: {
+      authorsPicture: './assets/tank5.jpg',
+      worksPictures: [
+        {
+          name: 'Postage stamp "100 years since the birth of Maxim Tank"',
+          img: './assets/tank2.jpg',
+        },
+        {
+          name: 'Maksim Tank',
+          img: './assets/tank3.jpg',
+        },
+        {
+          name: 'Collected Works',
+          img: './assets/tank4.jpg',
+        },
+      ],
+    },
+    youtubeVideos: {
+      aboutAuthor: 'https://www.youtube.com/watch?v=ZECpiojVfZs',
+      aboutWorks: 'https://www.youtube.com/watch?v=r3wv8iQ8XwA',
+      biographyVideo: 'https://www.youtube.com/watch?v=40Uhtifsk7s',
+    },
+    placesOfActivity: [
+      {
+        activity: 'A monument to Maksim Tank',
+        mapSrc: 'https://www.google.com/maps/place/%D0%9F%D0%B0%D0%BC%D1%8F%D1%82%D0%BD%D0%B8%D0%BA+%D0%9C%D0%B0%D0%BA%D1%81%D0%B8%D0%BC%D1%83+%D0%A2%D0%B0%D0%BD%D0%BA%D1%83/@54.8694513,26.9259341,17z/data=!3m1!4b1!4m5!3m4!1s0x46dc934bf8678649:0xbdfe07a3cdb70f6c!8m2!3d54.8694513!4d26.9281228',
+      }
+    ],
+  },
+
 ];
