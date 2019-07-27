@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Home from '../components/home';
 import LanguagePicker from '../components/languagePicker';
+import AuthrosList from '../components/AuthorsList';
 
 export default class App extends Component {
   constructor(props) {
@@ -17,6 +18,7 @@ export default class App extends Component {
       <React.Fragment>
         <LanguagePicker />
         <Home />
+        <AuthrosList />
       </React.Fragment>
     );
   }

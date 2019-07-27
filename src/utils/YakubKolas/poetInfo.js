@@ -6,10 +6,29 @@ import yakubKolasPicture3 from './assets/yakub-kolas-3.jpg';
 import yakubKolasPicture4 from './assets/yakub-kolas-4.jpg';
 import yakubKolasPicture5 from './assets/yakub-kolas-5.jpg';
 
+const media = {
+  photo: {
+    mainPhoto: yakubKolasMainPicture,
+    gallery: [
+      yakubKolasPicture1,
+      yakubKolasPicture2,
+      yakubKolasPicture3,
+      yakubKolasPicture4,
+      yakubKolasPicture5
+    ],
+  },
+  video: {
+    youtube: [
+      'https://www.youtube.com/watch?v=FRfHUhw9KkI',
+      'https://www.youtube.com/watch?v=HxFeWGZspJQ',
+      'https://www.youtube.com/watch?v=GNvCm0tK9gw'
+    ],
+  }
+};
+
 const englishInfo = {
   name: 'Yakub',
   surname: 'Kolas',
-  photo: yakubKolasMainPicture,
   yearsOfLife: 'November 3 [O.S. October 22] 1882 - August 13, 1956',
   biography: [
     {
@@ -69,18 +88,6 @@ const englishInfo = {
       work: 'At a Crossroads'
     }
   ],
-  gallery: [
-    yakubKolasPicture1,
-    yakubKolasPicture2,
-    yakubKolasPicture3,
-    yakubKolasPicture4,
-    yakubKolasPicture5
-  ],
-  youtube: [
-    'https://www.youtube.com/watch?v=FRfHUhw9KkI',
-    'https://www.youtube.com/watch?v=HxFeWGZspJQ',
-    'https://www.youtube.com/watch?v=GNvCm0tK9gw'
-  ],
   placesOfActivity: [
     {
       activity: 'Yakub Kolas Manor Museum',
@@ -89,10 +96,10 @@ const englishInfo = {
     }
   ]
 };
+
 const russianInfo = {
   name: 'Якуб',
   surname: 'Колас',
-  photo: yakubKolasMainPicture,
   yearsOfLife: '3 Ноября [22 Октября] 1882 -  13 Августа 1956',
   biography: [
     {
@@ -150,18 +157,6 @@ const russianInfo = {
       work: 'На перепутье'
     }
   ],
-  gallery: [
-    yakubKolasPicture1,
-    yakubKolasPicture2,
-    yakubKolasPicture3,
-    yakubKolasPicture4,
-    yakubKolasPicture5
-  ],
-  youtube: [
-    'https://www.youtube.com/watch?v=FRfHUhw9KkI',
-    'https://www.youtube.com/watch?v=HxFeWGZspJQ',
-    'https://www.youtube.com/watch?v=GNvCm0tK9gw'
-  ],
   placesOfActivity: [
     {
       activity: 'Музей имени Якуба Коласа',
@@ -170,6 +165,7 @@ const russianInfo = {
     }
   ]
 };
+
 const belarusianInfo = {};
 
-export default { englishInfo, russianInfo, belarusianInfo };
+export default { englishInfo, russianInfo, belarusianInfo, media };
