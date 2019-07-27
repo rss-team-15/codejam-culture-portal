@@ -9,7 +9,7 @@ import Button from '@material-ui/core/Button';
 
 import PoetCart from '../PoetCart';
 
-import authorsDB from '../../utils/AuthorsEng';
+import authorsDB from '../../utils/poetsList';
 
 const styles = {
   form: {
@@ -93,9 +93,12 @@ class AuthorsList extends React.Component {
         <List>
           {
             authorsDB.map((author, i) => {
+              const authorInfo = author.englishInfo;
+              const authorPhoto = author.media.photo.mainPhoto;
+
               return (
                 <ListItem key={i} className={classes.listItem}>
-                  <PoetCart author={author} />
+                  <PoetCart authorInfo={authorInfo} authorPhoto={authorPhoto} />
                 </ListItem>
               );
             })
