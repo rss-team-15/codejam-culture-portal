@@ -172,6 +172,4 @@ const russianInfo = {
 };
 const belarusianInfo = {};
 
-export { englishInfo };
-export { russianInfo };
-export { belarusianInfo };
+export default { englishInfo, russianInfo, belarusianInfo };

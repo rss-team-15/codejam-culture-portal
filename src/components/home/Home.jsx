@@ -23,7 +23,7 @@ export default class Home extends Component {
     return (
       <React.Fragment>
         <PortalDescription textContent={this.state.activeLanguage.home.portalDescription} />
-        <AuthorOfTheDay />
+        <AuthorOfTheDay poetOfTheDay={this.state.activeLanguage.home.poetOfTheDay} />
         <DevelopersList developers={this.state.activeLanguage.home.developersList} />
       </React.Fragment>
     );
