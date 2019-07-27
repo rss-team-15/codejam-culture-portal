@@ -12,7 +12,7 @@ export default class Home extends Component {
 
     this.state = {
       activeLanguage: languagesInitState.activeLanguage,
-      authorMedia: languagesInitState.poetMedia,
+      poetPhoto: languagesInitState.poetPhoto,
     };
   }
 
@@ -28,7 +28,7 @@ export default class Home extends Component {
         <PortalDescription textContent={this.state.activeLanguage.home.portalDescription} />
         <AuthorOfTheDay
           poetOfTheDay={this.state.activeLanguage.home.poetOfTheDay}
-          authorPhoto={this.state.authorMedia.photo.mainPhoto} />
+          poetPhoto={this.state.poetPhoto} />
         <DevelopersList developers={this.state.activeLanguage.home.developersList} />
       </React.Fragment>
     );

@@ -18,7 +18,7 @@ import {
 
 const poetOfTheDay = poetsList[Math.floor(Math.random() * poetsList.length)];
 
-const poetMedia = poetOfTheDay.media;
+const poetPhoto = poetOfTheDay.media.photo.mainPhoto;
 
 const date = new Date();
 const dayNumber = date.getDate();
@@ -217,5 +217,5 @@ export default {
     belarusian: {}
   },
   activeLanguage: englishContent,
-  poetMedia,
+  poetPhoto,
 };
