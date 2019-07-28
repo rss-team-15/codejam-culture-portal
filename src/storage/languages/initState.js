@@ -135,7 +135,7 @@ const russianContent = {
       topSectionHeader: 'Портал Белорусской Поэзии',
       aboutSectionHeader: 'Ищите информацию о любимом белорусском поэте с лёгкостью!',
       usedTechnologies: 'Портал использует',
-      openSourceSectionHeader: 'Исходный код в открытом доступе и доступен на GitHub',
+      openSourceSectionHeader: 'Исходный код находится в открытом доступе и доступен на GitHub',
       openSourceSectionButton: 'Заглянуть в исходники!'
     },
     poetOfTheDay: {
@@ -228,11 +228,11 @@ const belarusianContent = {
       topSectionHeader: 'Партал Беларускай Паэзіі',
       aboutSectionHeader: 'Шукайце інфармацыю пра любімага беларускага паэта з лёгкасцю!',
       usedTechnologies: 'Партал выкарыстоўвае',
-      openSourceSectionHeader: 'Зыходны код у адкрытым доступе і даступны на GitHub',
+      openSourceSectionHeader: 'Зыходны код знаходзiцца ў адкрытым доступе і даступны на GitHub',
       openSourceSectionButton: 'Зазірнуць у зыходнікі!'
     },
     poetOfTheDay: {
-      poetOfTheDayCardTitle: 'Аўтор Дня',
+      poetOfTheDayCardTitle: 'Аўтар Дня',
       curDateTitle: `${monthBel} ${dayNumber}, ${dayBel} ${year}`,
       poetInfo: poetOfTheDay.russianInfo,
       learnMoreBtn: 'Даведацца больш'
