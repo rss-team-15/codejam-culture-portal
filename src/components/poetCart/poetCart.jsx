@@ -16,31 +16,33 @@ const useStyles = makeStyles({
     margin: '0 auto',
     marginTop: '5%',
     marginBottom: '5%',
-    borderRadius: '2%',
+    borderRadius: '2%'
   },
   imagecontayner: {
-    width: 500,
+    width: '60vw'
   },
   media: {
-    height: 240,
+    height: '30vh'
   },
   description: {
-    width: '60%',
+    width: '40vw',
     background: '#a59f9f',
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'flex-end',
+    justifyContent: 'flex-end'
   },
   textName: {
     color: '#fff',
+    fontSize: '3vh'
   },
   textYears: {
     color: '#fff',
     fontStyle: 'italic',
     marginBottom: '25px',
+    fontSize: '2vh'
   },
   wrapperButton: {
-    paddingLeft: 0,
+    paddingLeft: 0
   },
 });
 
