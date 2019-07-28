@@ -39,7 +39,7 @@ const useStyles = makeStyles({
   },
   controlsBar__controlLinkButton: {
     height: '100%',
-    width: '6vw',
+    padding: '0 1vw',
 
     display: 'flex',
     justifyContent: 'center',
@@ -66,6 +66,7 @@ const routingLinkStyle = {
   alignItems: 'center',
 
   textDecoration: 'none',
+  textTransform: 'uppercase',
   color: '#ffffff'
 };
 
@@ -76,6 +77,8 @@ const NavBar = props => {
     controlsBar__flowerLogo,
     controlsBar__controlLinkButton
   } = useStyles();
+
+  const { homeLink, poetsListLink } = props;
   return (
     <BrowserRouter>
       <header className={navBar}>
@@ -84,7 +87,7 @@ const NavBar = props => {
         <ul className={controlsBar}>
           <li className={controlsBar__controlLinkButton}>
             <Link style={routingLinkStyle} to="/">
-              Home
+              {homeLink}
             </Link>
           </li>
           <li>
@@ -96,7 +99,7 @@ const NavBar = props => {
           </li>
           <li className={controlsBar__controlLinkButton}>
             <Link style={routingLinkStyle} to="/poets-list">
-              Poets List
+              {poetsListLink}
             </Link>
           </li>
         </ul>
