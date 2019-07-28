@@ -10,7 +10,10 @@ export default class Home extends Component {
   constructor() {
     super();
 
-    this.state = { activeLanguage: languagesInitState.activeLanguage };
+    this.state = {
+      activeLanguage: languagesInitState.activeLanguage,
+      poetPhoto: languagesInitState.poetPhoto,
+    };
   }
 
   render() {
@@ -23,7 +26,9 @@ export default class Home extends Component {
     return (
       <React.Fragment>
         <PortalDescription textContent={this.state.activeLanguage.home.portalDescription} />
-        <AuthorOfTheDay />
+        <AuthorOfTheDay
+          poetOfTheDay={this.state.activeLanguage.home.poetOfTheDay}
+          poetPhoto={this.state.poetPhoto} />
         <DevelopersList developers={this.state.activeLanguage.home.developersList} />
       </React.Fragment>
     );

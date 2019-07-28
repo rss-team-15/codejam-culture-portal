@@ -10,139 +10,86 @@ import Divider from '@material-ui/core/Divider';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
-import authorsDB from '../../utils/AuthorsEng';
-
 const styles = {
   card: {
-    width: "100%",
+    width: '100%'
+  },
+  poetOfTheDayCard__name: {
+    fontSize: '2.5vw'
+  },
+  poetOfTheDayCard__yearsOfLive: {
+    fontSize: '2vw'
+  },
+  poetOfTheDayCard__bio: {
+    fontSize: '1.1vw'
+  },
+  poetOfTheDayCard__learnMoreBtn: {
+    fontSize: '0.9vw'
   },
   mediaContainer: {
-    display: "flex",
-    width: "100%",
-    height: "50vh",
+    display: 'flex',
+    width: '100%',
+    height: '35vw'
   },
   photo: {
-    width: "100%",
-    height: "50vh",
-    backgroundPosition: "center 0%",
-  },
+    width: '100%',
+    height: '35vw',
+    backgroundPosition: 'center 0%'
+  }
 };
 
-const daysOfWeek = [
-  'Sunday',
-  'Monday',
-  'Tuesday',
-  'Wednesday',
-  'Thursday',
-  'Friday',
-  'Saturday',
-];
+const AuthorOfTheDay = props => {
+  const { classes } = props;
 
-const months = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December',
-]
+  const {
+    poetOfTheDay: {
+      poetInfo: { name, surname, yearsOfLife, biography },
+      poetOfTheDayCardTitle,
+      curDateTitle,
+      learnMoreBtn
+    },
+    poetPhoto,
+  } = props;
 
-class AuthorOfTheDay extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      author: '',
-    }
+  return (
+    <Card className={classes.card}>
+      <CardActionArea className={classes.mediaContainer}>
+        <CardMedia className={classes.photo} image={poetPhoto} title={`${name} ${surname}`}>
+          <CardHeader
+            className={classes.poetOfTheDayCardTitle}
+            title={poetOfTheDayCardTitle}
+            subheader={curDateTitle}
+          />
+        </CardMedia>
+      </CardActionArea>
+      <CardContent>
+        <Typography className={classes.poetOfTheDayCard__name} gutterBottom variant="h4">
+          {name} {surname}
+        </Typography>
+        <Typography className={classes.poetOfTheDayCard__yearsOfLive} variant="h6">
+          {yearsOfLife}
+        </Typography>
+      </CardContent>
+      <Divider variant="middle" />
+      <CardContent>
+        <Typography
+          className={classes.poetOfTheDayCard__bio}
+          component="p"
+        >{`${biography[0].content}...`}</Typography>
+      </CardContent>
 
-    this.updateAthour = this.updateAthour.bind(this);
-    this.interval = null;
-  }
-
-  componentWillMount() {
-    const date = new Date();
-    const day = date.getDay();
-
-    this.setState({
-      author: authorsDB[day],
-    });
-  }
-
-  componentDidMount() {
-    this.updateAthour();
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.interval);
-  }
-
-  updateAthour() {
-    this.interval = setInterval(() => {
-      const date = new Date();
-      const day = date.getDay();
-      const { author } = this.state;
-
-      if (author.name !== authorsDB[day].name) {
-        this.setState({
-          author: authorsDB[day],
-        });
-      }
-    }, 1000);
-  }
-
-  render() {
-    const { author } = this.state;
-    const { classes } = this.props;
-    const date = new Date();
-    const day = daysOfWeek[date.getDay()];
-    const dayNumber = date.getDate();
-    const month = months[date.getMonth()];
-    const year = date.getFullYear();
-
-    return (
-      <Card className={classes.card}>
-
-        <CardActionArea className={classes.mediaContainer}>
-          <CardMedia
-            className={classes.photo}
-            image={author.photo}
-            title="Author"
-          >
-            <CardHeader
-              title="Author Of The Day"
-              subheader={`${month} ${dayNumber},${day} ${year}`}
-            />
-          </CardMedia>
-        </CardActionArea>
-        <CardContent>
-          <Typography gutterBottom variant="h4">
-            {author.name}
-          </Typography>
-          <Typography variant="h6">
-            {author.yearsOfLife}
-          </Typography>
-        </CardContent>
-        <Divider variant="middle" />
-        <CardContent>
-          <Typography component="p">
-            {`${author.biography[0].content}...`}
-          </Typography>
-        </CardContent>
-
-
-        <CardActions>
-          <Button variant="contained" size="small" color="primary">
-            Learn More
-          </Button>
-        </CardActions>
-      </Card>
-    );
-  }
-}
+      <CardActions>
+        <Button
+          className={classes.poetOfTheDayCard__learnMoreBtn}
+          variant="contained"
+          size="small"
+          color="primary"
+        >
+          {learnMoreBtn}
+        </Button>
+      </CardActions>
+    </Card>
+  );
+};
 
 export default withStyles(styles)(AuthorOfTheDay);
