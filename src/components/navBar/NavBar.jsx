@@ -24,7 +24,7 @@ const useStyles = makeStyles({
     boxShadow: '1px 1px 12px #000000f0;'
   },
   controlsBar: {
-    width: '15vw',
+    height: '100%',
 
     display: 'flex',
     justifyContent: 'space-between',
@@ -34,35 +34,75 @@ const useStyles = makeStyles({
   },
   controlsBar__flowerLogo: {
     height: '2.8vw',
-    width: '2.8vw'
+    width: '2.8vw',
+    margin: '0 2vw'
+  },
+  controlsBar__controlLinkButton: {
+    height: '100%',
+    width: '6vw',
+
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    boxSizing: 'border-box',
+
+    borderBottom: '0.2vw solid #303030',
+
+    '&:hover': {
+      color: 'red',
+
+      cursor: 'pointer',
+      borderBottom: '0.2vw solid #40c8f4'
+    }
   }
 });
 
+const routingLinkStyle = {
+  height: '100%',
+  width: '100%',
+
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+
+  textDecoration: 'none',
+  color: '#ffffff'
+};
+
 const NavBar = props => {
-  const { navBar, controlsBar, controlsBar__flowerLogo } = useStyles();
+  const {
+    navBar,
+    controlsBar,
+    controlsBar__flowerLogo,
+    controlsBar__controlLinkButton
+  } = useStyles();
   return (
     <BrowserRouter>
       <header className={navBar}>
         <LanguagePicker />
 
         <ul className={controlsBar}>
-          <li>
-            <Link to="/home">Home</Link>
+          <li className={controlsBar__controlLinkButton}>
+            <Link style={routingLinkStyle} to="/">
+              Home
+            </Link>
           </li>
           <li>
             <img
               className={`blue-flower-logo ${controlsBar__flowerLogo}`}
               src={blueFlowerLogo}
-              alt=""
+              alt="blue flower"
             />
           </li>
-          <li>
-            <Link to="/poets-list">Poets List</Link>
+          <li className={controlsBar__controlLinkButton}>
+            <Link style={routingLinkStyle} to="/poets-list">
+              Poets List
+            </Link>
           </li>
         </ul>
       </header>
 
-      <Route path="/home" component={Home} />
+      <Route exact path="/" component={Home} />
       <Route path="/poets-list" component={AuthorsList} />
     </BrowserRouter>
   );
