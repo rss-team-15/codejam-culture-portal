@@ -18,7 +18,15 @@ const daysOfWeekRus = [
   'Суббота'
 ];
 
-const daysOfWeekBel = [];
+const daysOfWeekBel = [
+  'Нядзеля',
+  'Панядзелак',
+  'Аўторак',
+  'Серада',
+  'Чацвер',
+  'Пятніца',
+  'Субота'
+];
 
 const monthsEng = [
   'January',
@@ -50,7 +58,20 @@ const monthsRus = [
   'Декабрь'
 ];
 
-const monthsBel = [];
+const monthsBel = [
+  'Студзень',
+  'Люты',
+  'Сакавік',
+  'Красавік',
+  'Май',
+  'Чэрвень',
+  'Ліпень',
+  'Жнівень',
+  'Верасень',
+  'Кастрычнік',
+  'Лістапад',
+  'Снежань'
+];
 
 export { daysOfWeekEng };
 export { daysOfWeekRus };
