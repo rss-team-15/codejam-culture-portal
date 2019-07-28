@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 
 import NavBar from '../components/navBar';
-import Home from '../components/home';
-import AuthrosList from '../components/AuthorsList';
 
 export default class App extends Component {
   constructor(props) {

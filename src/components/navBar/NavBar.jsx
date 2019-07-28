@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 
 import LanguagePicker from '../languagePicker';
