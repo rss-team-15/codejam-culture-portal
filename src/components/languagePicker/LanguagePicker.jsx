@@ -8,6 +8,7 @@ import { languagesEvents, languagesActions, languagesStore } from '../../storage
 const styles = {
   languagePicker: {
     position: 'absolute',
+    left: '2vw',
     fontSize: '1vw',
 
     color: '#ffffff'
