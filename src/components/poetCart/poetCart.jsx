@@ -12,20 +12,21 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles({
   card: {
     display: 'flex',
-    maxWidth: 600,
+    maxWidth: '50vw',
+    // height: '30vh',
     margin: '0 auto',
     marginTop: '5%',
     marginBottom: '5%',
     borderRadius: '2%'
   },
   imagecontayner: {
-    width: '60vw'
+    width: '50vw'
   },
   media: {
-    height: '30vh'
+    height: '38vh'
   },
   description: {
-    width: '40vw',
+    width: '50vw',
     background: '#a59f9f',
     display: 'flex',
     flexDirection: 'column',
@@ -33,17 +34,22 @@ const useStyles = makeStyles({
   },
   textName: {
     color: '#fff',
-    fontSize: '3vh'
+    fontSize: '3vh',
+    padding: '3%'
   },
   textYears: {
     color: '#fff',
     fontStyle: 'italic',
-    marginBottom: '25px',
-    fontSize: '2vh'
+    fontSize: '2vh',
+    marginBottom: '1em',
+    padding: '3%'
   },
   wrapperButton: {
-    paddingLeft: 0
+    padding: '3%'
   },
+  button: {
+    padding: '1em'
+  }
 });
 
 export default function PoetCart(props) {
@@ -70,7 +76,7 @@ export default function PoetCart(props) {
           {yearsOfLife}
         </Typography>
         <CardActions className={classes.wrapperButton}>
-          <Button variant="contained" size="small" color="primary">
+          <Button variant="contained" size="small" color="primary" className={classes.button}>
             Learn More
           </Button>
         </CardActions>
