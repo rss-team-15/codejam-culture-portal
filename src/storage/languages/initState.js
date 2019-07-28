@@ -33,6 +33,10 @@ const monthRus = monthsRus[date.getMonth()];
 const monthBel = monthsBel[date.getMonth()];
 
 const englishContent = {
+  navbar: {
+    homeLink: 'Home',
+    poetsList: 'Poets List'
+  },
   home: {
     portalDescription: {
       topSectionHeader: 'Belarusian Poetry Portal',
@@ -122,6 +126,10 @@ const englishContent = {
 };
 
 const russianContent = {
+  navbar: {
+    homeLink: 'Главная',
+    poetsList: 'Список Поэтов'
+  },
   home: {
     portalDescription: {
       topSectionHeader: 'Портал Белорусской Поэзии',
@@ -217,5 +225,5 @@ export default {
     belarusian: {}
   },
   activeLanguage: englishContent,
-  poetPhoto,
+  poetPhoto
 };
