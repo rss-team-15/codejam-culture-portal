@@ -35,7 +35,7 @@ const monthBel = monthsBel[date.getMonth()];
 const englishContent = {
   navbar: {
     homeLink: 'Home',
-    poetsList: 'Poets List'
+    poetsListLink: 'Poets List'
   },
   home: {
     portalDescription: {
@@ -128,7 +128,7 @@ const englishContent = {
 const russianContent = {
   navbar: {
     homeLink: 'Главная',
-    poetsList: 'Список Поэтов'
+    poetsListLink: 'Список Поэтов'
   },
   home: {
     portalDescription: {
