@@ -18,6 +18,9 @@ const useStyles = makeStyles({
     marginBottom: '5%',
     borderRadius: '2%',
   },
+  imagecontayner: {
+    width: 500,
+  },
   media: {
     height: 240,
   },
@@ -27,7 +30,6 @@ const useStyles = makeStyles({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'flex-end',
-    width: '60%',
   },
   textName: {
     color: '#fff',
@@ -48,7 +50,7 @@ export default function PoetCart(props) {
 
   return (
     <Card className={classes.card}>
-      <CardActionArea>
+      <CardActionArea className={classes.imagecontayner}>
         <CardMedia
           className={classes.media}
           image={authorPhoto}
@@ -58,6 +60,8 @@ export default function PoetCart(props) {
       <CardContent className={classes.description}>
         <Typography gutterBottom variant="h5" component="h2" className={classes.textName}>
           {name}
+          &nbsp;
+          &nbsp;
           {surname}
         </Typography>
         <Typography variant="body2" color="textSecondary" component="p" className={classes.textYears}>
