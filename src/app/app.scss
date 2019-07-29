@@ -4,12 +4,12 @@
 }
 
 body {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 1.1vw;
 }
 
 @media screen and (max-width: 1024px) {
-  li .MuiPaper-root   {
+  li .MuiPaper-root {
     min-width: 90vw;
   }
   button .MuiCardMedia-root {
@@ -18,27 +18,26 @@ body {
 }
 
 @media screen and (max-width: 980px) {
-li .MuiPaper-root {
-  flex-direction: column;
-}
+  li .MuiPaper-root {
+    flex-direction: column;
+  }
 
-li .MuiCardActionArea-root {
-  width: 90vw;
-}
+  li .MuiCardActionArea-root {
+    width: 90vw;
+  }
 
-li .makeStyles-card-347 {
-  max-width: 90vw;
-}
+  li .makeStyles-card-347 {
+    max-width: 90vw;
+  }
 
-li .MuiPaper-root .MuiCardContent-root {
-  align-items: center;
-  width: 100%;
-  padding: 0;
-}
+  li .MuiPaper-root .MuiCardContent-root {
+    align-items: center;
+    width: 100%;
+    padding: 0;
+  }
 
-.MuiPaper-rounded {
-  padding: 0;
-  height: 100%;
-}
-
+  .MuiPaper-rounded {
+    padding: 0;
+    height: 100%;
+  }
 }

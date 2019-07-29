@@ -1,10 +1,8 @@
 import React from 'react';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { Link } from "gatsby"
 import { makeStyles } from '@material-ui/core/styles';
 
 import LanguagePicker from '../languagePicker';
-import Home from '../home';
-import AuthorsList from '../AuthorsList';
 
 import blueFlowerLogo from './assets/blue-flower-logo.png';
 
@@ -80,7 +78,6 @@ const NavBar = props => {
 
   const { homeLink, poetsListLink } = props;
   return (
-    <BrowserRouter>
       <header className={navBar}>
         <LanguagePicker />
 
@@ -98,16 +95,12 @@ const NavBar = props => {
             />
           </li>
           <li className={controlsBar__controlLinkButton}>
-            <Link style={routingLinkStyle} to="/poets-list">
+            <Link style={routingLinkStyle} to="/page-2">
               {poetsListLink}
             </Link>
           </li>
         </ul>
       </header>
-
-      <Route exact path="/" component={Home} />
-      <Route path="/poets-list" component={AuthorsList} />
-    </BrowserRouter>
   );
 };
 
