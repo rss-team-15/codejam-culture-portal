@@ -16,7 +16,7 @@ const styles = {
       display: 'flex',
       width: '100%',
     },
-    width: '80%',
+    width: '90%',
     margin: '0 auto'
   },
   poetOfTheDayCard__name: {
