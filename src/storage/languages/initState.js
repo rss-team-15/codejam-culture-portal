@@ -128,21 +128,21 @@ const englishContent = {
 const russianContent = {
   navbar: {
     homeLink: 'Главная',
-    poetsListLink: 'Список Поэтов'
+    poetsListLink: 'Список поэтов'
   },
   home: {
     portalDescription: {
       topSectionHeader: 'Портал Белорусской Поэзии',
-      aboutSectionHeader: 'Ищите информацию о любимом белорусском поэте с лёгкостью !',
-      usedTechnologies: 'Портал Использует',
-      openSourceSectionHeader: 'Исходный код в открытом доступе и доступен на GitHub',
-      openSourceSectionButton: 'Заглянуть в Исходники!'
+      aboutSectionHeader: 'Ищите информацию о любимом белорусском поэте с лёгкостью!',
+      usedTechnologies: 'Портал использует',
+      openSourceSectionHeader: 'Исходный код находится в открытом доступе и доступен на GitHub',
+      openSourceSectionButton: 'Заглянуть в исходники!'
     },
     poetOfTheDay: {
-      poetOfTheDayCardTitle: 'Автор Дня',
+      poetOfTheDayCardTitle: 'Автор дня',
       curDateTitle: `${monthRus} ${dayNumber}, ${dayRus} ${year}`,
       poetInfo: poetOfTheDay.russianInfo,
-      learnMoreBtn: 'Узнать Больше'
+      learnMoreBtn: 'Узнать больше'
     },
     developersList: {
       developersListHeader: 'Над проектом работала команда из шести разработчиков',
@@ -194,7 +194,7 @@ const russianContent = {
         {
           githubImg: ekater1naProfileImage,
           name: 'Екатерина',
-          surname: 'Лисюк',
+          surname: 'Лысюк',
           githubLink: 'https://github.com/ekater1na',
           githubNickname: 'ekater1na',
           contactLink: 'https://t.me/ObsssQ',
@@ -205,7 +205,100 @@ const russianContent = {
         {
           githubImg: grenborkProfileImage,
           name: 'Николай',
-          surname: 'Shishkin',
+          surname: 'Шишкин',
+          githubLink: 'https://github.com/grenbork',
+          githubNickname: 'grenbork',
+          contactLink: '',
+          tasksCreated: 7,
+          tasksAll: 25,
+          teamMembers: 6
+        }
+      ]
+    }
+  }
+};
+
+const belarusianContent = {
+  navbar: {
+    homeLink: 'Галоўная',
+    poetsListLink: 'Спіс паэтаў'
+  },
+  home: {
+    portalDescription: {
+      topSectionHeader: 'Партал Беларускай Паэзіі',
+      aboutSectionHeader: 'Шукайце інфармацыю пра любімага беларускага паэта з лёгкасцю!',
+      usedTechnologies: 'Партал выкарыстоўвае',
+      openSourceSectionHeader: 'Зыходны код знаходзiцца ў адкрытым доступе і даступны на GitHub',
+      openSourceSectionButton: 'Зазірнуць у зыходнікі!'
+    },
+    poetOfTheDay: {
+      poetOfTheDayCardTitle: 'Аўтар Дня',
+      curDateTitle: `${monthBel} ${dayNumber}, ${dayBel} ${year}`,
+      poetInfo: poetOfTheDay.russianInfo,
+      learnMoreBtn: 'Даведацца больш'
+    },
+    developersList: {
+      developersListHeader: 'Над праектам працавала каманда з шасці распрацоўшчыкаў',
+      developers: [
+        {
+          githubImg: slnchnProfileImage,
+          name: 'Аляксандр',
+          surname: 'Каваленка',
+          githubLink: 'https://github.com/Slnchn',
+          githubNickname: 'Slnchn',
+          contactLink: 'https://t.me/addicted2y0u',
+          tasksCreated: 7,
+          tasksAll: 25,
+          teamMembers: 6
+        },
+        {
+          githubImg: igor82bvProfileImage,
+          name: 'Iгар',
+          surname: 'Баранаў',
+          githubLink: 'https://github.com/igor82bv',
+          githubNickname: 'igor82bv',
+          contactLink: '',
+          tasksCreated: 7,
+          tasksAll: 25,
+          teamMembers: 6
+        },
+        {
+          githubImg: sannaoProfileImage,
+          name: 'Аляксандр',
+          surname: 'Пiскун',
+          githubLink: 'https://github.com/sannnao',
+          githubNickname: 'Sannnao',
+          contactLink: 'https://t.me/sannnao',
+          tasksCreated: 7,
+          tasksAll: 25,
+          teamMembers: 6
+        },
+        {
+          githubImg: sergmitminProfileImage,
+          name: 'Сяргей',
+          surname: 'Мiтасаў',
+          githubLink: 'https://github.com/sergmitmin',
+          githubNickname: 'SergMitMin',
+          contactLink: '',
+          tasksCreated: 7,
+          tasksAll: 25,
+          teamMembers: 6
+        },
+        {
+          githubImg: ekater1naProfileImage,
+          name: 'Кацярына',
+          surname: 'Лысюк',
+          githubLink: 'https://github.com/ekater1na',
+          githubNickname: 'ekater1na',
+          contactLink: 'https://t.me/ObsssQ',
+          tasksCreated: 7,
+          tasksAll: 25,
+          teamMembers: 6
+        },
+        {
+          githubImg: grenborkProfileImage,
+          name: 'Мiкалай',
+          surname: 'Шышкiн',
           githubLink: 'https://github.com/grenbork',
           githubNickname: 'grenbork',
           contactLink: '',
@@ -222,7 +315,7 @@ export default {
   contents: {
     english: englishContent,
     russian: russianContent,
-    belarusian: {}
+    belarusian: belarusianContent
   },
   activeLanguage: englishContent,
   poetPhoto
