@@ -8,10 +8,26 @@ body {
   font-size: 1.1vw;
 }
 
-@media screen and (max-width: 1020px) {
-.MuiPaper-root {
+@media screen and (max-width: 1024px) {
+  li .MuiPaper-root   {
+    min-width: 90vw;
+  }
+  button .MuiCardMedia-root {
+    height: 24vh;
+  }
+}
+
+@media screen and (max-width: 980px) {
+li .MuiPaper-root {
   flex-direction: column;
-  max-width: 70px;
+}
+
+li .MuiCardActionArea-root {
+  width: 90vw;
+}
+
+li .makeStyles-card-347 {
+  max-width: 90vw;
 }
 
 li .MuiPaper-root .MuiCardContent-root {

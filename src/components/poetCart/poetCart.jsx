@@ -35,7 +35,7 @@ const useStyles = makeStyles({
   textName: {
     color: '#fff',
     fontSize: '3vh',
-    padding: '3%'
+    margin: '3%'
   },
   textYears: {
     color: '#fff',
