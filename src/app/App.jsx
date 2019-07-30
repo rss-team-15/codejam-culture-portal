@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import NavBar from '../components/navBar';
 
-import { languagesStore, languagesInitState } from '../storage/languages';
+import { languagesStore, languagesInitState } from '../storage';
 
 class App extends Component {
   constructor(props) {

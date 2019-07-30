@@ -3,7 +3,11 @@ import { withStyles } from '@material-ui/core/styles';
 import { Select, MenuItem } from '@material-ui/core';
 
 import { supportedLanguages } from './constants';
-import { languagesEvents, languagesActions, languagesStore } from '../../storage/languages';
+import {
+  languagesEvents,
+  languagesActions,
+  languagesStore,
+} from '../../storage';
 
 const styles = {
   languagePicker: {
@@ -11,8 +15,8 @@ const styles = {
     left: '2vw',
     fontSize: '1vw',
 
-    color: '#ffffff'
-  }
+    color: '#ffffff',
+  },
 };
 
 class LanguagePicker extends Component {
@@ -20,7 +24,7 @@ class LanguagePicker extends Component {
     super();
 
     this.state = {
-      currentLanguage: supportedLanguages[0]
+      currentLanguage: supportedLanguages[0],
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -29,7 +33,9 @@ class LanguagePicker extends Component {
   handleChange(event) {
     this.setState({ currentLanguage: event.target.value });
 
-    languagesStore.dispatch(languagesEvents.updateLanguage(event.target.value.code));
+    languagesStore.dispatch(
+      languagesEvents.updateLanguage(event.target.value.code)
+    );
   }
 
   render() {

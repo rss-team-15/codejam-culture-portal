@@ -5,16 +5,15 @@ import sergmitminProfileImage from './assets/sergmitmin.jpg';
 import ekater1naProfileImage from './assets/ekater1na.jpg';
 import grenborkProfileImage from './assets/grenbork.jpg';
 
-import poetsList from '../../utils/poetsList';
-
+import poetsList from '../utils/poetsList';
 import {
   daysOfWeekEng,
   daysOfWeekRus,
   daysOfWeekBel,
   monthsEng,
   monthsRus,
-  monthsBel
-} from '../../utils/dateStuff';
+  monthsBel,
+} from '../utils/dateStuff';
 
 const poetOfTheDay = poetsList[Math.floor(Math.random() * poetsList.length)];
 
@@ -35,21 +34,23 @@ const monthBel = monthsBel[date.getMonth()];
 const englishContent = {
   navbar: {
     homeLink: 'Home',
-    poetsListLink: 'Poets List'
+    poetsListLink: 'Poets List',
   },
   home: {
     portalDescription: {
       topSectionHeader: 'Belarusian Poetry Portal',
-      aboutSectionHeader: 'Find info about your favorite belarusian poets with ease !',
+      aboutSectionHeader:
+        'Find info about your favorite belarusian poets with ease !',
       usedTechnologies: 'Portal Uses',
-      openSourceSectionHeader: 'All the code is open source and available on the GitHub',
-      openSourceSectionButton: 'Jump Into Sources!'
+      openSourceSectionHeader:
+        'All the code is open source and available on the GitHub',
+      openSourceSectionButton: 'Jump Into Sources!',
     },
     poetOfTheDay: {
       poetOfTheDayCardTitle: 'Author Of The Day',
       curDateTitle: `${monthEng} ${dayNumber}, ${dayEng} ${year}`,
       poetInfo: poetOfTheDay.englishInfo,
-      learnMoreBtn: 'Learn More'
+      learnMoreBtn: 'Learn More',
     },
     developersList: {
       developersListHeader: 'Project was created by the team of six developers',
@@ -63,7 +64,7 @@ const englishContent = {
           contactLink: 'https://t.me/addicted2y0u',
           tasksCreated: 7,
           tasksAll: 25,
-          teamMembers: 6
+          teamMembers: 6,
         },
         {
           githubImg: igor82bvProfileImage,
@@ -74,7 +75,7 @@ const englishContent = {
           contactLink: '',
           tasksCreated: 7,
           tasksAll: 25,
-          teamMembers: 6
+          teamMembers: 6,
         },
         {
           githubImg: sannaoProfileImage,
@@ -85,7 +86,7 @@ const englishContent = {
           contactLink: 'https://t.me/sannnao',
           tasksCreated: 7,
           tasksAll: 25,
-          teamMembers: 6
+          teamMembers: 6,
         },
         {
           githubImg: sergmitminProfileImage,
@@ -96,7 +97,7 @@ const englishContent = {
           contactLink: '',
           tasksCreated: 7,
           tasksAll: 25,
-          teamMembers: 6
+          teamMembers: 6,
         },
         {
           githubImg: ekater1naProfileImage,
@@ -107,7 +108,7 @@ const englishContent = {
           contactLink: 'https://t.me/ObsssQ',
           tasksCreated: 7,
           tasksAll: 25,
-          teamMembers: 6
+          teamMembers: 6,
         },
         {
           githubImg: grenborkProfileImage,
@@ -118,34 +119,41 @@ const englishContent = {
           contactLink: '',
           tasksCreated: 7,
           tasksAll: 25,
-          teamMembers: 6
-        }
-      ]
-    }
-  }
+          teamMembers: 6,
+        },
+      ],
+    },
+  },
+  poetsList: poetsList.map(poet => ({
+    poetInfo: poet.englishInfo,
+    poetMedia: poet.media.photo.mainPhoto,
+  })),
 };
 
 const russianContent = {
   navbar: {
     homeLink: 'Главная',
-    poetsListLink: 'Список поэтов'
+    poetsListLink: 'Список поэтов',
   },
   home: {
     portalDescription: {
       topSectionHeader: 'Портал Белорусской Поэзии',
-      aboutSectionHeader: 'Ищите информацию о любимом белорусском поэте с лёгкостью!',
+      aboutSectionHeader:
+        'Ищите информацию о любимом белорусском поэте с лёгкостью!',
       usedTechnologies: 'Портал использует',
-      openSourceSectionHeader: 'Исходный код находится в открытом доступе и доступен на GitHub',
-      openSourceSectionButton: 'Заглянуть в исходники!'
+      openSourceSectionHeader:
+        'Исходный код находится в открытом доступе и доступен на GitHub',
+      openSourceSectionButton: 'Заглянуть в исходники!',
     },
     poetOfTheDay: {
       poetOfTheDayCardTitle: 'Автор дня',
       curDateTitle: `${monthRus} ${dayNumber}, ${dayRus} ${year}`,
       poetInfo: poetOfTheDay.russianInfo,
-      learnMoreBtn: 'Узнать больше'
+      learnMoreBtn: 'Узнать больше',
     },
     developersList: {
-      developersListHeader: 'Над проектом работала команда из шести разработчиков',
+      developersListHeader:
+        'Над проектом работала команда из шести разработчиков',
       developers: [
         {
           githubImg: slnchnProfileImage,
@@ -156,7 +164,7 @@ const russianContent = {
           contactLink: 'https://t.me/addicted2y0u',
           tasksCreated: 7,
           tasksAll: 25,
-          teamMembers: 6
+          teamMembers: 6,
         },
         {
           githubImg: igor82bvProfileImage,
@@ -167,7 +175,7 @@ const russianContent = {
           contactLink: '',
           tasksCreated: 7,
           tasksAll: 25,
-          teamMembers: 6
+          teamMembers: 6,
         },
         {
           githubImg: sannaoProfileImage,
@@ -178,7 +186,7 @@ const russianContent = {
           contactLink: 'https://t.me/sannnao',
           tasksCreated: 7,
           tasksAll: 25,
-          teamMembers: 6
+          teamMembers: 6,
         },
         {
           githubImg: sergmitminProfileImage,
@@ -189,7 +197,7 @@ const russianContent = {
           contactLink: '',
           tasksCreated: 7,
           tasksAll: 25,
-          teamMembers: 6
+          teamMembers: 6,
         },
         {
           githubImg: ekater1naProfileImage,
@@ -200,7 +208,7 @@ const russianContent = {
           contactLink: 'https://t.me/ObsssQ',
           tasksCreated: 7,
           tasksAll: 25,
-          teamMembers: 6
+          teamMembers: 6,
         },
         {
           githubImg: grenborkProfileImage,
@@ -211,34 +219,41 @@ const russianContent = {
           contactLink: '',
           tasksCreated: 7,
           tasksAll: 25,
-          teamMembers: 6
-        }
-      ]
-    }
-  }
+          teamMembers: 6,
+        },
+      ],
+    },
+  },
+  poetsList: poetsList.map(poet => ({
+    poetInfo: poet.russianInfo,
+    poetMedia: poet.media.photo.mainPhoto,
+  })),
 };
 
 const belarusianContent = {
   navbar: {
     homeLink: 'Галоўная',
-    poetsListLink: 'Спіс паэтаў'
+    poetsListLink: 'Спіс паэтаў',
   },
   home: {
     portalDescription: {
       topSectionHeader: 'Партал Беларускай Паэзіі',
-      aboutSectionHeader: 'Шукайце інфармацыю пра любімага беларускага паэта з лёгкасцю!',
+      aboutSectionHeader:
+        'Шукайце інфармацыю пра любімага беларускага паэта з лёгкасцю!',
       usedTechnologies: 'Партал выкарыстоўвае',
-      openSourceSectionHeader: 'Зыходны код знаходзiцца ў адкрытым доступе і даступны на GitHub',
-      openSourceSectionButton: 'Зазірнуць у зыходнікі!'
+      openSourceSectionHeader:
+        'Зыходны код знаходзiцца ў адкрытым доступе і даступны на GitHub',
+      openSourceSectionButton: 'Зазірнуць у зыходнікі!',
     },
     poetOfTheDay: {
       poetOfTheDayCardTitle: 'Аўтар Дня',
       curDateTitle: `${monthBel} ${dayNumber}, ${dayBel} ${year}`,
       poetInfo: poetOfTheDay.russianInfo,
-      learnMoreBtn: 'Даведацца больш'
+      learnMoreBtn: 'Даведацца больш',
     },
     developersList: {
-      developersListHeader: 'Над праектам працавала каманда з шасці распрацоўшчыкаў',
+      developersListHeader:
+        'Над праектам працавала каманда з шасці распрацоўшчыкаў',
       developers: [
         {
           githubImg: slnchnProfileImage,
@@ -249,7 +264,7 @@ const belarusianContent = {
           contactLink: 'https://t.me/addicted2y0u',
           tasksCreated: 7,
           tasksAll: 25,
-          teamMembers: 6
+          teamMembers: 6,
         },
         {
           githubImg: igor82bvProfileImage,
@@ -260,7 +275,7 @@ const belarusianContent = {
           contactLink: '',
           tasksCreated: 7,
           tasksAll: 25,
-          teamMembers: 6
+          teamMembers: 6,
         },
         {
           githubImg: sannaoProfileImage,
@@ -271,7 +286,7 @@ const belarusianContent = {
           contactLink: 'https://t.me/sannnao',
           tasksCreated: 7,
           tasksAll: 25,
-          teamMembers: 6
+          teamMembers: 6,
         },
         {
           githubImg: sergmitminProfileImage,
@@ -282,7 +297,7 @@ const belarusianContent = {
           contactLink: '',
           tasksCreated: 7,
           tasksAll: 25,
-          teamMembers: 6
+          teamMembers: 6,
         },
         {
           githubImg: ekater1naProfileImage,
@@ -293,7 +308,7 @@ const belarusianContent = {
           contactLink: 'https://t.me/ObsssQ',
           tasksCreated: 7,
           tasksAll: 25,
-          teamMembers: 6
+          teamMembers: 6,
         },
         {
           githubImg: grenborkProfileImage,
@@ -304,19 +319,23 @@ const belarusianContent = {
           contactLink: '',
           tasksCreated: 7,
           tasksAll: 25,
-          teamMembers: 6
-        }
-      ]
-    }
-  }
+          teamMembers: 6,
+        },
+      ],
+    },
+  },
+  poetsList: poetsList.map(poet => ({
+    poetInfo: poet.belarusianInfo,
+    poetMedia: poet.media.photo.mainPhoto,
+  })),
 };
 
 export default {
   contents: {
     english: englishContent,
     russian: russianContent,
-    belarusian: belarusianContent
+    belarusian: belarusianContent,
   },
   activeLanguage: englishContent,
-  poetPhoto
+  poetPhoto,
 };

@@ -10,6 +10,8 @@ import Button from '@material-ui/core/Button';
 import PoetCart from '../PoetCart';
 
 import authorsDB from '../../utils/poetsList';
+import { languagesStore, languagesInitState } from '../../storage';
+import { poetsListActions, poetsListEvents } from '../../storage/poetsList';
 
 const styles = {
   container: {
@@ -21,19 +23,19 @@ const styles = {
     display: 'flex',
     alignItems: 'baseline',
     justifyContent: 'space-evenly',
-    minWidth: "50%",
+    minWidth: '50%',
   },
   textField: {
-    width: "50%",
+    width: '50%',
   },
   listItem: {
-    display: "flex",
-    flexDirection: "column",
+    display: 'flex',
+    flexDirection: 'column',
   },
   expansionPanel: {
-    display: "flex",
-    justifyContent: "center",
-    width: "100%",
+    display: 'flex',
+    justifyContent: 'center',
+    width: '100%',
   },
 };
 
@@ -42,41 +44,28 @@ class AuthorsList extends React.Component {
     super(props);
 
     this.state = {
-      search: '',
-      input: '',
+      poetsList: languagesInitState.activeLanguage.poetsList,
     };
 
     this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentDidMount() {
-    document.addEventListener('keypress', (e) => {
-      const keyEnter = 13;
-      if (e.keyCode === keyEnter) {
-        this.handleSubmit();
-      }
-    });
-  }
-
-  handleChange(e) {
-    this.setState({
-      input: e.target.value,
-    })
-  }
-
-  handleSubmit(e) {
-    e.preventDefault();
-    const { input } = this.state;
-
-    this.setState({
-      search: input,
-      input: '',
-    })
+  handleChange(event) {
+    languagesStore.dispatch(
+      poetsListEvents.updatePoetsList(event.target.value)
+    );
   }
 
   render() {
     const { classes } = this.props;
+
+    languagesStore.subscribe(() => {
+      const {
+        activeLanguage: { poetsList },
+      } = languagesStore.getState();
+
+      this.setState({ poetsList });
+    });
 
     return (
       <Grid
@@ -86,29 +75,24 @@ class AuthorsList extends React.Component {
         justify="flex-start"
         alignItems="center"
       >
-        <form onSubmit={this.handleSubmit} className={classes.form}>
+        <form className={classes.form}>
           <TextField
             onChange={this.handleChange}
             value={this.state.input}
             className={classes.textField}
-            name='title'
-            label='Search Author'
+            name="title"
+            label="Search Author"
           />
-          <Button type="submit" color='primary' variant='contained'>Search</Button>
         </form>
         <List>
-          {
-            authorsDB.map((author, i) => {
-              const authorInfo = author.englishInfo;
-              const authorPhoto = author.media.photo.mainPhoto;
-
-              return (
-                <ListItem key={i} className={classes.listItem}>
-                  <PoetCart authorInfo={authorInfo} authorPhoto={authorPhoto} />
-                </ListItem>
-              );
-            })
-          }
+          {this.state.poetsList.map((author, i) => {
+            const { poetInfo, poetMedia } = author;
+            return (
+              <ListItem key={i} className={classes.listItem}>
+                <PoetCart authorInfo={poetInfo} authorPhoto={poetMedia} />
+              </ListItem>
+            );
+          })}
         </List>
       </Grid>
     );
