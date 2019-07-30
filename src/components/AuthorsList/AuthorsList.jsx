@@ -12,6 +12,11 @@ import PoetCart from '../PoetCart';
 import authorsDB from '../../utils/poetsList';
 
 const styles = {
+  container: {
+    position: 'relative',
+    top: '4vh',
+    zIndex: 1,
+  },
   form: {
     display: 'flex',
     alignItems: 'baseline',
@@ -75,6 +80,7 @@ class AuthorsList extends React.Component {
 
     return (
       <Grid
+        className={classes.container}
         container
         direction="column"
         justify="flex-start"
