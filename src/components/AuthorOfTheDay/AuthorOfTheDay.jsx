@@ -12,30 +12,39 @@ import Typography from '@material-ui/core/Typography';
 
 const styles = {
   card: {
-    width: '100%'
+    mediaContainer: {
+      display: 'flex',
+      width: '100%',
+    },
+    width: '90%',
+    margin: '0 auto'
   },
   poetOfTheDayCard__name: {
-    fontSize: '2.5vw'
+    fontSize: '4.5vh'
   },
   poetOfTheDayCard__yearsOfLive: {
     fontSize: '2vw'
   },
   poetOfTheDayCard__bio: {
-    fontSize: '1.1vw'
+    fontSize: '2vh'
   },
   poetOfTheDayCard__learnMoreBtn: {
-    fontSize: '0.9vw'
-  },
-  mediaContainer: {
-    display: 'flex',
-    width: '100%',
-    height: '35vw'
+    fontSize: '1.5vw'
   },
   photo: {
     width: '100%',
-    height: '35vw',
-    backgroundPosition: 'center 0%'
-  }
+    height: '40vw',
+    backgroundPosition: 'center 50%',
+    '& span:first-child': {
+      fontSize: '2.5vw'
+    },
+    '& span:nth-child(2)': {
+      fontSize: '2vw'
+    }
+  },
+  poetOfTheDayCardTitle: {
+    '-webkitTextStroke': '0.5px #fafafa',
+  },
 };
 
 const AuthorOfTheDay = props => {
