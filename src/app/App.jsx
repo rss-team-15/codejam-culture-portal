@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 import NavBar from '../components/navBar';
 
@@ -10,7 +10,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      activeLanguage: languagesInitState.activeLanguage
+      activeLanguage: languagesInitState.activeLanguage,
     };
   }
 
@@ -25,9 +25,9 @@ class App extends Component {
 
     return (
       <React.Fragment>
-        <NavBar 
+        <NavBar
           homeLink={this.state.activeLanguage.navbar.homeLink}
-          poetsListLink={this.state.activeLanguage.navbar.poetsListLink}         
+          poetsListLink={this.state.activeLanguage.navbar.poetsListLink}
         />
         <main>{children}</main>
         <footer>
@@ -42,6 +42,6 @@ class App extends Component {
 
 App.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
 export default App;
