@@ -64,20 +64,8 @@ export default function PoetCart(props) {
         <CardMedia className={classes.media} image={authorPhoto} title={name} />
       </CardActionArea>
       <CardContent className={classes.description}>
-<<<<<<< HEAD
         <Typography gutterBottom variant="h5" component="h2" className={classes.textName}>
           {name} {surname}
-=======
-        <Typography
-          gutterBottom
-          variant="h5"
-          component="h2"
-          className={classes.textName}
-        >
-          {name}
-          &nbsp; &nbsp;
-          {surname}
->>>>>>> f017fcea4b2a3f957e696aac922324214b2a3760
         </Typography>
         <Typography
           variant="body2"
