@@ -23,6 +23,7 @@ const styles = {
     alignItems: 'baseline',
     justifyContent: 'space-evenly',
     minWidth: '50%',
+    marginTop: '2vh'
   },
   textField: {
     width: '50%',
