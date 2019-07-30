@@ -19,8 +19,8 @@ function rootReducer(state = languagesState, act) {
       return { ...state, activeLanguage };
     }
     case poetsListActions.updatePoetsList: {
-      const activePoets = state.contents.english.poetsList.filter(poet =>
-        poet.poetInfo.name.includes(act.query)
+      const activePoets = state.contents.english.poetsListBlock.poetsList.filter(
+        poet => poet.poetInfo.name.includes(act.query)
       );
 
       return {
@@ -28,7 +28,13 @@ function rootReducer(state = languagesState, act) {
         activeLanguage: {
           navbar: state.activeLanguage.navbar,
           home: state.activeLanguage.home,
-          poetsList: activePoets,
+          poetsListBlock: {
+            poetsList: activePoets,
+            poetsListSearchLabel:
+              state.activeLanguage.poetsListBlock.poetsListSearchLabel,
+            poetCardLearnMore:
+              state.activeLanguage.poetsListBlock.poetCardLearnMore,
+          },
         },
       };
     }

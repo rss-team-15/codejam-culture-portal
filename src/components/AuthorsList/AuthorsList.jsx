@@ -5,7 +5,6 @@ import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import Button from '@material-ui/core/Button';
 
 import PoetCart from '../PoetCart';
 
@@ -44,7 +43,11 @@ class AuthorsList extends React.Component {
     super(props);
 
     this.state = {
-      poetsList: languagesInitState.activeLanguage.poetsList,
+      poetsList: languagesInitState.activeLanguage.poetsListBlock.poetsList,
+      poetsListSearchLabel:
+        languagesInitState.activeLanguage.poetsListBlock.poetsListSearchLabel,
+      poetCardLearnMore:
+        languagesInitState.activeLanguage.poetsListBlock.poetCardLearnMore,
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -61,10 +64,16 @@ class AuthorsList extends React.Component {
 
     languagesStore.subscribe(() => {
       const {
-        activeLanguage: { poetsList },
+        activeLanguage: {
+          poetsListBlock: {
+            poetsList,
+            poetsListSearchLabel,
+            poetCardLearnMore,
+          },
+        },
       } = languagesStore.getState();
 
-      this.setState({ poetsList });
+      this.setState({ poetsList, poetsListSearchLabel, poetCardLearnMore });
     });
 
     return (
@@ -81,7 +90,7 @@ class AuthorsList extends React.Component {
             value={this.state.input}
             className={classes.textField}
             name="title"
-            label="Search Author"
+            label={this.state.poetsListSearchLabel}
           />
         </form>
         <List>
@@ -89,7 +98,11 @@ class AuthorsList extends React.Component {
             const { poetInfo, poetMedia } = author;
             return (
               <ListItem key={i} className={classes.listItem}>
-                <PoetCart authorInfo={poetInfo} authorPhoto={poetMedia} />
+                <PoetCart
+                  authorInfo={poetInfo}
+                  authorPhoto={poetMedia}
+                  poetCardLearnMore={this.state.poetCardLearnMore}
+                />
               </ListItem>
             );
           })}

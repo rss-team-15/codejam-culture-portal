@@ -124,10 +124,14 @@ const englishContent = {
       ],
     },
   },
-  poetsList: poetsList.map(poet => ({
-    poetInfo: poet.englishInfo,
-    poetMedia: poet.media.photo.mainPhoto,
-  })),
+  poetsListBlock: {
+    poetsList: poetsList.map(poet => ({
+      poetInfo: poet.englishInfo,
+      poetMedia: poet.media.photo.mainPhoto,
+    })),
+    poetsListSearchLabel: 'Search poet',
+    poetCardLearnMore: 'Learn more',
+  },
 };
 
 const russianContent = {
@@ -224,10 +228,14 @@ const russianContent = {
       ],
     },
   },
-  poetsList: poetsList.map(poet => ({
-    poetInfo: poet.russianInfo,
-    poetMedia: poet.media.photo.mainPhoto,
-  })),
+  poetsListBlock: {
+    poetsList: poetsList.map(poet => ({
+      poetInfo: poet.russianInfo,
+      poetMedia: poet.media.photo.mainPhoto,
+    })),
+    poetsListSearchLabel: 'Найти поэта',
+    poetCardLearnMore: 'Узнать больше',
+  },
 };
 
 const belarusianContent = {
@@ -324,10 +332,14 @@ const belarusianContent = {
       ],
     },
   },
-  poetsList: poetsList.map(poet => ({
-    poetInfo: poet.belarusianInfo,
-    poetMedia: poet.media.photo.mainPhoto,
-  })),
+  poetsListBlock: {
+    poetsList: poetsList.map(poet => ({
+      poetInfo: poet.russianInfo,
+      poetMedia: poet.media.photo.mainPhoto,
+    })),
+    poetsListSearchLabel: 'Знайсцi паэта',
+    poetCardLearnMore: 'Даведацца больш',
+  },
 };
 
 export default {
