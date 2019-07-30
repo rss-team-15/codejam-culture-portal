@@ -18,11 +18,7 @@ const media = {
     ],
   },
   video: {
-    youtube: [
-      'https://www.youtube.com/watch?v=sWPk3sk6m6k',
-      'https://www.youtube.com/watch?v=j9FC-l66ymo',
-      'https://www.youtube.com/watch?v=BsylylXD9kA'
-    ],
+    youtube: 'sWPk3sk6m6k',
   }
 };
 
@@ -85,8 +81,7 @@ const englishInfo = {
   placesOfActivity: [
     {
       activity: 'Place of death',
-      mapLink:
-        'https://www.google.com/maps/place/%D0%9A%D0%B0%D0%BB%D1%8C%D0%B2%D0%B0%D1%80%D0%B8%D0%B9%D1%81%D0%BA%D0%BE%D0%B5+%D0%BA%D0%BB%D0%B0%D0%B4%D0%B1%D0%B8%D1%89%D0%B5/@53.9081635,27.5022413,17z/data=!3m1!4b1!4m5!3m4!1s0x46dbc55aa7756d03:0xf3710a32010134a4!8m2!3d53.9081635!4d27.50443'
+      mapLink: {lat: 53.908353, lng: 27.505074}
     }
   ]
 };
@@ -154,8 +149,7 @@ const russianInfo = {
   placesOfActivity: [
     {
       activity: 'Место погребения',
-      mapLink:
-        'https://www.google.com/maps/place/%D0%9A%D0%B0%D0%BB%D1%8C%D0%B2%D0%B0%D1%80%D0%B8%D0%B9%D1%81%D0%BA%D0%BE%D0%B5+%D0%BA%D0%BB%D0%B0%D0%B4%D0%B1%D0%B8%D1%89%D0%B5/@53.9081635,27.5022413,17z/data=!3m1!4b1!4m5!3m4!1s0x46dbc55aa7756d03:0xf3710a32010134a4!8m2!3d53.9081635!4d27.50443'
+      mapLink: {lat: 53.908353, lng: 27.505074}
     }
   ]
 };
@@ -223,8 +217,7 @@ const belarusianInfo = {
   placesOfActivity: [
     {
       activity: 'Месца пахавання',
-      mapLink:
-        'https://www.google.com/maps/place/%D0%9A%D0%B0%D0%BB%D1%8C%D0%B2%D0%B0%D1%80%D0%B8%D0%B9%D1%81%D0%BA%D0%BE%D0%B5+%D0%BA%D0%BB%D0%B0%D0%B4%D0%B1%D0%B8%D1%89%D0%B5/@53.9081635,27.5022413,17z/data=!3m1!4b1!4m5!3m4!1s0x46dbc55aa7756d03:0xf3710a32010134a4!8m2!3d53.9081635!4d27.50443'
+      mapLink: {lat: 53.908353, lng: 27.505074}
     }
   ]
 };

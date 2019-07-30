@@ -18,11 +18,8 @@ const media = {
     ],
   },
   video: {
-    youtube: [
-      'https://www.youtube.com/watch?v=ZECpiojVfZs',
-      'https://www.youtube.com/watch?v=r3wv8iQ8XwA',
-      'https://www.youtube.com/watch?v=40Uhtifsk7s'
-    ],
+    youtube: 'ZECpiojVfZs',
+
   }
 };
 
@@ -85,8 +82,7 @@ const englishInfo = {
   placesOfActivity: [
     {
       activity: 'A monument to Maksim Tank',
-      mapLink:
-        'https://www.google.com/maps/place/%D0%9F%D0%B0%D0%BC%D1%8F%D1%82%D0%BD%D0%B8%D0%BA+%D0%9C%D0%B0%D0%BA%D1%81%D0%B8%D0%BC%D1%83+%D0%A2%D0%B0%D0%BD%D0%BA%D1%83/@54.8694513,26.9259341,17z/data=!3m1!4b1!4m5!3m4!1s0x46dc934bf8678649:0xbdfe07a3cdb70f6c!8m2!3d54.8694513!4d26.9281228'
+      mapLink: {lat: 54.869630, lng: 26.928101}
     }
   ]
 };
@@ -151,8 +147,7 @@ const russianInfo = {
   placesOfActivity: [
     {
       activity: 'Памятник Максиму Танку',
-      mapLink:
-        'https://www.google.com/maps/place/%D0%9F%D0%B0%D0%BC%D1%8F%D1%82%D0%BD%D0%B8%D0%BA+%D0%9C%D0%B0%D0%BA%D1%81%D0%B8%D0%BC%D1%83+%D0%A2%D0%B0%D0%BD%D0%BA%D1%83/@54.8694513,26.9259341,17z/data=!3m1!4b1!4m5!3m4!1s0x46dc934bf8678649:0xbdfe07a3cdb70f6c!8m2!3d54.8694513!4d26.9281228'
+      mapLink: {lat: 54.869630, lng: 26.928101}
     }
   ]
 };
@@ -217,8 +212,7 @@ const belarusianInfo = {
   placesOfActivity: [
     {
       activity: 'Помнік Максіму Танку',
-      mapLink:
-        'https://www.google.com/maps/place/%D0%9F%D0%B0%D0%BC%D1%8F%D1%82%D0%BD%D0%B8%D0%BA+%D0%9C%D0%B0%D0%BA%D1%81%D0%B8%D0%BC%D1%83+%D0%A2%D0%B0%D0%BD%D0%BA%D1%83/@54.8694513,26.9259341,17z/data=!3m1!4b1!4m5!3m4!1s0x46dc934bf8678649:0xbdfe07a3cdb70f6c!8m2!3d54.8694513!4d26.9281228'
+      mapLink: {lat: 54.869630, lng: 26.928101}
     }
   ]
 };
