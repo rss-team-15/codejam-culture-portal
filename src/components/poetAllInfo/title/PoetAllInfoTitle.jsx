@@ -4,13 +4,22 @@ import { Typography } from '@material-ui/core';
 
 const useStyles = makeStyles({
   poetName: {
-    fontWeight: '200'
-  }
+    fontWeight: '200',
+    fontSize: '3.5vw',
+  },
+  poetYearsOfLife: {
+    fontWeight: '200',
+    fontSize: '2.5vw',
+  },
+  poetPicture: {
+    width: '25vw',
+    borderRadius: '5px',
+  },
 });
 
 const PoetAllInfoTitle = props => {
   const {
-    poetInfo: { name, surname, yearsOfLife, picture }
+    poetInfo: { name, surname, yearsOfLife, picture },
   } = props;
 
   const classes = useStyles();
@@ -20,10 +29,14 @@ const PoetAllInfoTitle = props => {
       <Typography className={classes.poetName} variant="h3" component="h3">
         {name} {surname}
       </Typography>
-      <Typography className={classes.poetName} variant="h5" component="h5">
+      <Typography
+        className={classes.poetYearsOfLife}
+        variant="h5"
+        component="h5"
+      >
         {yearsOfLife}
       </Typography>
-      <img src={picture} alt="" />
+      <img className={classes.poetPicture} src={picture} alt="" />
     </React.Fragment>
   );
 };
