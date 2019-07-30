@@ -13,6 +13,8 @@ const useStyles = makeStyles({
   },
   poetPicture: {
     width: '25vw',
+    marginTop: '2vw',
+
     borderRadius: '5px',
   },
 });
@@ -31,8 +33,8 @@ const PoetAllInfoTitle = props => {
       </Typography>
       <Typography
         className={classes.poetYearsOfLife}
-        variant="h5"
-        component="h5"
+        variant="h4"
+        component="h4"
       >
         {yearsOfLife}
       </Typography>
