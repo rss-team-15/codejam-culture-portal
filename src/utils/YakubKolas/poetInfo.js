@@ -18,11 +18,7 @@ const media = {
     ],
   },
   video: {
-    youtube: [
-      'https://www.youtube.com/watch?v=FRfHUhw9KkI',
-      'https://www.youtube.com/watch?v=HxFeWGZspJQ',
-      'https://www.youtube.com/watch?v=GNvCm0tK9gw'
-    ],
+    youtube: 'FRfHUhw9KkI',
   }
 };
 
@@ -91,8 +87,7 @@ const englishInfo = {
   placesOfActivity: [
     {
       activity: 'Yakub Kolas Manor Museum',
-      mapLink:
-        'https://www.google.com/maps/place/%D0%BC%D1%83%D0%B7%D0%B5%D0%B9-%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0+%D0%AF%D0%BA%D1%83%D0%B1%D0%B0+%D0%9A%D0%BE%D0%BB%D0%B0%D1%81%D0%B0/@53.4638026,26.7758654,15z/data=!4m5!3m4!1s0x0:0xc3379081b1ecec27!8m2!3d53.4638026!4d26.7758654'
+      mapLink: {lat: 53.464620, lng: 26.775737}
     }
   ]
 };
@@ -160,8 +155,7 @@ const russianInfo = {
   placesOfActivity: [
     {
       activity: 'Музей имени Якуба Коласа',
-      mapLink:
-        'https://www.google.com/maps/place/%D0%BC%D1%83%D0%B7%D0%B5%D0%B9-%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0+%D0%AF%D0%BA%D1%83%D0%B1%D0%B0+%D0%9A%D0%BE%D0%BB%D0%B0%D1%81%D0%B0/@53.4638026,26.7758654,15z/data=!4m5!3m4!1s0x0:0xc3379081b1ecec27!8m2!3d53.4638026!4d26.7758654'
+      mapLink: {lat: 53.464620, lng: 26.775737}
     }
   ]
 };
@@ -229,8 +223,7 @@ const belarusianInfo = {
   placesOfActivity: [
     {
       activity: 'Музей імя Якуба Коласа',
-      mapLink:
-        'https://www.google.com/maps/place/%D0%BC%D1%83%D0%B7%D0%B5%D0%B9-%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0+%D0%AF%D0%BA%D1%83%D0%B1%D0%B0+%D0%9A%D0%BE%D0%BB%D0%B0%D1%81%D0%B0/@53.4638026,26.7758654,15z/data=!4m5!3m4!1s0x0:0xc3379081b1ecec27!8m2!3d53.4638026!4d26.7758654'
+      mapLink: {lat: 53.464620, lng: 26.775737}
     }
   ]
 };

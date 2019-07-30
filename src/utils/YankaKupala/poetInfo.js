@@ -18,11 +18,7 @@ const media = {
     ],
   },
   video: {
-    youtube: [
-      'https://www.youtube.com/watch?v=Q4ZkjFIF3tE',
-      'https://www.youtube.com/watch?v=R9Sx1WcSbiI',
-      'https://www.youtube.com/watch?v=9FZehV2qJTk'
-    ],
+    youtube: 'Q4ZkjFIF3tE',
   }
 };
 
@@ -85,8 +81,7 @@ const englishInfo = {
   placesOfActivity: [
     {
       activity: 'Yanka Kupala State Literary Museum',
-      mapLink:
-        'https://www.google.com/maps/place/%D0%93%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9+%D0%BB%D0%B8%D1%82%D0%B5%D1%80%D0%B0%D1%82%D1%83%D1%80%D0%BD%D1%8B%D0%B9+%D0%BC%D1%83%D0%B7%D0%B5%D0%B9+%D0%AF%D0%BD%D0%BA%D0%B8+%D0%9A%D1%83%D0%BF%D0%B0%D0%BB%D1%8B/@53.8813227,27.4621734,12z/data=!4m8!1m2!2m1!1z0Y_QvdC60LAg0LrRg9C_0LDQu9Cw!3m4!1s0x46dbcfbfb87d11ad:0x88709ade33477086!8m2!3d53.9061114!4d27.5651102',
+      mapLink: {lat: 53.906843, lng: 27.565148}
     }
   ]
 };
@@ -154,8 +149,7 @@ const russianInfo = {
   placesOfActivity: [
     {
       activity: 'Государственный литературный музей имени Янки Купалы',
-      mapLink:
-        'https://www.google.com/maps/place/%D0%93%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9+%D0%BB%D0%B8%D1%82%D0%B5%D1%80%D0%B0%D1%82%D1%83%D1%80%D0%BD%D1%8B%D0%B9+%D0%BC%D1%83%D0%B7%D0%B5%D0%B9+%D0%AF%D0%BD%D0%BA%D0%B8+%D0%9A%D1%83%D0%BF%D0%B0%D0%BB%D1%8B/@53.8813227,27.4621734,12z/data=!4m8!1m2!2m1!1z0Y_QvdC60LAg0LrRg9C_0LDQu9Cw!3m4!1s0x46dbcfbfb87d11ad:0x88709ade33477086!8m2!3d53.9061114!4d27.5651102'
+      mapLink: {lat: 53.906843, lng: 27.565148}
     }
   ]
 };
@@ -223,8 +217,7 @@ const belarusianInfo = {
   placesOfActivity: [
     {
       activity: 'Дзяржаўны літаратурны музей імя Янкі Купалы',
-      mapLink:
-        'https://www.google.com/maps/place/%D0%93%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9+%D0%BB%D0%B8%D1%82%D0%B5%D1%80%D0%B0%D1%82%D1%83%D1%80%D0%BD%D1%8B%D0%B9+%D0%BC%D1%83%D0%B7%D0%B5%D0%B9+%D0%AF%D0%BD%D0%BA%D0%B8+%D0%9A%D1%83%D0%BF%D0%B0%D0%BB%D1%8B/@53.8813227,27.4621734,12z/data=!4m8!1m2!2m1!1z0Y_QvdC60LAg0LrRg9C_0LDQu9Cw!3m4!1s0x46dbcfbfb87d11ad:0x88709ade33477086!8m2!3d53.9061114!4d27.5651102'
+      mapLink: {lat: 53.906843, lng: 27.565148}
     }
   ]
 };

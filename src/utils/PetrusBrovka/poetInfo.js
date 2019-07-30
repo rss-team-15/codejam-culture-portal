@@ -18,11 +18,7 @@ const media = {
     ],
   },
   video: {
-    youtube: [
-      'https://www.youtube.com/watch?v=7xHGTr4EbK4',
-      'https://www.youtube.com/watch?v=6m-Fb7vaZuM',
-      'https://www.youtube.com/watch?v=y7q6WXFqP2I'
-    ],
+    youtube: '7xHGTr4EbK4',
   }
 };
 
@@ -85,9 +81,8 @@ const englishInfo = {
   placesOfActivity: [
     {
       activity: 'Literary Museum of Petrus Brovka',
-      mapLink:
-        'https://www.google.com/maps/place/%D0%9B%D0%B8%D1%82%D0%B5%D1%80%D0%B0%D1%82%D1%83%D1%80%D0%BD%D1%8B%D0%B9+%D0%BC%D1%83%D0%B7%D0%B5%D0%B9+%D0%9F%D0%B5%D1%82%D1%80%D1%83%D1%81%D1%8F+%D0%91%D1%80%D0%BE%D0%B2%D0%BA%D0%B8/@53.9075836,27.5704226,15z/data=!4m8!1m2!2m1!1z0J_QsNC80Y_RgtC90LjQuiDQn9C10YLRgNGD0YHRjiDQkdGA0L7QstC60LUg!3m4!1s0x46dbcfc17d85a9ad:0xc02659e9771bc5ec!8m2!3d53.8993429!4d27.5608658'
-    }
+      mapLink: {lat: 53.899999, lng: 27.561369}
+   }
   ]
 };
 
@@ -154,8 +149,7 @@ const russianInfo = {
   placesOfActivity: [
     {
       activity: 'Литературный музей имени Петруся Бровки',
-      mapLink:
-        'https://www.google.com/maps/place/%D0%9B%D0%B8%D1%82%D0%B5%D1%80%D0%B0%D1%82%D1%83%D1%80%D0%BD%D1%8B%D0%B9+%D0%BC%D1%83%D0%B7%D0%B5%D0%B9+%D0%9F%D0%B5%D1%82%D1%80%D1%83%D1%81%D1%8F+%D0%91%D1%80%D0%BE%D0%B2%D0%BA%D0%B8/@53.9075836,27.5704226,15z/data=!4m8!1m2!2m1!1z0J_QsNC80Y_RgtC90LjQuiDQn9C10YLRgNGD0YHRjiDQkdGA0L7QstC60LUg!3m4!1s0x46dbcfc17d85a9ad:0xc02659e9771bc5ec!8m2!3d53.8993429!4d27.5608658'
+      mapLink: {lat: 53.899999, lng: 27.561369}
     }
   ]
 };
@@ -222,8 +216,7 @@ const belarusianInfo = {
   placesOfActivity: [
     {
       activity: 'Літаратурны музей імя Петруся Броўкі',
-      mapLink:
-        'https://www.google.com/maps/place/%D0%9B%D0%B8%D1%82%D0%B5%D1%80%D0%B0%D1%82%D1%83%D1%80%D0%BD%D1%8B%D0%B9+%D0%BC%D1%83%D0%B7%D0%B5%D0%B9+%D0%9F%D0%B5%D1%82%D1%80%D1%83%D1%81%D1%8F+%D0%91%D1%80%D0%BE%D0%B2%D0%BA%D0%B8/@53.9075836,27.5704226,15z/data=!4m8!1m2!2m1!1z0J_QsNC80Y_RgtC90LjQuiDQn9C10YLRgNGD0YHRjiDQkdGA0L7QstC60LUg!3m4!1s0x46dbcfc17d85a9ad:0xc02659e9771bc5ec!8m2!3d53.8993429!4d27.5608658'
+      mapLink: {lat: 53.899999, lng: 27.561369}
     }
   ]
 };

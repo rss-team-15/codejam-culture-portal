@@ -18,11 +18,7 @@ const media = {
     ],
   },
   video: {
-    youtube: [
-      'https://www.youtube.com/watch?v=GlYYLSkqG90',
-      'https://www.youtube.com/watch?v=5ImuYkCOD30',
-      'https://www.youtube.com/watch?v=L7zlDkZhU_Q'
-    ],
+    youtube: 'GlYYLSkqG90',
   }
 };
 
@@ -85,8 +81,7 @@ const englishInfo = {
   placesOfActivity: [
     {
       activity: 'A monument to Alaiza Pashkevich',
-      mapLink:
-        'https://www.google.com/maps/place/%D0%9F%D0%B0%D0%BC%D1%8F%D1%82%D0%BD%D0%B8%D0%BA+%D0%90%D0%BB%D0%BE%D0%B8%D0%B7%D0%B5+%D0%9F%D0%B0%D1%88%D0%BA%D0%B5%D0%B2%D0%B8%D1%87/@53.6086,24.7405113,17z/data=!4m13!1m7!3m6!1s0x0:0x0!2zNTPCsDM2JzMxLjAiTiAyNMKwNDQnMzMuNyJF!3b1!8m2!3d53.6086!4d24.7427!3m4!1s0x46dfad2b098aff67:0x3cb26a2d925612b1!8m2!3d53.6067679!4d24.7416468'
+      mapLink: {lat: 53.606939, lng: 24.741627}
     }
   ]
 };
@@ -154,8 +149,7 @@ const russianInfo = {
   placesOfActivity: [
     {
       activity: 'Памятник Алаизе Пашкевич',
-      mapLink:
-        'https://www.google.com/maps/place/%D0%9F%D0%B0%D0%BC%D1%8F%D1%82%D0%BD%D0%B8%D0%BA+%D0%90%D0%BB%D0%BE%D0%B8%D0%B7%D0%B5+%D0%9F%D0%B0%D1%88%D0%BA%D0%B5%D0%B2%D0%B8%D1%87/@53.6086,24.7405113,17z/data=!4m13!1m7!3m6!1s0x0:0x0!2zNTPCsDM2JzMxLjAiTiAyNMKwNDQnMzMuNyJF!3b1!8m2!3d53.6086!4d24.7427!3m4!1s0x46dfad2b098aff67:0x3cb26a2d925612b1!8m2!3d53.6067679!4d24.7416468'
+      mapLink: {lat: 53.606939, lng: 24.741627}
     }
   ]
 };
@@ -223,8 +217,7 @@ const belarusianInfo = {
   placesOfActivity: [
     {
        activity: 'Помнік Алаізы Пашкевіч',
-       mapLink:
-        'https://www.google.com/maps/place/%D0%9F%D0%B0%D0%BC%D1%8F%D1%82%D0%BD%D0%B8%D0%BA+%D0%90%D0%BB%D0%BE%D0%B8%D0%B7%D0%B5+%D0%9F%D0%B0%D1%88%D0%BA%D0%B5%D0%B2%D0%B8%D1%87/@53.6086,24.7405113,17z/data=!4m13!1m7!3m6!1s0x0:0x0!2zNTPCsDM2JzMxLjAiTiAyNMKwNDQnMzMuNyJF!3b1!8m2!3d53.6086!4d24.7427!3m4!1s0x46dfad2b098aff67:0x3cb26a2d925612b1!8m2!3d53.6067679!4d24.7416468'
+       mapLink: {lat: 53.606939, lng: 24.741627},
     }
   ]
 };

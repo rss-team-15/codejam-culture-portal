@@ -18,11 +18,7 @@ const media = {
     ],
   },
   video: {
-    youtube: [
-    'https://www.youtube.com/watch?v=qDzp2NuLy-Q',
-    'https://www.youtube.com/watch?v=mywFhAvJbAY',
-    'https://www.youtube.com/watch?v=xXXaSXWLpsc'
-    ],
+    youtube: 'qDzp2NuLy-Q',
   }
 };
 
@@ -85,8 +81,7 @@ const englishInfo = {
   placesOfActivity: [
     {
     activity: 'Place of Birth',
-    mapLink:
-      'https://www.google.com/maps/place/%D0%A3%D1%88%D0%B0%D1%87%D0%B8/@55.1753999,28.5808859,13z/data=!3m1!4b1!4m5!3m4!1s0x46c4b87803535efd:0x7a89cfa5f3082377!8m2!3d55.1795157!4d28.6137424'
+    mapLink: {lat: 55.179611, lng: 28.612304}
     }
   ]
 };
@@ -150,8 +145,7 @@ const russianInfo = {
   placesOfActivity: [
     {
     activity: 'Место рождения',
-    mapLink:
-      'https://www.google.com/maps/place/%D0%A3%D1%88%D0%B0%D1%87%D0%B8/@55.1753999,28.5808859,13z/data=!3m1!4b1!4m5!3m4!1s0x46c4b87803535efd:0x7a89cfa5f3082377!8m2!3d55.1795157!4d28.6137424'
+    mapLink: {lat: 55.179611, lng: 28.612304}
     }
   ]
 };
@@ -215,8 +209,7 @@ const belarusianInfo = {
   placesOfActivity: [
     {
     activity: 'Месца нараджэння',
-    mapLink:
-      'https://www.google.com/maps/place/%D0%A3%D1%88%D0%B0%D1%87%D0%B8/@55.1753999,28.5808859,13z/data=!3m1!4b1!4m5!3m4!1s0x46c4b87803535efd:0x7a89cfa5f3082377!8m2!3d55.1795157!4d28.6137424'
+    mapLink: {lat: 55.179611, lng: 28.612304}
     }
   ]
 };
