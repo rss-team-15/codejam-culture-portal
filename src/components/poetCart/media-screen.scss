@@ -1,0 +1,52 @@
+@media screen and (max-width: 1600px) {
+}
+
+@media screen and (max-width: 1400px) { 
+}
+
+@media screen and (max-width: 1200px) {
+  li .MuiPaper-root {
+    min-width: 90vw;
+  }
+  button .MuiCardMedia-root {
+    height: 24vh;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  li .MuiPaper-root {
+    flex-direction: column;
+  }
+
+  li .MuiCardActionArea-root {
+    width: 90vw;
+  }
+
+  li .makeStyles-card-347 {
+    max-width: 90vw;
+  }
+
+  li .MuiPaper-root .MuiCardContent-root {
+    align-items: center;
+    width: 100%;
+    padding: 0;
+  }
+
+  .MuiPaper-rounded {
+    padding: 0;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .makeStyles-description-205 p {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+}
+
+@media screen and (max-width: 320px) {
+}

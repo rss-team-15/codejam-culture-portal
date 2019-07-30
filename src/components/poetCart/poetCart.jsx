@@ -12,7 +12,6 @@ const useStyles = makeStyles({
   card: {
     display: 'flex',
     maxWidth: '50vw',
-    // height: '30vh',
     margin: '0 auto',
     marginTop: '5%',
     marginBottom: '5%',
@@ -65,15 +64,8 @@ export default function PoetCart(props) {
         <CardMedia className={classes.media} image={authorPhoto} title={name} />
       </CardActionArea>
       <CardContent className={classes.description}>
-        <Typography
-          gutterBottom
-          variant="h5"
-          component="h2"
-          className={classes.textName}
-        >
-          {name}
-          &nbsp; &nbsp;
-          {surname}
+        <Typography gutterBottom variant="h5" component="h2" className={classes.textName}>
+          {name} {surname}
         </Typography>
         <Typography
           variant="body2"
