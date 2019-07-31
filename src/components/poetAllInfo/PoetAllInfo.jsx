@@ -5,6 +5,7 @@ import { Paper, Grid } from '@material-ui/core';
 import PoetTitle from './title';
 import PoetBiograpyhy from './timeline';
 import PoetWorks from './works';
+import PoetVideo from './video';
 
 const useStyles = makeStyles(theme => ({
   poetAllInfoContainer: {
@@ -93,12 +94,15 @@ const PoetAllInfo = props => {
     secondColumnName: 'Name',
   };
 
+  const videoId = 'GlYYLSkqG90';
+
   return (
     <Grid container className={classes.poetAllInfoContainer} justify="center">
       <Paper className={classes.poetAllInfoRoot}>
         <PoetTitle poetInfo={poetInfo} />
         <PoetBiograpyhy poetBio={poetBio} title="Biography" />
         <PoetWorks listOfWorks={listOfWorks} interface={interFace} />
+        <PoetVideo videoId={videoId} />
       </Paper>
     </Grid>
   );

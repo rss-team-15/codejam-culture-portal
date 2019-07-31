@@ -1,8 +1,19 @@
 import React, { Component } from 'react';
-import { Button } from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
+import { Button, Grid } from '@material-ui/core';
 import ModalVideo from 'react-modal-video';
+import poetInfo from '../../../utils/YakubKolas';
 
-export default class PoetAllInfoVideo extends Component {
+const styles = {
+  watchVideoButton: {
+    marginTop: '3vw',
+    marginBottom: '3vw',
+
+    fontSize: '2.5vw',
+  },
+};
+
+class PoetAllInfoVideo extends Component {
   constructor(props) {
     super(props);
 
@@ -23,15 +34,27 @@ export default class PoetAllInfoVideo extends Component {
   render() {
     const { isOpen } = this.state;
 
+    const { classes } = this.props;
     const { videoId } = this.props;
 
     return (
-      <React.Fragment>
-        <ModalVideo channel="youtube" isOpen={isOpen} onClose={this.closeModal} videoId={videoId} />
-        <Button color="secondary" onClick={this.openModal}>
+      <Grid container justify="center">
+        <ModalVideo
+          channel="youtube"
+          isOpen={isOpen}
+          onClose={this.closeModal}
+          videoId={videoId}
+        />
+        <Button
+          className={classes.watchVideoButton}
+          color="secondary"
+          onClick={this.openModal}
+        >
           Watch video
         </Button>
-      </React.Fragment>
+      </Grid>
     );
   }
 }
+
+export default withStyles(styles)(PoetAllInfoVideo);
