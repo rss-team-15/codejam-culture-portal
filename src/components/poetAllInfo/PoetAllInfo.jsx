@@ -4,6 +4,7 @@ import { Paper, Grid } from '@material-ui/core';
 
 import PoetTitle from './title';
 import PoetBiograpyhy from './timeline';
+import PoetWorks from './works';
 
 const useStyles = makeStyles(theme => ({
   poetAllInfoContainer: {
@@ -59,11 +60,45 @@ const PoetAllInfo = props => {
     },
   ];
 
+  const listOfWorks = [
+    {
+      date: '1904',
+      work: "Man hasn't changed",
+    },
+    {
+      date: '1905',
+      work: 'Faith of a Belarusian',
+    },
+    {
+      date: '1905',
+      work: "On the New Year's Eve",
+    },
+    {
+      date: '1906',
+      work: 'Belarusian violin',
+    },
+    {
+      date: '1906',
+      work: 'Cross to the freedom',
+    },
+    {
+      date: '1906',
+      work: 'With the banner',
+    },
+  ];
+
+  const interFace = {
+    title: 'Works',
+    firstColumnName: 'Date',
+    secondColumnName: 'Name',
+  };
+
   return (
     <Grid container className={classes.poetAllInfoContainer} justify="center">
       <Paper className={classes.poetAllInfoRoot}>
         <PoetTitle poetInfo={poetInfo} />
         <PoetBiograpyhy poetBio={poetBio} title="Biography" />
+        <PoetWorks listOfWorks={listOfWorks} interface={interFace} />
       </Paper>
     </Grid>
   );
