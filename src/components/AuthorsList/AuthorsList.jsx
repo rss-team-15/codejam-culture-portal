@@ -23,7 +23,7 @@ const styles = {
     alignItems: 'baseline',
     justifyContent: 'space-evenly',
     minWidth: '50%',
-    marginTop: '2vh'
+    marginTop: '2vh',
   },
   textField: {
     width: '50%',
@@ -43,12 +43,16 @@ class AuthorsList extends React.Component {
   constructor(props) {
     super(props);
 
+    const {
+      activeLanguage: {
+        poetsListBlock: { poetsList, poetsListSearchLabel, poetCardLearnMore },
+      },
+    } = languagesStore.getState();
+
     this.state = {
-      poetsList: languagesInitState.activeLanguage.poetsListBlock.poetsList,
-      poetsListSearchLabel:
-        languagesInitState.activeLanguage.poetsListBlock.poetsListSearchLabel,
-      poetCardLearnMore:
-        languagesInitState.activeLanguage.poetsListBlock.poetCardLearnMore,
+      poetsList,
+      poetsListSearchLabel,
+      poetCardLearnMore,
     };
 
     this.handleChange = this.handleChange.bind(this);

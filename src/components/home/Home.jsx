@@ -10,8 +10,10 @@ export default class Home extends Component {
   constructor() {
     super();
 
+    const { activeLanguage } = languagesStore.getState();
+
     this.state = {
-      activeLanguage: languagesInitState.activeLanguage,
+      activeLanguage,
       poetPhoto: languagesInitState.poetPhoto,
     };
   }
