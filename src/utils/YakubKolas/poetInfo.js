@@ -86,8 +86,16 @@ const englishInfo = {
   ],
   placesOfActivity: [
     {
+      activity: 'Manor "Akinchitsy"',
+      mapLink: {lat: 53.465833, lng: 26.781667}
+    },
+    {
       activity: 'Yakub Kolas Manor Museum',
       mapLink: {lat: 53.464620, lng: 26.775737}
+    },
+    {
+      activity: 'Place of burial',
+      mapLink: {lat: 53.908600, lng: 27.586526}
     }
   ]
 };
@@ -154,8 +162,16 @@ const russianInfo = {
   ],
   placesOfActivity: [
     {
+      activity: 'Усадьба "Акинчицы"',
+      mapLink: {lat: 53.465833, lng: 26.781667}
+    },
+    {
       activity: 'Музей имени Якуба Коласа',
       mapLink: {lat: 53.464620, lng: 26.775737}
+    },
+    {
+      activity: 'Место погребения',
+      mapLink: {lat: 53.908600, lng: 27.586526}
     }
   ]
 };
@@ -222,8 +238,16 @@ const belarusianInfo = {
   ],
   placesOfActivity: [
     {
+      activity: 'Сядзіба «Акінчыцы»',
+      mapLink: {lat: 53.465833, lng: 26.781667}
+    },
+    {
       activity: 'Музей імя Якуба Коласа',
       mapLink: {lat: 53.464620, lng: 26.775737}
+    },
+    {
+      activity: 'Месца захавання',
+      mapLink: {lat: 53.908600, lng: 27.586526}
     }
   ]
 };
