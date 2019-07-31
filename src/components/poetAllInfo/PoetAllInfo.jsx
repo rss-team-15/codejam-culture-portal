@@ -7,6 +7,9 @@ import PoetBiograpyhy from './timeline';
 import PoetWorks from './works';
 import PoetVideo from './video';
 import PoetMap from './map';
+import PoetGallery from './gallery';
+
+import ap from '../../utils/AlaizaPashkevich';
 
 const useStyles = makeStyles(theme => ({
   poetAllInfoContainer: {
@@ -120,6 +123,7 @@ const PoetAllInfo = props => {
           center={placesOfActivity[0].mapLink}
           title="Map"
         />
+        <PoetGallery images={ap.media.photo.gallery} title="Gallery" />
       </Paper>
     </Grid>
   );
