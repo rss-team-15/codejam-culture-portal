@@ -81,8 +81,16 @@ const englishInfo = {
   ],
   placesOfActivity: [
     {
+      activity: 'Birthplace',
+      mapLink: {lat: 54.808800, lng: 27.099500}
+    },
+    {
       activity: 'A monument to Maksim Tank',
       mapLink: {lat: 54.869630, lng: 26.928101}
+    },
+    {
+      activity: 'Place of burial',
+      mapLink: {lat: 54.808820, lng: 22.099520}
     }
   ]
 };
@@ -146,8 +154,16 @@ const russianInfo = {
   ],
   placesOfActivity: [
     {
+      activity: 'Место рождения',
+      mapLink: {lat: 54.808800, lng: 27.099500}
+    },
+    {
       activity: 'Памятник Максиму Танку',
       mapLink: {lat: 54.869630, lng: 26.928101}
+    },
+    {
+      activity: 'Место погребения',
+      mapLink: {lat: 54.808820, lng: 22.099520}
     }
   ]
 };
@@ -211,8 +227,16 @@ const belarusianInfo = {
   ],
   placesOfActivity: [
     {
+      activity: 'Месца нараджэння',
+      mapLink: {lat: 54.808800, lng: 27.099500}
+    },
+    {
       activity: 'Помнік Максіму Танку',
       mapLink: {lat: 54.869630, lng: 26.928101}
+    },
+    {
+      activity: 'Месца захавання',
+      mapLink: {lat: 54.808820, lng: 22.099520}
     }
   ]
 };

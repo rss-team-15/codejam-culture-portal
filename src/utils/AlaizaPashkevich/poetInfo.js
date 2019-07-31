@@ -80,8 +80,16 @@ const englishInfo = {
   ],
   placesOfActivity: [
     {
+      activity: 'Birthplace',
+      mapLink: {lat: 53.495293, lng: 24.454230}
+    },
+    {
       activity: 'A monument to Alaiza Pashkevich',
       mapLink: {lat: 53.606939, lng: 24.741627}
+    },
+    {
+      activity: 'Place of burial',
+      mapLink: {lat: 53.495280, lng: 24.454220}
     }
   ]
 };
@@ -148,8 +156,16 @@ const russianInfo = {
   ],
   placesOfActivity: [
     {
+      activity: 'Место рождения',
+      mapLink: {lat: 53.495293, lng: 24.454230}
+    },
+    {
       activity: 'Памятник Алаизе Пашкевич',
       mapLink: {lat: 53.606939, lng: 24.741627}
+    },
+    {
+      activity: 'Место погребения',
+      mapLink: {lat: 53.495280, lng: 24.454220}
     }
   ]
 };
@@ -216,8 +232,16 @@ const belarusianInfo = {
   ],
   placesOfActivity: [
     {
-       activity: 'Помнік Алаізы Пашкевіч',
-       mapLink: {lat: 53.606939, lng: 24.741627},
+      activity: 'Месца нараджэння',
+      mapLink: {lat: 53.495293, lng: 24.454230}
+    },
+    {
+      activity: 'Помнiк Алаiзе Пашкевiч',
+      mapLink: {lat: 53.606939, lng: 24.741627}
+    },
+    {
+      activity: 'Месца захавання',
+      mapLink: {lat: 53.495280, lng: 24.454220}
     }
   ]
 };

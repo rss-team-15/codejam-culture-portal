@@ -79,10 +79,18 @@ const englishInfo = {
     },
   ],
   placesOfActivity: [
-    {
-      activity: 'Literary Museum of Petrus Brovka',
-      mapLink: {lat: 53.899999, lng: 27.561369}
-   }
+   {
+    activity: 'Birthplace',
+    mapLink: {lat: 54.937899, lng: 28.384333}
+  },
+  {
+    activity: 'Literary Museum of Petrus Brovka',
+    mapLink: {lat: 53.899999, lng: 27.561369}
+  },
+  {
+    activity: 'Place of burial',
+    mapLink: {lat: 53.938500, lng: 27.661100}
+  }
   ]
 };
 
@@ -148,8 +156,16 @@ const russianInfo = {
   ],
   placesOfActivity: [
     {
+      activity: 'Место рождения',
+      mapLink: {lat: 54.937899, lng: 28.384333}
+    },
+    {
       activity: 'Литературный музей имени Петруся Бровки',
       mapLink: {lat: 53.899999, lng: 27.561369}
+    },
+    {
+      activity: 'Место погребения',
+      mapLink: {lat: 53.938500, lng: 27.661100}
     }
   ]
 };
@@ -215,8 +231,16 @@ const belarusianInfo = {
   ],
   placesOfActivity: [
     {
+      activity: 'Месца нараджэння',
+      mapLink: {lat: 54.937899, lng: 28.384333}
+    },
+    {
       activity: 'Літаратурны музей імя Петруся Броўкі',
       mapLink: {lat: 53.899999, lng: 27.561369}
+    },
+    {
+      activity: 'Месца захавання',
+      mapLink: {lat: 53.938500, lng: 27.661100}
     }
   ]
 };

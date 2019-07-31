@@ -80,9 +80,17 @@ const englishInfo = {
   ],
   placesOfActivity: [
     {
+      activity: 'Birthplace',
+      mapLink: {lat: 54.109970, lng: 27.190873}
+    },
+    {
       activity: 'Yanka Kupala State Literary Museum',
       mapLink: {lat: 53.906843, lng: 27.565148}
-    }
+    },
+    {
+      activity: 'The grave monument Yakub Kolas',
+      mapLink: {lat: 53.909042, lng: 27.586000}
+    },
   ]
 };
 
@@ -148,9 +156,17 @@ const russianInfo = {
   ],
   placesOfActivity: [
     {
+      activity: 'Место роджения',
+      mapLink: {lat: 54.109970, lng: 27.190873}
+    },
+    {
       activity: 'Государственный литературный музей имени Янки Купалы',
       mapLink: {lat: 53.906843, lng: 27.565148}
-    }
+    },
+    {
+      activity: 'Могила-памятник Якубу Коласу',
+      mapLink: {lat: 53.909042, lng: 27.586000}
+    },
   ]
 };
 
@@ -216,9 +232,17 @@ const belarusianInfo = {
   ],
   placesOfActivity: [
     {
+      activity: 'Месца нараджэння',
+      mapLink: {lat: 54.109970, lng: 27.190873}
+    },
+    {
       activity: 'Дзяржаўны літаратурны музей імя Янкі Купалы',
       mapLink: {lat: 53.906843, lng: 27.565148}
-    }
+    },
+    {
+      activity: 'Магіла-помнік Якубу Коласу',
+      mapLink: {lat: 53.909042, lng: 27.586000}
+    },
   ]
 };
 

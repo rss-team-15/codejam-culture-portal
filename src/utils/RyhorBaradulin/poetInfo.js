@@ -80,8 +80,16 @@ const englishInfo = {
   ],
   placesOfActivity: [
     {
-    activity: 'Place of Birth',
+    activity: 'Birthplace',
     mapLink: {lat: 55.179611, lng: 28.612304}
+    },
+    {
+    activity: 'Place of study (BSU)',
+    mapLink: {lat: 53.898947, lng: 27.559127}
+    },
+    {
+    activity: 'Place of burial',
+    mapLink: {lat: 55.179621, lng: 28.612374}
     }
   ]
 };
@@ -146,6 +154,14 @@ const russianInfo = {
     {
     activity: 'Место рождения',
     mapLink: {lat: 55.179611, lng: 28.612304}
+    },
+    {
+    activity: 'Место учебы (БГУ)',
+    mapLink: {lat: 53.898947, lng: 27.559127}
+    },
+    {
+    activity: 'Место погребения',
+    mapLink: {lat: 55.179621, lng: 28.612374}
     }
   ]
 };
@@ -210,6 +226,14 @@ const belarusianInfo = {
     {
     activity: 'Месца нараджэння',
     mapLink: {lat: 55.179611, lng: 28.612304}
+    },
+    {
+    activity: 'Месца вучобы (БДУ)',
+    mapLink: {lat: 53.898947, lng: 27.559127}
+    },
+    {
+    activity: 'Месца захавання',
+    mapLink: {lat: 55.179621, lng: 28.612374}
     }
   ]
 };
