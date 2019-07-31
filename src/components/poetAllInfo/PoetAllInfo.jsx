@@ -6,6 +6,7 @@ import PoetTitle from './title';
 import PoetBiograpyhy from './timeline';
 import PoetWorks from './works';
 import PoetVideo from './video';
+import PoetMap from './map';
 
 const useStyles = makeStyles(theme => ({
   poetAllInfoContainer: {
@@ -96,6 +97,13 @@ const PoetAllInfo = props => {
 
   const videoId = 'GlYYLSkqG90';
 
+  const placesOfActivity = [
+    {
+      activity: 'Памятник Алаизе Пашкевич',
+      mapLink: { lat: 53.606939, lng: 24.741627 },
+    },
+  ];
+
   return (
     <Grid container className={classes.poetAllInfoContainer} justify="center">
       <Paper className={classes.poetAllInfoRoot}>
@@ -103,6 +111,15 @@ const PoetAllInfo = props => {
         <PoetBiograpyhy poetBio={poetBio} title="Biography" />
         <PoetWorks listOfWorks={listOfWorks} interface={interFace} />
         <PoetVideo videoId={videoId} />
+        <PoetMap
+          googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+          loadingElement={<div style={{ height: `100%` }} />}
+          containerElement={<div style={{ height: `30vw` }} />}
+          mapElement={<div style={{ height: `100%` }} />}
+          markers={placesOfActivity}
+          center={placesOfActivity[0].mapLink}
+          title="Map"
+        />
       </Paper>
     </Grid>
   );

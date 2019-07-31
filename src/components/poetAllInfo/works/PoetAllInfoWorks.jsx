@@ -15,6 +15,7 @@ const useStyles = makeStyles(theme => ({
     marginBottom: '3vw',
 
     color: '#555555',
+    fontSize: '2vw',
   },
   poetWorksTableHeader: {
     color: '#ffffff',
