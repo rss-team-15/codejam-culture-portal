@@ -9,9 +9,9 @@ import {
 const PoetAllInfoMap = props => {
   const { markers, center } = props;
   return (
-    <GoogleMap defaultZoom={8} defaultCenter={center}>
+    <GoogleMap defaultZoom={15} defaultCenter={center}>
       {markers.map(marker => (
-        <Marker position={marker} />
+        <Marker position={marker.mapLink} label={marker.activity} />
       ))}
     </GoogleMap>
   );
