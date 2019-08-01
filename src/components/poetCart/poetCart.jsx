@@ -37,8 +37,8 @@ const useStyles = makeStyles({
   },
   textYears: {
     color: '#fff',
-    fontStyle: 'italic',
-    fontSize: '2vh',
+    fontFamily: `'Marck Script', cursive`,
+    fontSize: '2.5vh',
     marginBottom: '1em',
     padding: '3%',
   },

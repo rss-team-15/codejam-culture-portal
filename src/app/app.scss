@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Marck+Script&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -6,4 +10,8 @@
 body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 1.1vw;
+  span {
+    font-family: "Roboto Condensed", sans-serif;
+  }
 }
+

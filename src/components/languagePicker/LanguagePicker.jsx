@@ -16,6 +16,7 @@ const styles = {
     fontSize: '1vw',
 
     color: '#ffffff',
+    fontFamily: `'PT Sans', sans-serif`
   },
 };
 

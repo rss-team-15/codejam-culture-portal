@@ -26,7 +26,8 @@ const styles = {
     fontSize: '2vw'
   },
   poetOfTheDayCard__bio: {
-    fontSize: '2vh'
+    fontSize: '2.5vh',
+    fontFamily: `'Marck Script', cursive`
   },
   poetOfTheDayCard__learnMoreBtn: {
     fontSize: '1.5vw'
