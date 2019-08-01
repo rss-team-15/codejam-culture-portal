@@ -32,10 +32,14 @@ class App extends Component {
           poetsListLink={this.state.activeLanguage.navbar.poetsListLink}
         />
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+        <footer className='footer'>
+          <p>
+            © {new Date().getFullYear()}, Built with	&nbsp;
+            {`  `}
+          </p>
+          <p>
+            <a href="https://www.gatsbyjs.org"> Gatsby</a>
+          </p>
         </footer>
       </React.Fragment>
     );
