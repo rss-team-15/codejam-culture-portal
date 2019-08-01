@@ -21,8 +21,8 @@ const PoetAllInfoGallery = props => {
   const { images, title } = props;
 
   const imagesWraps = images.map(image => ({
-    original: image,
-    thumbnail: image,
+    original: image.file.url,
+    thumbnail: image.file.url,
   }));
 
   const classes = useStyles();
