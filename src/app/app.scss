@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Marck+Script&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
 @import url('https://fonts.googleapis.com/css?family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
 
 * {
   margin: 0;
@@ -19,7 +20,7 @@ body {
 
 .footer {
   height: 10vh;
-  background: #3f50b5;
+  background: #303030;
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 2vw;
   display: flex;
@@ -31,7 +32,7 @@ body {
     color: #ffffff;
     a {
       text-decoration: none;
-      color: #cce223;
+      color: #3f50b5;
     }
   }
 }
