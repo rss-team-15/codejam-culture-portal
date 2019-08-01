@@ -18,15 +18,13 @@ const styles = {
     top: '4vh',
     zIndex: 1,
   },
-  form: {
+  textField: {
     display: 'flex',
     alignItems: 'baseline',
     justifyContent: 'space-evenly',
+    width: '50%',  
     minWidth: '50%',
     marginTop: '2vh',
-  },
-  textField: {
-    width: '50%',
   },
   listItem: {
     display: 'flex',
@@ -60,16 +58,19 @@ class AuthorsList extends React.Component {
   }
 
   handleChange(event) {
-    languagesStore.dispatch(
-      poetsListEvents.updatePoetsList(event.target.value)
-    );
+    // languagesStore.dispatch(
+    //   poetsListEvents.updatePoetsList(event.target.value)
+    // );
 
-    const filteredList = this.props.authors.filter((author) => {
-      const { name, surname, yearsOfLife } = author.node;
+    const filteredList = this.props.authors.filter(author => {
+      const { name, surname, city } = author.node;
+      const fullName = `${name} ${surname}`.toLowerCase();
+      const reverseFullName = `${surname} ${name}`.toLowerCase();
+      const poetCity = city.toLowerCase();
+      const eValue = event.target.value.toLowerCase();
+      const regExp = new RegExp(eValue, 'g');
 
-      return name.toLowerCase().includes(event.target.value) ||
-        surname.toLowerCase().includes(event.target.value) ||
-        yearsOfLife.toLowerCase().includes(event.target.value);
+      return regExp.test(fullName) || regExp.test(reverseFullName) || regExp.test(poetCity);
     });
 
     this.setState({ authorsList: filteredList });
@@ -100,18 +101,18 @@ class AuthorsList extends React.Component {
         justify="flex-start"
         alignItems="center"
       >
-        <form className={classes.form}>
-          <TextField
-            onChange={this.handleChange}
-            value={this.state.input}
-            className={classes.textField}
-            name="title"
-            label={this.state.poetsListSearchLabel}
-          />
-        </form>
+        <TextField
+          className={classes.form}
+          onChange={this.handleChange}
+          value={this.state.input}
+          className={classes.textField}
+          name="title"
+          label={this.state.poetsListSearchLabel}
+        />
+
         <List>
-          {this.state.authorsList.map((author) => {
-          const { id, name, surname, yearsOfLife, mainPicture } = author.node;
+          {this.state.authorsList.map(author => {
+            const { id, name, surname, yearsOfLife, mainPicture } = author.node;
             const poetInfo = { id, name, surname, yearsOfLife, mainPicture };
 
             return (

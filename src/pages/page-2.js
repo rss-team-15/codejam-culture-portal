@@ -28,6 +28,7 @@ export const query = graphql`
           name
           surname
           yearsOfLife
+          city
           mainPicture {
             file {
               url
