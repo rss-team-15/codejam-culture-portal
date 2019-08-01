@@ -45,6 +45,9 @@ const useStyles = makeStyles({
   },
   wrapperButton: {
     padding: '3%',
+    '& :first-child': {
+      fontWeight: 'bold'
+    }
   },
   button: {
     width: '100%',
@@ -52,8 +55,14 @@ const useStyles = makeStyles({
     padding: '1em',
     textDecoration: 'none',
     textTransform: 'uppercase',
-    color: '#ffffff',
-  },
+    color: '#303030',
+    fontWeight: 'bold',
+    '&:hover': {
+      color: '#5348e5',
+      transform: 'scale(1.1)',
+      transitionDuration: '1.2s'
+    }
+  }
 });
 
 export default function PoetCart(props) {
@@ -94,7 +103,7 @@ export default function PoetCart(props) {
             color="primary"
             className={classes.button}
           >
-            <Typography>{poetCardLearnMore}</Typography>
+            <Typography className={classes.textButton}>{poetCardLearnMore} . . . </Typography>
           </Link>
         </CardActions>
       </CardContent>
