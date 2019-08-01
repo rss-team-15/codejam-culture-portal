@@ -42,6 +42,15 @@
       }
     }
   }
+  body .footer {
+    height: 5vh;
+    p {
+      font-size: 3vw;
+      a {
+        font-size: 3vw;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 320px) {

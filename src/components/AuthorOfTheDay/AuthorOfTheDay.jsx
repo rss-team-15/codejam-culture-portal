@@ -21,13 +21,20 @@ const styles = {
     margin: '0 auto'
   },
   poetOfTheDayCard__name: {
-    fontSize: '4.5vh'
+    fontSize: '4.5vh',
+    textAlign: 'right',
+    textShadow: '2px 4px 3px rgba(0,0,0,0.3)',
+    fontFamily: `'Pacifico', cursive`
   },
   poetOfTheDayCard__yearsOfLive: {
-    fontSize: '2vw'
+    fontSize: '2vw',
+    textAlign: 'right',
+    textShadow: '2px 4px 3px rgba(0,0,0,0.3)',
+    fontFamily: `'Pacifico', cursive`
   },
   poetOfTheDayCard__bio: {
-    fontSize: '2vh'
+    fontSize: '2.5vh',
+    fontFamily: `'Marck Script', cursive`
   },
   poetOfTheDayCard__learnMoreBtn: {
     fontSize: '1.5vw'
@@ -96,9 +103,9 @@ const AuthorOfTheDay = props => {
           size="small"
           color="primary"
         >
-        <Link to={`/${name}_${surname}`} style={{textDecoration: 'none', color: 'inherit'}}>
-          {learnMoreBtn}
-        </Link>
+          <Link to={`/${name}_${surname}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+            {learnMoreBtn}
+          </Link>
         </Button>
       </CardActions>
     </Card>
