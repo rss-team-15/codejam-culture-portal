@@ -351,6 +351,7 @@ export default {
     russian: russianContent,
     belarusian: belarusianContent,
   },
+  contentsActive: englishContent,
   activeLanguage: englishContent,
   poetPhoto,
 };
