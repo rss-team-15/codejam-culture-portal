@@ -23,7 +23,7 @@ function rootReducer(state = languagesState, act) {
       const query = act.query.trim();
       const activePoets = state.contentsActive.poetsListBlock.poetsList.filter(
         poet =>
-          `${poet.poetInfo.name}${poet.poetInfo.surname}`
+          `${poet.poetInfo.name} ${poet.poetInfo.surname}`
             .toLowerCase()
             .includes(query.toLowerCase())
       );
