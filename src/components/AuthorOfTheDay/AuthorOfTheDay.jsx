@@ -24,13 +24,13 @@ const styles = {
     fontSize: '4.5vh',
     textAlign: 'right',
     textShadow: '2px 4px 3px rgba(0,0,0,0.3)',
-    fontFamily: `'Pacifico', cursive`
+    fontFamily: `'proxima-nova', sans-serif`
   },
   poetOfTheDayCard__yearsOfLive: {
     fontSize: '2vw',
     textAlign: 'right',
     textShadow: '2px 4px 3px rgba(0,0,0,0.3)',
-    fontFamily: `'Pacifico', cursive`
+    fontFamily: `'proxima-nova', sans-serif`
   },
   poetOfTheDayCard__bio: {
     fontSize: '2.5vh',
