@@ -53,6 +53,7 @@ class AuthorsList extends React.Component {
       poetsList,
       poetsListSearchLabel,
       poetCardLearnMore,
+      contentfulList: [...this.props.authors],
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -99,13 +100,16 @@ class AuthorsList extends React.Component {
           />
         </form>
         <List>
-          {this.state.poetsList.map((author, i) => {
-            const { poetInfo, poetMedia } = author;
+          {this.state.contentfulList.map((author) => {
+            {/* const { poetInfo, poetMedia } = author; */}
+            const { id, name, surname, yearsOfLife, mainPicture } = author.node;
+            const poetInfo = { id, name, surname, yearsOfLife, mainPicture };
+
             return (
-              <ListItem key={i} className={classes.listItem}>
+              <ListItem key={id} className={classes.listItem}>
                 <PoetCart
                   authorInfo={poetInfo}
-                  authorPhoto={poetMedia}
+                  authorPhoto={mainPicture.file.url}
                   poetCardLearnMore={this.state.poetCardLearnMore}
                 />
               </ListItem>
