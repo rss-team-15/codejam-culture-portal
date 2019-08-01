@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
@@ -95,7 +96,9 @@ const AuthorOfTheDay = props => {
           size="small"
           color="primary"
         >
+        <Link to={`/${name}_${surname}`} style={{textDecoration: 'none', color: 'inherit'}}>
           {learnMoreBtn}
+        </Link>
         </Button>
       </CardActions>
     </Card>
