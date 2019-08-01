@@ -20,10 +20,11 @@ const useStyles = makeStyles({
 
     backgroundColor: '#303030',
     boxShadow: '1px 1px 12px #000000f0;'
+
   },
   controlsBar: {
     height: '100%',
-
+    fontFamily: `'PT Sans', sans-serif`,
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -38,7 +39,7 @@ const useStyles = makeStyles({
   controlsBar__controlLinkButton: {
     height: '100%',
     padding: '0 1vw',
-
+    fontFamily: `'PT Sans', sans-serif`,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -78,29 +79,29 @@ const NavBar = props => {
 
   const { homeLink, poetsListLink } = props;
   return (
-      <header className={navBar}>
-        <LanguagePicker />
+    <header className={navBar}>
+      <LanguagePicker />
 
-        <ul className={controlsBar}>
-          <li className={controlsBar__controlLinkButton}>
-            <Link style={routingLinkStyle} to="/">
-              {homeLink}
-            </Link>
-          </li>
-          <li>
-            <img
-              className={`blue-flower-logo ${controlsBar__flowerLogo}`}
-              src={blueFlowerLogo}
-              alt="blue flower"
-            />
-          </li>
-          <li className={controlsBar__controlLinkButton}>
-            <Link style={routingLinkStyle} to="/page-2">
-              {poetsListLink}
-            </Link>
-          </li>
-        </ul>
-      </header>
+      <ul className={controlsBar}>
+        <li className={controlsBar__controlLinkButton}>
+          <Link style={routingLinkStyle} to="/">
+            {homeLink}
+          </Link>
+        </li>
+        <li>
+          <img
+            className={`blue-flower-logo ${controlsBar__flowerLogo}`}
+            src={blueFlowerLogo}
+            alt="blue flower"
+          />
+        </li>
+        <li className={controlsBar__controlLinkButton}>
+          <Link style={routingLinkStyle} to="/page-2">
+            {poetsListLink}
+          </Link>
+        </li>
+      </ul>
+    </header>
   );
 };
 
