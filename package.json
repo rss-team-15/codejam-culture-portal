@@ -25,6 +25,7 @@
     "react-helmet": "^5.2.1",
     "react-image-gallery": "^0.8.18",
     "react-modal-video": "^1.2.2",
+    "react-yandex-maps": "^4.0.1",
     "typeface-roboto": "0.0.75",
     "vertical-timeline-component-for-react": "^1.0.6"
   },
