@@ -16,11 +16,16 @@ function rootReducer(state = languagesState, act) {
   switch (act.type) {
     case actions.updateLanguage: {
       const activeLanguage = state.contents[act.language];
-      return { ...state, activeLanguage };
+      const contentsActive = state.contents[act.language];
+      return { ...state, activeLanguage, contentsActive };
     }
     case poetsListActions.updatePoetsList: {
-      const activePoets = state.contents.english.poetsListBlock.poetsList.filter(
-        poet => poet.poetInfo.name.includes(act.query)
+      const query = act.query.trim();
+      const activePoets = state.contentsActive.poetsListBlock.poetsList.filter(
+        poet =>
+          `${poet.poetInfo.name}${poet.poetInfo.surname}`
+            .toLowerCase()
+            .includes(query.toLowerCase())
       );
 
       return {
