@@ -53,7 +53,7 @@ class AuthorsList extends React.Component {
       poetsList,
       poetsListSearchLabel,
       poetCardLearnMore,
-      contentfulList: [...this.props.authors],
+      authorsList: [...this.props.authors],
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -63,6 +63,16 @@ class AuthorsList extends React.Component {
     languagesStore.dispatch(
       poetsListEvents.updatePoetsList(event.target.value)
     );
+
+    const filteredList = this.props.authors.filter((author) => {
+      const { name, surname, yearsOfLife } = author.node;
+
+      return name.toLowerCase().includes(event.target.value) ||
+        surname.toLowerCase().includes(event.target.value) ||
+        yearsOfLife.toLowerCase().includes(event.target.value);
+    });
+
+    this.setState({ authorsList: filteredList });
   }
 
   render() {
@@ -100,9 +110,8 @@ class AuthorsList extends React.Component {
           />
         </form>
         <List>
-          {this.state.contentfulList.map((author) => {
-            {/* const { poetInfo, poetMedia } = author; */}
-            const { id, name, surname, yearsOfLife, mainPicture } = author.node;
+          {this.state.authorsList.map((author) => {
+          const { id, name, surname, yearsOfLife, mainPicture } = author.node;
             const poetInfo = { id, name, surname, yearsOfLife, mainPicture };
 
             return (
