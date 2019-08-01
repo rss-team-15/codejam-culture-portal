@@ -24,8 +24,14 @@ class LanguagePicker extends Component {
   constructor() {
     super();
 
+    const {
+      activeLanguage: { languagePicker },
+    } = languagesStore.getState();
+
+    console.log(supportedLanguages[0], languagePicker);
+
     this.state = {
-      currentLanguage: supportedLanguages[0],
+      currentLanguage: supportedLanguages[languagePicker],
     };
 
     this.handleChange = this.handleChange.bind(this);

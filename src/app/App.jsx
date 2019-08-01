@@ -9,8 +9,10 @@ class App extends Component {
   constructor(props) {
     super(props);
 
+    const { activeLanguage } = languagesStore.getState();
+
     this.state = {
-      activeLanguage: languagesInitState.activeLanguage,
+      activeLanguage,
     };
   }
 

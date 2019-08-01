@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -46,7 +47,12 @@ const useStyles = makeStyles({
     padding: '3%',
   },
   button: {
+    width: '100%',
+    height: '100%',
     padding: '1em',
+    textDecoration: 'none',
+    textTransform: 'uppercase',
+    color: '#ffffff',
   },
 });
 
@@ -64,7 +70,12 @@ export default function PoetCart(props) {
         <CardMedia className={classes.media} image={authorPhoto} title={name} />
       </CardActionArea>
       <CardContent className={classes.description}>
-        <Typography gutterBottom variant="h5" component="h2" className={classes.textName}>
+        <Typography
+          gutterBottom
+          variant="h5"
+          component="h2"
+          className={classes.textName}
+        >
           {name} {surname}
         </Typography>
         <Typography
@@ -76,14 +87,15 @@ export default function PoetCart(props) {
           {yearsOfLife}
         </Typography>
         <CardActions className={classes.wrapperButton}>
-          <Button
+          <Link
+            to={`/${name}_${surname}`}
             variant="contained"
             size="small"
             color="primary"
             className={classes.button}
           >
-            {poetCardLearnMore}
-          </Button>
+            <Typography>{poetCardLearnMore}</Typography>
+          </Link>
         </CardActions>
       </CardContent>
     </Card>

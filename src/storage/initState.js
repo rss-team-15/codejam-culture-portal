@@ -36,6 +36,7 @@ const englishContent = {
     homeLink: 'Home',
     poetsListLink: 'Poets List',
   },
+  languagePicker: 0,
   home: {
     portalDescription: {
       topSectionHeader: 'Belarusian Poetry Portal',
@@ -139,6 +140,7 @@ const russianContent = {
     homeLink: 'Главная',
     poetsListLink: 'Список поэтов',
   },
+  languagePicker: 1,
   home: {
     portalDescription: {
       topSectionHeader: 'Портал Белорусской Поэзии',
@@ -243,6 +245,7 @@ const belarusianContent = {
     homeLink: 'Галоўная',
     poetsListLink: 'Спіс паэтаў',
   },
+  languagePicker: 2,
   home: {
     portalDescription: {
       topSectionHeader: 'Партал Беларускай Паэзіі',
@@ -348,6 +351,7 @@ export default {
     russian: russianContent,
     belarusian: belarusianContent,
   },
+  contentsActive: englishContent,
   activeLanguage: englishContent,
   poetPhoto,
 };

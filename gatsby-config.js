@@ -5,6 +5,13 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
+    {
+      resolve: 'gatsby-source-contentful',
+      options: {
+        spaceId: 'i65agxdtmogm',
+        accessToken: 'nTLku0xVQqJdp3E8i2Scp3aJiiov6k1SIv1hkAHooJE',
+      }
+    },
     `gatsby-plugin-sass`,
     {
       resolve: 'gatsby-plugin-material-ui',
