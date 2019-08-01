@@ -25,14 +25,18 @@ export default class Home extends Component {
       this.setState({ activeLanguage });
     });
 
+    const { authors } = this.props;
+    const authorOfTheDay = authors[Math.floor(Math.random() * 7)].node;
+
     return (
       <React.Fragment>
         <PortalDescription
           textContent={this.state.activeLanguage.home.portalDescription}
         />
         <AuthorOfTheDay
+          authorOfTheDay={authorOfTheDay}
           poetOfTheDay={this.state.activeLanguage.home.poetOfTheDay}
-          poetPhoto={this.state.poetPhoto}
+          poetPhoto={authorOfTheDay.mainPicture.file.url}
         />
         <DevelopersList
           developers={this.state.activeLanguage.home.developersList}

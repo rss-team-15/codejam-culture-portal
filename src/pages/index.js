@@ -1,18 +1,65 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react';
+import { Link } from 'gatsby';
 
-import App from "../app/"
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import App from '../app/';
+import Layout from '../components/layout';
+import Image from '../components/image';
+import SEO from '../components/seo';
 
 import Home from '../components/home';
 
-const IndexPage = () => (
-  <App>
-    <SEO title="Home" />
-    <Home />
-  </App>
-)
+const IndexPage = ({ data }) => {
+  console.log(data);
+  const authors = data.allContentfulAuthor.edges;
 
-export default IndexPage
+  return (
+    <App>
+      <SEO title="Home" />
+      <Home authors={authors}/>
+    </App>
+  );
+};
+
+export const query = graphql`
+  query authorsQuery {
+    allContentfulAuthor {
+      edges {
+        node {
+          id
+          name
+          surname
+          yearsOfLife
+          mainPicture {
+            file {
+              url
+            }
+          }
+          biography {
+            date
+            content
+          }
+          listOfWorks {
+            id
+            date
+            work
+          }
+          gallery {
+            file {
+              url
+            }
+          }
+          placesOfActivity {
+            id
+            activity
+            mapLink {
+              lat
+              lng
+            }
+          }
+        }
+      }
+    }
+  }
+`;
+
+export default IndexPage;

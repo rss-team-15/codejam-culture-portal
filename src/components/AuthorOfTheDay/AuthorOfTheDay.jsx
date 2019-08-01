@@ -52,11 +52,12 @@ const AuthorOfTheDay = props => {
 
   const {
     poetOfTheDay: {
-      poetInfo: { name, surname, yearsOfLife, biography },
+      // poetInfo: { name, surname, yearsOfLife, biography },
       poetOfTheDayCardTitle,
       curDateTitle,
       learnMoreBtn
     },
+    authorOfTheDay: { name, surname, yearsOfLife, biography },
     poetPhoto,
   } = props;
 

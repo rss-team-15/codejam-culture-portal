@@ -1,4 +1,5 @@
 import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography, Grid, SvgIcon, Button } from '@material-ui/core';
 
@@ -6,9 +7,9 @@ import UsedTechnology from '../usedTechnology';
 
 import belorusianLandscape from './assets/belorusian-landscape.jpg';
 import svgIcons from './assets/svg-icons';
-import reactIcon from './assets/react-icon.png';
-import reduxIcon from './assets/redux-icon.png';
-import materialUiIcon from './assets/material-ui-icon.png';
+// import reactIcon from './assets/react-icon.png';
+// import reduxIcon from './assets/redux-icon.png';
+// import materialUiIcon from './assets/material-ui-icon.png';
 
 import constants from './constants';
 
@@ -19,57 +20,80 @@ const useStyles = makeStyles({
     color: 'white',
 
     backgroundImage: `url(${belorusianLandscape})`,
-    backgroundPosition: 'center 60%'
+    backgroundPosition: 'center 60%',
   },
   topSection__topSectionHeader: {
-    fontSize: '4.25vw'
+    fontSize: '4.25vw',
   },
   aboutSection: {
     height: '15vw',
 
-    boxShadow: '0 -22px 15px #00000080'
+    boxShadow: '0 -22px 15px #00000080',
   },
   aboutSection__aboutSectionHeader: {
-    fontSize: '2.25vw'
+    fontSize: '2.25vw',
   },
   arrowDownIcon: {
     height: '3.5vw',
-    width: '3.5vw'
+    width: '3.5vw',
   },
   usedTecnologiesContainer: {
     height: '35vw',
 
-    background: 'linear-gradient(#ffffff, #eeeeee)'
+    background: 'linear-gradient(#ffffff, #eeeeee)',
   },
   usedTecnologiesContainer__usedTecnologiesHeader: {
-    fontSize: '2.25vw'
+    fontSize: '2.25vw',
   },
   openSourceSection: {
     height: '20vw',
 
-    background: 'linear-gradient(#eeeeee, #ffffff)'
+    background: 'linear-gradient(#eeeeee, #ffffff)',
   },
   openSourceSection__openSourceSectionHeader: {
-    fontSize: '2.25vw'
+    fontSize: '2.25vw',
   },
   openSourceSection__repositoryLinkButton: {
     padding: '0.8vw 1.5vw',
 
     color: '#ffffff',
     fontSize: '1.5vw',
-    fontWeight: 'bold'
-  }
+    fontWeight: 'bold',
+  },
 });
 
 const PortalDescription = props => {
+  const data = useStaticQuery(
+    graphql`
+      query technologyQuery {
+        allContentfulTechnology(sort: { fields: order, order: ASC }) {
+          nodes {
+            id
+            logo {
+              file {
+                url
+              }
+            }
+            technology
+            order
+          }
+        }
+      }
+    `
+  );
+
+  console.log(data);
+
+  const technologies = data.allContentfulTechnology.nodes;
+   
   const {
     textContent: {
       topSectionHeader,
       aboutSectionHeader,
       usedTechnologies,
       openSourceSectionHeader,
-      openSourceSectionButton
-    }
+      openSourceSectionButton,
+    },
   } = props;
   const classes = useStyles();
   return (
@@ -129,9 +153,15 @@ const PortalDescription = props => {
           {usedTechnologies}
         </Typography>
         <Grid container justify="space-around" alignItems="center">
-          <UsedTechnology tecnologyImg={reactIcon} tecnologyName="React" />
-          <UsedTechnology tecnologyImg={reduxIcon} tecnologyName="Redux" />
-          <UsedTechnology tecnologyImg={materialUiIcon} tecnologyName="Material-UI" />
+        {
+          technologies.map((tech) => {
+            const { id, technology, logo } = tech;
+            const icon = logo.file.url;
+
+            return <UsedTechnology key={id} tecnologyImg={icon} tecnologyName={technology} />
+          })
+        }
+          
         </Grid>
       </Grid>
 
