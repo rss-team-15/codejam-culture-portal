@@ -1,4 +1,5 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import { Link } from 'gatsby';
 
 import App from '../app/';
@@ -9,7 +10,6 @@ import SEO from '../components/seo';
 import Home from '../components/home';
 
 const IndexPage = ({ data }) => {
-  console.log(data);
   const authors = data.allContentfulAuthor.edges;
 
   return (

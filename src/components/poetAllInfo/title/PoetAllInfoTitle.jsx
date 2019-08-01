@@ -21,7 +21,7 @@ const useStyles = makeStyles({
 
 const PoetAllInfoTitle = props => {
   const {
-    poetInfo: { name, surname, yearsOfLife, picture },
+    poetInfo: { name, surname, yearsOfLife, mainPicture },
   } = props;
 
   const classes = useStyles();
@@ -38,7 +38,7 @@ const PoetAllInfoTitle = props => {
       >
         {yearsOfLife}
       </Typography>
-      <img className={classes.poetPicture} src={picture} alt="" />
+      <img className={classes.poetPicture} src={mainPicture.file.url} alt="" />
     </React.Fragment>
   );
 };
