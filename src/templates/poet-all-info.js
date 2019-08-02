@@ -39,7 +39,6 @@ const PoetAllInfo = ({ pageContext }) => {
   const { indexData } = pageContext;
 
   const {
-    slug,
     name,
     surname,
     yearsOfLife,
