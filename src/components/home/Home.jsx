@@ -10,20 +10,23 @@ export default class Home extends Component {
   constructor() {
     super();
 
-    const { activeLanguage } = languagesStore.getState();
+    const { activeLanguage, lang } = languagesStore.getState();
 
     this.state = {
       activeLanguage,
+      lang,
       poetPhoto: languagesInitState.poetPhoto,
     };
   }
 
   render() {
     languagesStore.subscribe(() => {
-      const { activeLanguage } = languagesStore.getState();
+      const { activeLanguage, lang } = languagesStore.getState();
 
-      this.setState({ activeLanguage });
+      this.setState({ activeLanguage, lang });
     });
+
+    console.log(this.state.lang);
 
     const { authors } = this.props;
     const authorOfTheDay = authors[Math.floor(Math.random() * 7)].node;

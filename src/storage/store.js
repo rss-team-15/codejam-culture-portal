@@ -17,7 +17,8 @@ function rootReducer(state = languagesState, act) {
     case actions.updateLanguage: {
       const activeLanguage = state.contents[act.language];
       const contentsActive = state.contents[act.language];
-      return { ...state, activeLanguage, contentsActive };
+      const lang = act.language;
+      return { ...state, activeLanguage, contentsActive, lang };
     }
     case poetsListActions.updatePoetsList: {
       const query = act.query.trim();
@@ -41,6 +42,7 @@ function rootReducer(state = languagesState, act) {
               state.activeLanguage.poetsListBlock.poetCardLearnMore,
           },
         },
+        lang: state.lang,
       };
     }
     default: {

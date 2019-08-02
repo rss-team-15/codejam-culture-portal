@@ -95,9 +95,9 @@ const englishInfo = {
 };
 
 const russianInfo = {
-  name: 'Якуб',
-  surname: 'Колас',
-  yearsOfLife: '3 ноября [22 октября] 1882 -  13 августа 1956',
+  name: 'Нил',
+  surname: 'Гилевич',
+  yearsOfLife: '30 сентября, 1931 - 29 марта, 2016',
   biography: [
     {
       date: '1958',
@@ -171,9 +171,9 @@ const russianInfo = {
 };
 
 const belarusianInfo = {
-  name: 'Якуб',
-  surname: 'Колас',
-  yearsOfLife: '3 лістапада [22 кастрычніка] 1882 - 13 жніўня 1956',
+  name: 'Ніл',
+  surname: 'Гілевіч',
+  yearsOfLife: '30 верасня, 1931 - 29 сакавіка, 2016',
   biography: [
       {
         date: '1958',
