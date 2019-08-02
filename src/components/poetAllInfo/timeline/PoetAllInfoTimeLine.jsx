@@ -10,6 +10,7 @@ const useStyles = makeStyles({
   poetBiographyTitle: {
     fontSize: '2vw',
     color: '#555555',
+    fontFamily: `'proxima-nova', sans-serif`
   },
 });
 

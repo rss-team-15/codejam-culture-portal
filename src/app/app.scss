@@ -27,6 +27,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  margin-top: 20px;
   p {
     display: block;
     color: #ffffff;
@@ -35,5 +36,28 @@ body {
       color: #3f50b5;
     }
   }
+}
+
+@media screen and (max-width: 1200px) {
+  .MuiGrid-justify-xs-center .MuiPaper-rounded {
+    padding: 20px;
+    width: 90%;
+  }
+}
+
+
+@media screen and (max-width: 992px) {
+  .MuiGrid-justify-xs-center .MuiPaper-rounded h3 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 480px) {
+}
+
+@media screen and (max-width: 320px) {
 }
 
