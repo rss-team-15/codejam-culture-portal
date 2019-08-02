@@ -145,6 +145,30 @@ export const query = graphql`
         }
       }
     }
+    contentfulPoetPageInterfaceEnglish {
+      biographyTitle
+      worksTitle
+      firstColumnTitle
+      secondColumnTitle
+      watchVideoTitle
+      galleryTitle
+    }
+    contentfulPoetPageInterfaceRussian {
+      biographyTitle
+      worksTitle
+      firstColumnTitle
+      secondColumnTitle
+      watchVideoTitle
+      galleryTitle
+    }
+    contentfulPoetPageInterfaceBelarusian {
+      biographyTitle
+      worksTitle
+      firstColumnTitle
+      secondColumnTitle
+      watchVideoTitle
+      galleryTitle
+    }
   }
 `;
 
