@@ -60,12 +60,11 @@ const AuthorOfTheDay = props => {
 
   const {
     poetOfTheDay: {
-      // poetInfo: { name, surname, yearsOfLife, biography },
       poetOfTheDayCardTitle,
       curDateTitle,
       learnMoreBtn
     },
-    authorOfTheDay: { name, surname, yearsOfLife, biography },
+    authorOfTheDay: { slug, name, surname, yearsOfLife, biography },
     poetPhoto,
   } = props;
 
@@ -103,7 +102,7 @@ const AuthorOfTheDay = props => {
           size="small"
           color="primary"
         >
-          <Link to={`/${name}_${surname}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+          <Link to={`/${slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
             {learnMoreBtn}
           </Link>
         </Button>

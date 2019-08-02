@@ -13,7 +13,6 @@ import { languagesStore } from '../storage';
 
 import App from '../app/';
 
-import ap from '../utils/AlaizaPashkevich';
 
 const useStyles = makeStyles(theme => ({
   poetAllInfoContainer: {
@@ -30,7 +29,6 @@ const PoetAllInfo = ({ pageContext }) => {
   const classes = useStyles();
   const { lang } = languagesStore.getState();
   const [language, updateLang] = useState(lang);
-  console.log(pageContext, lang);
 
   languagesStore.subscribe(() => {
     const { lang } = languagesStore.getState();
@@ -41,6 +39,7 @@ const PoetAllInfo = ({ pageContext }) => {
   const { indexData } = pageContext;
 
   const {
+    slug,
     name,
     surname,
     yearsOfLife,

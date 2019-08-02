@@ -26,10 +26,10 @@ export default class Home extends Component {
       this.setState({ activeLanguage, lang });
     });
 
-    console.log(this.state.lang);
-
     const { authors } = this.props;
-    const authorOfTheDay = authors[Math.floor(Math.random() * 7)].node;
+    const authorsList = authors[`allContentfulAuthor${this.state.lang[0].toUpperCase() + this.state.lang.slice(1)}`].edges;
+
+    const authorOfTheDay = authorsList[Math.floor(Math.random() * 7)].node;
 
     return (
       <React.Fragment>

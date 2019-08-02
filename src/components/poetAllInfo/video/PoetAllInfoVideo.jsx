@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import { Button, Grid } from '@material-ui/core';
 import ModalVideo from 'react-modal-video';
-import poetInfo from '../../../utils/YakubKolas';
 
 const styles = {
   watchVideoButton: {

@@ -68,7 +68,7 @@ const useStyles = makeStyles({
 export default function PoetCart(props) {
   const classes = useStyles();
   const {
-    authorInfo: { name, surname, yearsOfLife, city, order },
+    authorInfo: { slug, name, surname, yearsOfLife, city, order },
     authorPhoto,
     poetCardLearnMore,
   } = props;
@@ -97,7 +97,7 @@ export default function PoetCart(props) {
         </Typography>
         <CardActions className={classes.wrapperButton}>
           <Link
-            to={`/${order}`}
+            to={`/${slug}`}
             variant="contained"
             size="small"
             color="primary"
