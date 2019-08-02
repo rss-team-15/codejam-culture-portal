@@ -49,8 +49,6 @@ const DevelopersList = (props) => {
     `
   );
 
-  console.log(data);
-
   const developersContentful = data.allContentfulDeveloper.nodes;
 
   const {

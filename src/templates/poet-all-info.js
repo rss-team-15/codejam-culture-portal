@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Paper, Grid } from '@material-ui/core';
 
@@ -8,6 +8,8 @@ import PoetWorks from '../components/poetAllInfo/works';
 import PoetVideo from '../components/poetAllInfo/video';
 import PoetMap from '../components/poetAllInfo/map';
 import PoetGallery from '../components/poetAllInfo/gallery';
+
+import { languagesStore } from '../storage';
 
 import App from '../app/';
 
@@ -26,6 +28,17 @@ const useStyles = makeStyles(theme => ({
 
 const PoetAllInfo = ({ pageContext }) => {
   const classes = useStyles();
+  const { lang } = languagesStore.getState();
+  const [language, updateLang] = useState(lang);
+  console.log(pageContext, lang);
+
+  languagesStore.subscribe(() => {
+    const { lang } = languagesStore.getState();
+
+    updateLang(lang);
+  });
+
+  const { indexData } = pageContext;
 
   const {
     name,
@@ -37,7 +50,7 @@ const PoetAllInfo = ({ pageContext }) => {
     listOfWorks,
     placesOfActivity,
     gallery,
-  } = pageContext.data;
+  } = pageContext.resultData[`allContentfulAuthor${lang[0].toUpperCase() + lang.slice(1)}`].edges[indexData].node;
 
   const poetInfo = { name, surname, yearsOfLife, mainPicture };
 

@@ -15,7 +15,7 @@ const IndexPage = ({ data }) => {
   return (
     <App>
       <SEO title="Home" />
-      <Home authors={authors}/>
+      <Home authors={authors} />
     </App>
   );
 };
