@@ -79,12 +79,11 @@ const DevelopersList = (props) => {
         justify="space-around"
         alignItems="center"
       >
-        {developersContentful.map((developer) => {
+        {developersContentful.map((developer, i) => {
+          const { name, surname } = developers[i];
           const photo = developer.developerPhoto.file.url;
           const { 
             id,
-            name,
-            surname, 
             githubId, 
             githubLink, 
             telegramLink, 
