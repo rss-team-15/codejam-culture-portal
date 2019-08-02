@@ -82,8 +82,6 @@ const PortalDescription = props => {
     `
   );
 
-  console.log(data);
-
   const technologies = data.allContentfulTechnology.nodes;
    
   const {

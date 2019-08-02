@@ -23,8 +23,8 @@ const PoetAllInfoMap = props => {
     <Grid container justify="center">
       <YMaps>
         <Map defaultState={mapData}>
-          {markersYandexData.map(markerYandexData => (
-            <Placemark {...markerYandexData} />
+          {markersYandexData.map((markerYandexData, i) => (
+            <Placemark key={i} {...markerYandexData} />
           ))}
         </Map>
       </YMaps>

@@ -353,5 +353,6 @@ export default {
   },
   contentsActive: englishContent,
   activeLanguage: englishContent,
+  lang: 'english',
   poetPhoto,
 };
