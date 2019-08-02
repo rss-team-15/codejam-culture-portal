@@ -62,18 +62,11 @@ class AuthorsList extends React.Component {
   }
 
   handleChange(event) {
-    // languagesStore.dispatch(
-    //   poetsListEvents.updatePoetsList(event.target.value)
-    // );
     const queryLang = this.state.lang[0].toUpperCase() + this.state.lang.slice(1);
-    console.log(queryLang);
     const authors = this.props.authors[`allContentfulAuthor${queryLang}`].edges;
-
-    
 
     const filteredList = authors.filter(author => {
       const { name, surname, city } = author.node;
-      console.log(author, name, surname, city);
       const fullName = `${name} ${surname}`.toLowerCase();
       const reverseFullName = `${surname} ${name}`.toLowerCase();
       const poetCity = city.toLowerCase();
@@ -110,8 +103,6 @@ class AuthorsList extends React.Component {
       this.setState({ poetsList, poetsListSearchLabel, poetCardLearnMore, lang, authorsList });
     });
 
-    console.log(this.state.lang);
-
     return (
       <Grid
         className={classes.container}
@@ -134,6 +125,7 @@ class AuthorsList extends React.Component {
           {this.state.authorsList.map(author => {
             const {
               id,
+              slug,
               name,
               surname,
               yearsOfLife,
@@ -143,6 +135,7 @@ class AuthorsList extends React.Component {
             } = author.node;
             const poetInfo = {
               id,
+              slug,
               name,
               surname,
               yearsOfLife,

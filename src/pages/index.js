@@ -10,7 +10,7 @@ import SEO from '../components/seo';
 import Home from '../components/home';
 
 const IndexPage = ({ data }) => {
-  const authors = data.allContentfulAuthor.edges;
+  const authors = data;
 
   return (
     <App>
@@ -22,13 +22,99 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
   query authorsQuery {
-    allContentfulAuthor {
+    allContentfulAuthorEnglish(sort: { fields: order, order: DESC }) {
       edges {
         node {
           id
+          order
+          slug
           name
           surname
           yearsOfLife
+          city
+          videoId
+          mainPicture {
+            file {
+              url
+            }
+          }
+          biography {
+            date
+            content
+          }
+          listOfWorks {
+            id
+            date
+            work
+          }
+          gallery {
+            file {
+              url
+            }
+          }
+          placesOfActivity {
+            id
+            activity
+            mapLink {
+              lat
+              lng
+            }
+          }
+        }
+      }
+    }
+    allContentfulAuthorRussian(sort: { fields: order, order: DESC }) {
+      edges {
+        node {
+          id
+          order
+          slug
+          name
+          surname
+          yearsOfLife
+          city
+          videoId
+          mainPicture {
+            file {
+              url
+            }
+          }
+          biography {
+            date
+            content
+          }
+          listOfWorks {
+            id
+            date
+            work
+          }
+          gallery {
+            file {
+              url
+            }
+          }
+          placesOfActivity {
+            id
+            activity
+            mapLink {
+              lat
+              lng
+            }
+          }
+        }
+      }
+    }
+    allContentfulAuthorBelarusian(sort: { fields: order, order: DESC }) {
+      edges {
+        node {
+          id
+          order
+          slug
+          name
+          surname
+          yearsOfLife
+          city
+          videoId
           mainPicture {
             file {
               url
