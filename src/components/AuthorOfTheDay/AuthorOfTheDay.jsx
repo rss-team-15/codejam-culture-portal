@@ -26,6 +26,7 @@ const styles = {
     textShadow: '2px 4px 3px rgba(0,0,0,0.3)',
     fontFamily: `'proxima-nova', sans-serif`,
     '-webkitTextStroke': '0.5px #fafafa',
+    textShadow: '0px 0px 0.5vw #ffffff, 0px 0px 1vw #000000',
   },
   poetOfTheDayCard__yearsOfLive: {
     fontSize: '2vw',
@@ -33,6 +34,7 @@ const styles = {
     textShadow: '2px 4px 3px rgba(0,0,0,0.3)',
     fontFamily: `'proxima-nova', sans-serif`,
     '-webkitTextStroke': '0.5px #fafafa',
+    textShadow: '0px 0px 0.5vw #ffffff, 0px 0px 1vw #000000',
   },
   poetOfTheDayCard__bio: {
     fontSize: '2.5vh',
@@ -46,7 +48,7 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'space-between',
     width: '100%',
-    height: '40vw',
+    height: '45vw',
     backgroundPosition: 'center 50%',
     '& span:first-child': {
       fontSize: '2.5vw',
@@ -57,6 +59,7 @@ const styles = {
   },
   poetOfTheDayCardTitle: {
     '-webkitTextStroke': '0.5px #fafafa',
+    textShadow: '0px 0px 0.5vw #ffffff, 0px 0px 1vw #000000',
   },
 };
 

@@ -50,12 +50,23 @@ const PoetAllInfo = ({ pageContext }) => {
     gallery,
   } = pageContext.resultData[`allContentfulAuthor${lang[0].toUpperCase() + lang.slice(1)}`].edges[indexData].node;
 
+  const {
+    biographyTitle,
+    worksTitle,
+    firstColumnTitle,
+    secondColumnTitle,
+    watchVideoTitle,
+    galleryTitle,
+  } = pageContext.resultData[`contentfulPoetPageInterface${lang[0].toUpperCase() + lang.slice(1)}`];
+
+  console.log(pageContext);
+
   const poetInfo = { name, surname, yearsOfLife, mainPicture };
 
   const tableInterface = {
-    title: 'Works',
-    firstColumnName: '1st col',
-    secondColumnName: '2st col',
+    title: worksTitle,
+    firstColumnName: firstColumnTitle,
+    secondColumnName: secondColumnTitle,
   };
 
   return (
@@ -63,9 +74,9 @@ const PoetAllInfo = ({ pageContext }) => {
       <Grid container className={classes.poetAllInfoContainer} justify="center">
         <Paper className={classes.poetAllInfoRoot}>
           <PoetTitle poetInfo={poetInfo} />
-          <PoetBiograpyhy poetBio={biography} title="Biography" />
+          <PoetBiograpyhy poetBio={biography} title={biographyTitle} />
           <PoetWorks listOfWorks={listOfWorks} interface={tableInterface} />
-          <PoetVideo videoId={videoId} />
+          <PoetVideo videoId={videoId} videoTitle={watchVideoTitle}/>
           <PoetMap
             googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
             loadingElement={<div style={{ height: `100%` }} />}
@@ -75,7 +86,7 @@ const PoetAllInfo = ({ pageContext }) => {
             center={placesOfActivity[0].mapLink}
             title="Map"
           />
-          <PoetGallery images={gallery} title="Gallery" />
+          <PoetGallery images={gallery} title={galleryTitle} />
         </Paper>
       </Grid>
     </App>

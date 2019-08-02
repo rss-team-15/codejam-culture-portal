@@ -34,7 +34,7 @@ class PoetAllInfoVideo extends Component {
     const { isOpen } = this.state;
 
     const { classes } = this.props;
-    const { videoId } = this.props;
+    const { videoId, videoTitle } = this.props;
 
     return (
       <Grid container justify="center">
@@ -49,7 +49,7 @@ class PoetAllInfoVideo extends Component {
           color="secondary"
           onClick={this.openModal}
         >
-          Watch video
+          {videoTitle}
         </Button>
       </Grid>
     );

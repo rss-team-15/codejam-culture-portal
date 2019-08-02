@@ -137,6 +137,30 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         }
+        contentfulPoetPageInterfaceEnglish {
+          biographyTitle
+          worksTitle
+          firstColumnTitle
+          secondColumnTitle
+          watchVideoTitle
+          galleryTitle
+        }
+        contentfulPoetPageInterfaceRussian {
+          biographyTitle
+          worksTitle
+          firstColumnTitle
+          secondColumnTitle
+          watchVideoTitle
+          galleryTitle
+        }
+        contentfulPoetPageInterfaceBelarusian {
+          biographyTitle
+          worksTitle
+          firstColumnTitle
+          secondColumnTitle
+          watchVideoTitle
+          galleryTitle
+        }
       }
     `
   ).then(result => {
@@ -150,30 +174,6 @@ exports.createPages = ({ graphql, actions }) => {
       const resultData = result.data;
 
       const indexData = index;
-
-      // const {
-      //   name,
-      //   surname,
-      //   yearsOfLife,
-      //   biography,
-      //   mainPicture,
-      //   videoId,
-      //   listOfWorks,
-      //   placesOfActivity,
-      //   gallery,
-      // } = post.node;
-
-      // const data = {
-      //   name,
-      //   surname,
-      //   yearsOfLife,
-      //   biography,
-      //   mainPicture,
-      //   videoId,
-      //   listOfWorks,
-      //   placesOfActivity,
-      //   gallery,
-      // };
 
       createPage({
         path: `/${post.node.slug}/`,
