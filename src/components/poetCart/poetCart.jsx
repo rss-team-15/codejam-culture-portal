@@ -35,6 +35,9 @@ const useStyles = makeStyles({
     color: '#fff',
     fontSize: '3vh',
     margin: '3%',
+    fontFamily: `'proxima-nova', sans-serif`,
+    textShadow: '2px 4px 3px rgba(0,0,0,0.3)',
+
   },
   textYears: {
     color: '#fff',

@@ -54,7 +54,7 @@ const PoetAllInfo = ({ pageContext }) => {
   const poetInfo = { name, surname, yearsOfLife, mainPicture };
 
   const tableInterface = {
-    title: 'hello',
+    title: 'Works',
     firstColumnName: '1st col',
     secondColumnName: '2st col',
   };
