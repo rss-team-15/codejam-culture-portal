@@ -7,12 +7,8 @@ import AuthorsList from '../components/AuthorsList';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-import { languagesStore, languagesInitState } from '../storage';
-
 const SecondPage = ({ data }) => {
   const authors = data;
-
-  console.log(data);
 
   return (
     <App>
@@ -30,10 +26,12 @@ export const query = graphql`
         node {
           id
           order
+          slug
           name
           surname
           yearsOfLife
           city
+          videoId
           mainPicture {
             file {
               url
@@ -69,10 +67,12 @@ export const query = graphql`
         node {
           id
           order
+          slug
           name
           surname
           yearsOfLife
           city
+          videoId
           mainPicture {
             file {
               url
@@ -108,10 +108,12 @@ export const query = graphql`
         node {
           id
           order
+          slug
           name
           surname
           yearsOfLife
           city
+          videoId
           mainPicture {
             file {
               url

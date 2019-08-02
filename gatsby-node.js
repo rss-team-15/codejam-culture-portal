@@ -19,10 +19,12 @@ exports.createPages = ({ graphql, actions }) => {
             node {
               id
               order
+              slug
               name
               surname
               yearsOfLife
               city
+              videoId
               mainPicture {
                 file {
                   url
@@ -58,10 +60,12 @@ exports.createPages = ({ graphql, actions }) => {
             node {
               id
               order
+              slug
               name
               surname
               yearsOfLife
               city
+              videoId
               mainPicture {
                 file {
                   url
@@ -97,10 +101,12 @@ exports.createPages = ({ graphql, actions }) => {
             node {
               id
               order
+              slug
               name
               surname
               yearsOfLife
               city
+              videoId
               mainPicture {
                 file {
                   url
@@ -141,43 +147,38 @@ exports.createPages = ({ graphql, actions }) => {
     const posts = result.data.allContentfulAuthorEnglish.edges;
 
     posts.forEach((post, index) => {
-      const previous =
-        index === posts.length - 1 ? null : posts[index + 1].node;
-      const next = index === 0 ? null : posts[index - 1].node;
-
       const resultData = result.data;
 
       const indexData = index;
 
-      const {
-        name,
-        surname,
-        yearsOfLife,
-        biography,
-        mainPicture,
-        videoId,
-        listOfWorks,
-        placesOfActivity,
-        gallery,
-      } = post.node;
+      // const {
+      //   name,
+      //   surname,
+      //   yearsOfLife,
+      //   biography,
+      //   mainPicture,
+      //   videoId,
+      //   listOfWorks,
+      //   placesOfActivity,
+      //   gallery,
+      // } = post.node;
 
-      const data = {
-        name,
-        surname,
-        yearsOfLife,
-        biography,
-        mainPicture,
-        videoId,
-        listOfWorks,
-        placesOfActivity,
-        gallery,
-      };
+      // const data = {
+      //   name,
+      //   surname,
+      //   yearsOfLife,
+      //   biography,
+      //   mainPicture,
+      //   videoId,
+      //   listOfWorks,
+      //   placesOfActivity,
+      //   gallery,
+      // };
 
       createPage({
-        path: `/${post.node.order}/`,
+        path: `/${post.node.slug}/`,
         component: blogPost,
         context: {
-          data,
           resultData,
           indexData,
         },
