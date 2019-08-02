@@ -6,12 +6,14 @@ const useStyles = makeStyles({
   poetName: {
     fontWeight: '200',
     fontSize: '3.5vw',
-    fontFamily: `'proxima-nova', sans-serif`
+    fontFamily: `'proxima-nova', sans-serif`,
+    textShadow: '2px 4px 3px rgba(0,0,0,0.3)'
   },
   poetYearsOfLife: {
     fontWeight: '200',
     fontSize: '2.5vw',
-    fontFamily: `'proxima-nova', sans-serif`
+    fontFamily: `'proxima-nova', sans-serif`,
+    textShadow: '2px 4px 3px rgba(0,0,0,0.3)'
   },
   poetPicture: {
     width: '25vw',
