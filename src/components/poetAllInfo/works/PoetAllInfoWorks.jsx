@@ -13,17 +13,20 @@ import {
 const useStyles = makeStyles(theme => ({
   poetBiographyTitle: {
     marginBottom: '3vw',
+    fontFamily: `'proxima-nova', sans-serif`,
 
     color: '#555555',
     fontSize: '2vw',
   },
   poetWorksTableHeader: {
     color: '#ffffff',
+    fontFamily: `'proxima-nova', sans-serif`,
 
     backgroundColor: '#40c8f4',
   },
   poetWorksTableRow: {
     fontSize: '3vw',
+    fontFamily: `'proxima-nova', sans-serif`,
 
     '&:nth-of-type(odd)': {
       backgroundColor: theme.palette.background.default,
