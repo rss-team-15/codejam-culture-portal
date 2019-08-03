@@ -38,6 +38,10 @@ body {
   }
 }
 
+.timeline--wrapper .timeline--animate {
+  margin: 15px auto;
+}
+
 @media screen and (max-width: 1200px) {
   .MuiGrid-justify-xs-center .MuiPaper-rounded {
     padding: 20px;
