@@ -66,7 +66,7 @@ main {
   .bounce-in p {
     font-size: 3vw;
   }
-  #gatsby-focus-wrapper  footer {
+  .footer {
     height: 6vh;
     p {
       font-size: 2vh;
@@ -103,7 +103,7 @@ main {
   .bounce-in p {
     font-size: 4vw;
   }
-  #gatsby-focus-wrapper  footer {
+  .footer {
     height: 6vh;
     p {
       font-size: 2vh;
@@ -117,20 +117,14 @@ main {
       font-size: 3.5vh;
     }
   }
-  .MuiPaper-elevation1 {
-    img {
-      display: block;
-      margin: 8px auto;
-      width: 30vh;
-    }  
-  }
+  
 }
 
 @media screen and (max-width: 480px) {
   .bounce-in p {
     font-size: 5vw;
   }
-  #gatsby-focus-wrapper  footer {
+  .footer {
     height: 4vh;
     p {
       font-size: 1.5vh;

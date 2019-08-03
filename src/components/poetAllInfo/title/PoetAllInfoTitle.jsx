@@ -16,11 +16,11 @@ const useStyles = makeStyles({
     textShadow: '2px 4px 3px rgba(0,0,0,0.3)'
   },
   poetPicture: {
-    width: '25vw',
-    marginTop: '2vw',
-
+    width: '40vw',
     borderRadius: '5px',
-  },
+    display: 'block',
+    margin: '10px auto',
+  }
 });
 
 const PoetAllInfoTitle = props => {
