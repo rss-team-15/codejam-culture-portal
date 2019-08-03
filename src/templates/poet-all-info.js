@@ -11,8 +11,7 @@ import PoetGallery from '../components/poetAllInfo/gallery';
 
 import { languagesStore } from '../storage';
 
-import App from '../app/';
-
+import Layout from '../layout/';
 
 const useStyles = makeStyles(theme => ({
   poetAllInfoContainer: {
@@ -48,37 +47,46 @@ const PoetAllInfo = ({ pageContext }) => {
     listOfWorks,
     placesOfActivity,
     gallery,
-  } = pageContext.resultData[`allContentfulAuthor${lang[0].toUpperCase() + lang.slice(1)}`].edges[indexData].node;
+  } = pageContext.resultData[
+    `allContentfulAuthor${lang[0].toUpperCase() + lang.slice(1)}`
+  ].edges[indexData].node;
+
+  const {
+    biographyTitle,
+    worksTitle,
+    firstColumnTitle,
+    secondColumnTitle,
+    watchVideoTitle,
+    galleryTitle,
+  } = pageContext.resultData[
+    `contentfulPoetPageInterface${lang[0].toUpperCase() + lang.slice(1)}`
+  ];
 
   const poetInfo = { name, surname, yearsOfLife, mainPicture };
 
   const tableInterface = {
-    title: 'Works',
-    firstColumnName: '1st col',
-    secondColumnName: '2st col',
+    title: worksTitle,
+    firstColumnName: firstColumnTitle,
+    secondColumnName: secondColumnTitle,
   };
 
   return (
-    <App>
+    <Layout>
       <Grid container className={classes.poetAllInfoContainer} justify="center">
         <Paper className={classes.poetAllInfoRoot}>
           <PoetTitle poetInfo={poetInfo} />
-          <PoetBiograpyhy poetBio={biography} title="Biography" />
+          <PoetBiograpyhy poetBio={biography} title={biographyTitle} />
           <PoetWorks listOfWorks={listOfWorks} interface={tableInterface} />
-          <PoetVideo videoId={videoId} />
+          <PoetVideo videoId={videoId} videoTitle={watchVideoTitle} />
           <PoetMap
-            googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
-            loadingElement={<div style={{ height: `100%` }} />}
-            containerElement={<div style={{ height: `30vw` }} />}
-            mapElement={<div style={{ height: `100%` }} />}
             markers={placesOfActivity}
             center={placesOfActivity[0].mapLink}
             title="Map"
           />
-          <PoetGallery images={gallery} title="Gallery" />
+          <PoetGallery images={gallery} title={galleryTitle} />
         </Paper>
       </Grid>
-    </App>
+    </Layout>
   );
 };
 

@@ -67,7 +67,9 @@ const GithubProfile = props => {
     tasksAll,
     teamMembers
   } = props;
+
   const classes = useStyles();
+  
   return (
     <Card className={classes.githubCard}>
       <CardActionArea href={githubLink}>

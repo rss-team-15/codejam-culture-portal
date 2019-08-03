@@ -1,10 +1,3 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
-
-// You can delete this file if you're not using it
 const path = require('path');
 
 exports.createPages = ({ graphql, actions }) => {
@@ -137,6 +130,30 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         }
+        contentfulPoetPageInterfaceEnglish {
+          biographyTitle
+          worksTitle
+          firstColumnTitle
+          secondColumnTitle
+          watchVideoTitle
+          galleryTitle
+        }
+        contentfulPoetPageInterfaceRussian {
+          biographyTitle
+          worksTitle
+          firstColumnTitle
+          secondColumnTitle
+          watchVideoTitle
+          galleryTitle
+        }
+        contentfulPoetPageInterfaceBelarusian {
+          biographyTitle
+          worksTitle
+          firstColumnTitle
+          secondColumnTitle
+          watchVideoTitle
+          galleryTitle
+        }
       }
     `
   ).then(result => {
@@ -150,30 +167,6 @@ exports.createPages = ({ graphql, actions }) => {
       const resultData = result.data;
 
       const indexData = index;
-
-      // const {
-      //   name,
-      //   surname,
-      //   yearsOfLife,
-      //   biography,
-      //   mainPicture,
-      //   videoId,
-      //   listOfWorks,
-      //   placesOfActivity,
-      //   gallery,
-      // } = post.node;
-
-      // const data = {
-      //   name,
-      //   surname,
-      //   yearsOfLife,
-      //   biography,
-      //   mainPicture,
-      //   videoId,
-      //   listOfWorks,
-      //   placesOfActivity,
-      //   gallery,
-      // };
 
       createPage({
         path: `/${post.node.slug}/`,

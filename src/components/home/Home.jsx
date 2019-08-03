@@ -4,7 +4,7 @@ import PortalDescription from '../portalDescription';
 import AuthorOfTheDay from '../AuthorOfTheDay';
 import DevelopersList from '../developersList';
 
-import { languagesStore, languagesInitState } from '../../storage';
+import { languagesStore } from '../../storage';
 
 export default class Home extends Component {
   constructor() {
@@ -15,7 +15,6 @@ export default class Home extends Component {
     this.state = {
       activeLanguage,
       lang,
-      poetPhoto: languagesInitState.poetPhoto,
     };
   }
 

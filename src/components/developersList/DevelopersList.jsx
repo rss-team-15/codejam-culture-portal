@@ -113,19 +113,3 @@ const DevelopersList = (props) => {
 };
 
 export default DevelopersList;
-
-//=============FROM REDUX===========
-// {developers.map(developer => (
-//   <GithubProfile
-//     key={developer.githubNickname}
-//     githubImg={developer.githubImg}
-//     name={developer.name}
-//     surname={developer.surname}
-//     githubLink={developer.githubLink}
-//     githubNickname={developer.githubNickname}
-//     contactLink={developer.contactLink}
-//     tasksCreated={developer.tasksCreated}
-//     tasksAll={developer.tasksAll}
-//     teamMembers={developer.teamMembers}
-//   />
-// ))}

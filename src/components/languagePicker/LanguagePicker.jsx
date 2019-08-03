@@ -5,7 +5,6 @@ import { Select, MenuItem } from '@material-ui/core';
 import { supportedLanguages } from './constants';
 import {
   languagesEvents,
-  languagesActions,
   languagesStore,
 } from '../../storage';
 
@@ -28,8 +27,6 @@ class LanguagePicker extends Component {
       activeLanguage: { languagePicker },
     } = languagesStore.getState();
 
-    console.log(supportedLanguages[0], languagePicker);
-
     this.state = {
       currentLanguage: supportedLanguages[languagePicker],
     };
@@ -48,6 +45,7 @@ class LanguagePicker extends Component {
   render() {
     const { classes } = this.props;
     const { currentLanguage } = this.state;
+    
     return (
       <Select
         className={classes.languagePicker}

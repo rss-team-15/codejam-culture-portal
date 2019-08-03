@@ -78,6 +78,7 @@ const NavBar = props => {
   } = useStyles();
 
   const { homeLink, poetsListLink } = props;
+  
   return (
     <header className={navBar}>
       <LanguagePicker />

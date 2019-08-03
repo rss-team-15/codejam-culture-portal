@@ -1,15 +1,17 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { withStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Divider from '@material-ui/core/Divider';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
+import {
+  Card,
+  CardHeader,
+  CardActionArea,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Divider,
+  Button,
+  Typography,
+} from '@material-ui/core';
 
 const styles = {
   card: {
@@ -26,6 +28,7 @@ const styles = {
     textShadow: '2px 4px 3px rgba(0,0,0,0.3)',
     fontFamily: `'proxima-nova', sans-serif`,
     '-webkitTextStroke': '0.5px #fafafa',
+    textShadow: '0px 0px 0.5vw #ffffff, 0px 0px 1vw #000000',
   },
   poetOfTheDayCard__yearsOfLive: {
     fontSize: '2vw',
@@ -33,6 +36,7 @@ const styles = {
     textShadow: '2px 4px 3px rgba(0,0,0,0.3)',
     fontFamily: `'proxima-nova', sans-serif`,
     '-webkitTextStroke': '0.5px #fafafa',
+    textShadow: '0px 0px 0.5vw #ffffff, 0px 0px 1vw #000000',
   },
   poetOfTheDayCard__bio: {
     fontSize: '2.5vh',
@@ -46,7 +50,7 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'space-between',
     width: '100%',
-    height: '40vw',
+    height: '45vw',
     backgroundPosition: 'center 50%',
     '& span:first-child': {
       fontSize: '2.5vw',
@@ -57,6 +61,7 @@ const styles = {
   },
   poetOfTheDayCardTitle: {
     '-webkitTextStroke': '0.5px #fafafa',
+    textShadow: '0px 0px 0.5vw #ffffff, 0px 0px 1vw #000000',
   },
 };
 

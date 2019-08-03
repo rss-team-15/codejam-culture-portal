@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import { Helmet } from "react-helmet";
 
 import NavBar from '../components/navBar';
 
-import { languagesStore, languagesInitState } from '../storage';
+import { languagesStore } from '../storage';
 
-class App extends Component {
+class Layout extends Component {
   constructor(props) {
     super(props);
 
@@ -27,16 +27,17 @@ class App extends Component {
 
     return (
       <React.Fragment>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Culture Portal</title>
+        </Helmet>
         <NavBar
           homeLink={this.state.activeLanguage.navbar.homeLink}
           poetsListLink={this.state.activeLanguage.navbar.poetsListLink}
         />
         <main>{children}</main>
-        <footer className='footer'>
-          <p>
-            © {new Date().getFullYear()}, Built with	&nbsp;
-            {`  `}
-          </p>
+        <footer className="footer">
+          <p>© {new Date().getFullYear()}, Built with &nbsp;</p>
           <p>
             <a href="https://www.gatsbyjs.org"> Gatsby</a>
           </p>
@@ -46,8 +47,4 @@ class App extends Component {
   }
 }
 
-App.propTypes = {
-  children: PropTypes.node.isRequired,
-};
-
-export default App;
+export default Layout;
