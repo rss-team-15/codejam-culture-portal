@@ -3,9 +3,8 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import { Grid, TextField, List, ListItem } from '@material-ui/core/';
 
-import PoetCart from '../PoetCart';
+import PoetCart from '../poetCart';
 import { languagesStore } from '../../storage';
-
 
 const styles = {
   container: {
@@ -48,7 +47,11 @@ class AuthorsList extends React.Component {
     this.state = {
       poetsListSearchLabel,
       poetCardLearnMore,
-      authorsList: [...this.props.authors[`allContentfulAuthor${lang[0].toUpperCase() + lang.slice(1)}`].edges],
+      authorsList: [
+        ...this.props.authors[
+          `allContentfulAuthor${lang[0].toUpperCase() + lang.slice(1)}`
+        ].edges,
+      ],
       lang,
     };
 
@@ -56,7 +59,8 @@ class AuthorsList extends React.Component {
   }
 
   handleChange(event) {
-    const queryLang = this.state.lang[0].toUpperCase() + this.state.lang.slice(1);
+    const queryLang =
+      this.state.lang[0].toUpperCase() + this.state.lang.slice(1);
     const authors = this.props.authors[`allContentfulAuthor${queryLang}`].edges;
 
     const filteredList = authors.filter(author => {
@@ -83,17 +87,23 @@ class AuthorsList extends React.Component {
     languagesStore.subscribe(() => {
       const {
         activeLanguage: {
-          poetsListBlock: {
-            poetsListSearchLabel,
-            poetCardLearnMore,
-          },
+          poetsListBlock: { poetsListSearchLabel, poetCardLearnMore },
         },
         lang,
       } = languagesStore.getState();
 
-      const authorsList = [...this.props.authors[`allContentfulAuthor${lang[0].toUpperCase() + lang.slice(1)}`].edges]
+      const authorsList = [
+        ...this.props.authors[
+          `allContentfulAuthor${lang[0].toUpperCase() + lang.slice(1)}`
+        ].edges,
+      ];
 
-      this.setState({ poetsListSearchLabel, poetCardLearnMore, lang, authorsList });
+      this.setState({
+        poetsListSearchLabel,
+        poetCardLearnMore,
+        lang,
+        authorsList,
+      });
     });
 
     return (
