@@ -1,3 +1,42 @@
+# Worklog and self evaluation:
+## Worklog:
+
+*slnchn*
+
+| time spent | feature |
+| ---------- | ------- |
+| add hours | describe task |
+
+*igor82bv*
+
+| time spent | feature |
+| ---------- | ------- |
+| add hours | describe task |
+
+*sannnao*
+
+| time spent | feature |
+| ---------- | ------- |
+| 2 hours | Create "Author of the day" component |
+| 1 hour | Create authors data storage template |
+| 2 hours | Create "List of authors" component with search widget and authors list |
+| 20 hours | Explore and Switch to GtasbyJS |
+| 40 hours | Explore and inject Contentful |
+| 15 hours | Add content to contentful |
+| 3 hours | Implement language changing with contentful |
+| 3 hours | Add search through contentful content by name, surname, city |
+| 8 hours | Learn and add programmatically create pages |
+
+
+
+*ekater1na*
+
+| time spent | feature |
+| ---------- | ------- |
+| add hours | describe task |
+
+## Self evaluation:
+
 1. ### Task: https://github.com/rolling-scopes-school/tasks/blob/2018-Q3/tasks/codejam-culture-portal.md
 2. ### Screenshot https://imgur.com/a/vB30e5R
 3. ### 2019-08-04 / 04.08.2019
