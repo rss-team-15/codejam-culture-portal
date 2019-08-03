@@ -1,0 +1,142 @@
+$laptopScreen: 1200px;
+$tabletScreen: 760px;
+
+@media screen and (min-width: $laptopScreen) {
+  .top-section {
+    height: 40vw;
+  }
+
+  h1.top-section__top-section-header {
+    font-size: 5vw;
+  }
+
+  .about-section {
+    height: 25vw;
+  }
+
+  p.about-section__about-section-header {
+    font-size: 3vw;
+    text-align: center;
+  }
+
+  .about-section__reading-icon.MuiSvgIcon-root {
+    height: 4vw;
+    width: 4vw;
+  }
+
+  .used-tecnologies-container {
+    height: 35vw;
+  }
+
+  p.used-tecnologies-container__used-technologies-header {
+    font-size: 3vw;
+    text-align: center;
+  }
+
+  .open-source-section {
+    height: 30vw;
+  }
+
+  p.open-source-section__open-source-header {
+    font-size: 3.5vw;
+    text-align: center;
+  }
+
+  .MuiButton-root.open-source-section__open-source-button {
+    font-size: 3.5vw;
+  }
+}
+
+@media screen and (max-width: $laptopScreen) {
+  .top-section {
+    padding-top: 7vw;
+    height: 47.5vw;
+  }
+
+  h1.top-section__top-section-header {
+    font-size: 7vw;
+  }
+
+  .about-section {
+    height: 30vw;
+  }
+
+  p.about-section__about-section-header {
+    font-size: 4vw;
+    text-align: center;
+  }
+
+  .about-section__reading-icon.MuiSvgIcon-root {
+    height: 5vw;
+    width: 5vw;
+  }
+
+  .used-tecnologies-container {
+    height: 40vw;
+  }
+
+  p.used-tecnologies-container__used-technologies-header {
+    font-size: 4vw;
+    text-align: center;
+  }
+
+  .open-source-section {
+    height: 30vw;
+  }
+
+  p.open-source-section__open-source-header {
+    font-size: 4vw;
+    text-align: center;
+  }
+
+  .MuiButton-root.open-source-section__open-source-button {
+    font-size: 2.75vw;
+  }
+}
+
+@media screen and (max-width: $tabletScreen) {
+  .top-section {
+    padding-top: 11vw;
+    height: 60vw;
+  }
+
+  h1.top-section__top-section-header {
+    font-size: 9vw;
+  }
+
+  .about-section {
+    height: 35vw;
+  }
+
+  p.about-section__about-section-header {
+    font-size: 5vw;
+    text-align: center;
+  }
+
+  .about-section__reading-icon.MuiSvgIcon-root {
+    height: 7vw;
+    width: 7vw;
+  }
+
+  .used-tecnologies-container {
+    height: 40vw;
+  }
+
+  p.used-tecnologies-container__used-technologies-header {
+    font-size: 5vw;
+    text-align: center;
+  }
+
+  .open-source-section {
+    height: 30vw;
+  }
+
+  p.open-source-section__open-source-header {
+    font-size: 5vw;
+    text-align: center;
+  }
+
+  .MuiButton-root.open-source-section__open-source-button {
+    font-size: 3.5vw;
+  }
+}

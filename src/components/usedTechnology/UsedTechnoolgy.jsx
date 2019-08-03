@@ -4,27 +4,27 @@ import { Card, Grid, Avatar, Typography } from '@material-ui/core';
 
 const useStyles = makeStyles({
   technologyCard: {
-    width: '17vw'
+    width: '17vw',
   },
   technologyCardImageBlock: {
-    height: '15vw'
+    height: '15vw',
   },
   technologyCardImageBlock__technologyImage: {
     height: '9vw',
-    width: '9vw'
+    width: '9vw',
   },
   technologyCardNameBlock: {
-    height: '10vw'
+    height: '10vw',
   },
   technologyCardNameBlock__technologyName: {
-    fontSize: '1.6vw'
-  }
+    fontSize: '2vw',
+  },
 });
 
 const UsedTechnology = props => {
   const { tecnologyImg, tecnologyName } = props;
   const classes = useStyles();
-  
+
   return (
     <Card className={classes.technologyCard}>
       <Grid
@@ -33,7 +33,10 @@ const UsedTechnology = props => {
         justify="center"
         alignItems="center"
       >
-        <Avatar className={classes.technologyCardImageBlock__technologyImage} src={tecnologyImg} />
+        <Avatar
+          className={classes.technologyCardImageBlock__technologyImage}
+          src={tecnologyImg}
+        />
       </Grid>
 
       <Grid
