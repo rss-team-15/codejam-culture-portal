@@ -38,7 +38,7 @@
 ## Self evaluation:
 
 1. ### Task: https://github.com/rolling-scopes-school/tasks/blob/2018-Q3/tasks/codejam-culture-portal.md
-2. ### Screenshot https://imgur.com/a/vB30e5R
+2. ### Screenshot: http://prntscr.com/onpfyg
 3. ### 2019-08-04 / 04.08.2019
 ## Total
 ### Task ( 20 / 20 )
