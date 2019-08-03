@@ -1,0 +1,58 @@
+$laptopScreen: 1200px;
+$tabletScreen: 760px;
+
+@media screen and (min-width: $laptopScreen) {
+  .nav-bar {
+    height: 4vw;
+  }
+
+  .blue-flower-logo {
+    width: 2.5vw;
+  }
+}
+
+@media screen and (max-width: $laptopScreen) {
+  .nav-bar {
+    height: 7vw;
+  }
+
+  .controls-bar {
+    width: 75vw;
+  }
+
+  .nav-bar__nav-link {
+    flex-grow: 1;
+  }
+
+  .blue-flower-logo {
+    width: 4.5vw;
+  }
+
+  .nav-bar__nav-link a {
+    font-size: 2.3vw;
+  }
+}
+
+@media screen and (max-width: $tabletScreen) {
+  .nav-bar {
+    height: 11vw;
+  }
+
+  .controls-bar {
+    width: 40vw;
+
+    flex-direction: column;
+  }
+
+  .blue-flower-logo {
+    display: none;
+  }
+
+  .nav-bar__nav-link {
+    width: 100%;
+  }
+
+  .nav-bar__nav-link a {
+    font-size: 2.75vw;
+  }
+}

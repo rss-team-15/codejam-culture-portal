@@ -1,0 +1,48 @@
+$tabletScreen: 760px;
+
+@media screen and (min-width: $tabletScreen) {
+  h4.poet-of-the-day__name {
+    text-align: right;
+    font-size: 3vw;
+  }
+
+  h6.poet-of-the-day__years-of-life {
+    text-align: right;
+    font-size: 2vw;
+  }
+
+  p.poet-of-the-day__bio {
+    font-size: 1.7vw;
+  }
+
+  .poet-of-the-day__learn-more-button a {
+    font-size: 1.5vw;
+  }
+}
+
+@media screen and (max-width: $tabletScreen) {
+  h4.poet-of-the-day__name {
+    text-align: center;
+    font-size: 6vw;
+  }
+
+  h6.poet-of-the-day__years-of-life {
+    text-align: center;
+    font-size: 3.5vw;
+  }
+
+  p.poet-of-the-day__bio {
+    align-items: center;
+
+    font-size: 2.5vw;
+  }
+
+  .poet-of-the-day-button-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .poet-of-the-day__learn-more-button a {
+    font-size: 3vw;
+  }
+}
