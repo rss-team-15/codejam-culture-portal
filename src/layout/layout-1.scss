@@ -47,19 +47,39 @@ body {
     padding: 20px;
     width: 90%;
   }
+  .bounce-in p {
+    font-size: 3vw;
+  }
 }
 
 @media screen and (max-width: 992px) {
   .MuiGrid-justify-xs-center .MuiPaper-rounded h3 {
     text-align: center;
+    font-size: 4.5vw;
+  }
+  .MuiGrid-justify-xs-center .MuiPaper-rounded h4 {
+    text-align: center;
+    font-size: 3vw;
+  }
+  .bounce-in p {
+    font-size: 3.5vw;
   }
 }
 
 @media screen and (max-width: 768px) {
+  .bounce-in p {
+    font-size: 4vw;
+  }
 }
 
 @media screen and (max-width: 480px) {
+  .bounce-in p {
+    font-size: 5vw;
+  }
 }
 
 @media screen and (max-width: 320px) {
+  .bounce-in p {
+    font-size: 5.5vw;
+  }
 }
