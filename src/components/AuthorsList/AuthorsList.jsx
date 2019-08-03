@@ -3,7 +3,7 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import { Grid, TextField, List, ListItem } from '@material-ui/core/';
 
-import PoetCart from '../poetCart';
+import PoetCart from '../poetCard';
 import { languagesStore } from '../../storage';
 
 const styles = {
