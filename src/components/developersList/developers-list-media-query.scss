@@ -1,0 +1,26 @@
+$tabletScreen: 760px;
+
+@media screen and (min-width: $tabletScreen) {
+  .developers-list-container {
+    height: 40vw;
+  }
+
+  h2.developers-list-container__deveolpers-list-header {
+    font-size: 4vw;
+  }
+}
+
+@media screen and (max-width: $tabletScreen) {
+  .developers-list-container {
+    height: 35vw;
+  }
+
+  h2.developers-list-container__deveolpers-list-header {
+    font-size: 3vw;
+  }
+
+  .developers-list-container__deveolpers-list {
+    flex-direction: column;
+    height: 40vw;
+  }
+}
