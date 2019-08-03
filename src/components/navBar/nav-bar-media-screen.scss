@@ -203,6 +203,10 @@ $tabletScreen: 760px;
     height: 11vw;
   }
 
+  .controls-bar {
+    width: 58vw;
+  }
+
   .MuiInputBase-root.nav-bar__language-picker {
     height: 8vw;
   }
@@ -223,6 +227,10 @@ $tabletScreen: 760px;
 @media screen and (max-width: 320px) {
   .nav-bar {
     height: 13vw;
+  }
+
+  .controls-bar {
+    width: 56vw;
   }
 
   .MuiInputBase-root.nav-bar__language-picker {
