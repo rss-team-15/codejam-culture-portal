@@ -11,49 +11,24 @@ import svgIcons from './assets/svg-icons';
 
 const useStyles = makeStyles({
   topSection: {
-    height: '40vw',
-
     color: 'white',
 
     backgroundImage: `url(${belorusianLandscape})`,
     backgroundPosition: 'center 60%',
   },
-  topSection__topSectionHeader: {
-    fontSize: '4.25vw',
-  },
   aboutSection: {
-    height: '15vw',
-
     boxShadow: '0 -22px 15px #00000080',
   },
-  aboutSection__aboutSectionHeader: {
-    fontSize: '2.25vw',
-  },
-  arrowDownIcon: {
-    height: '3.5vw',
-    width: '3.5vw',
-  },
   usedTecnologiesContainer: {
-    height: '35vw',
-
     background: 'linear-gradient(#ffffff, #eeeeee)',
   },
-  usedTecnologiesContainer__usedTecnologiesHeader: {
-    fontSize: '2.25vw',
-  },
   openSourceSection: {
-    height: '20vw',
-
     background: 'linear-gradient(#eeeeee, #ffffff)',
-  },
-  openSourceSection__openSourceSectionHeader: {
-    fontSize: '2.25vw',
   },
   openSourceSection__repositoryLinkButton: {
     padding: '0.8vw 1.5vw',
 
     color: '#ffffff',
-    fontSize: '1.5vw',
     fontWeight: 'bold',
   },
 });
@@ -96,14 +71,14 @@ const PortalDescription = props => {
     <React.Fragment>
       {/* Top section with image */}
       <Grid
-        className={classes.topSection}
+        className={`${classes.topSection} top-section`}
         container
         direction="column"
         justify="center"
         alignItems="center"
       >
         <Typography
-          className={classes.topSection__topSectionHeader}
+          className="top-section__top-section-header"
           gutterBottom
           variant="h1"
           component="h1"
@@ -114,34 +89,34 @@ const PortalDescription = props => {
 
       {/* Section with short 'about' info */}
       <Grid
-        className={classes.aboutSection}
+        className={`${classes.aboutSection} about-section`}
         container
         direction="column"
         justify="space-around"
         alignItems="center"
       >
         <Typography
-          className={classes.aboutSection__aboutSectionHeader}
+          className="about-section__about-section-header"
           variant="h4"
           color="textSecondary"
           component="p"
         >
           {aboutSectionHeader}
         </Typography>
-        <SvgIcon className={classes.arrowDownIcon}>
+        <SvgIcon className="about-section__reading-icon">
           <path d={svgIcons.reading} />
         </SvgIcon>
       </Grid>
 
       {/* Section with used technologies info */}
       <Grid
-        className={classes.usedTecnologiesContainer}
+        className={`${classes.usedTecnologiesContainer} used-tecnologies-container`}
         container
         justify="space-around"
         alignItems="center"
       >
         <Typography
-          className={classes.usedTecnologiesContainer__usedTecnologiesHeader}
+          className="used-tecnologies-container__used-technologies-header"
           variant="h4"
           color="textSecondary"
           component="p"
@@ -166,14 +141,14 @@ const PortalDescription = props => {
 
       {/* Section with sources info */}
       <Grid
-        className={classes.openSourceSection}
+        className={`${classes.openSourceSection} open-source-section`}
         container
         direction="column"
         justify="space-around"
         alignItems="center"
       >
         <Typography
-          className={classes.openSourceSection__openSourceSectionHeader}
+          className="open-source-section__open-source-header"
           variant="h4"
           color="textSecondary"
           component="p"
@@ -184,7 +159,7 @@ const PortalDescription = props => {
         <Button
           variant="contained"
           color="primary"
-          className={classes.openSourceSection__repositoryLinkButton}
+          className={`${classes.openSourceSection__repositoryLinkButton} open-source-section__open-source-button`}
           href="https://github.com/rss-team-15/codejam-culture-portal"
           alt="To GitHub"
           target="_blank"

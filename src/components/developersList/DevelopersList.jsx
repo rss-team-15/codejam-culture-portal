@@ -7,15 +7,11 @@ import GithubProfile from '../github-profile';
 
 const useStyles = makeStyles({
   developersListContainer: {
-    height: '40vw',
+    marginTop: '5vw',
 
     background:
       'linear-gradient(#ffffff 0%, #aee3ee70 25%, #16e9c950 50%, #aee3ee70 90%, #ffffff 100%)',
     backgroundSize: '100% 100%',
-  },
-
-  developersListContainer__developersListHeader: {
-    fontSize: '2vw',
   },
 
   developersListContainer__developersList: {
@@ -58,14 +54,14 @@ const DevelopersList = props => {
   const classes = useStyles();
   return (
     <Grid
-      className={classes.developersListContainer}
+      className={`${classes.developersListContainer} developers-list-container`}
       container
       direction="column"
       justify="space-around"
       alignItems="center"
     >
       <Typography
-        className={classes.developersListContainer__developersListHeader}
+        className="developers-list-container__deveolpers-list-header"
         gutterBottom
         color="textSecondary"
         variant="h5"
@@ -74,7 +70,7 @@ const DevelopersList = props => {
         {developersListHeader}
       </Typography>
       <Grid
-        className={classes.developersListContainer__developersList}
+        className={`${classes.developersListContainer__developersList} developers-list-container__deveolpers-list`}
         container
         justify="space-around"
         alignItems="center"

@@ -23,27 +23,19 @@ const styles = {
     margin: '0 auto',
   },
   poetOfTheDayCard__name: {
-    fontSize: '4.5vh',
-    textAlign: 'right',
     textShadow: '2px 4px 3px rgba(0,0,0,0.3)',
     fontFamily: `'proxima-nova', sans-serif`,
     '-webkitTextStroke': '0.5px #fafafa',
     textShadow: '0px 0px 0.5vw #ffffff, 0px 0px 1vw #000000',
   },
   poetOfTheDayCard__yearsOfLive: {
-    fontSize: '2vw',
-    textAlign: 'right',
     textShadow: '2px 4px 3px rgba(0,0,0,0.3)',
     fontFamily: `'proxima-nova', sans-serif`,
     '-webkitTextStroke': '0.5px #fafafa',
     textShadow: '0px 0px 0.5vw #ffffff, 0px 0px 1vw #000000',
   },
   poetOfTheDayCard__bio: {
-    fontSize: '2.5vh',
     fontFamily: `'Marck Script', cursive`,
-  },
-  poetOfTheDayCard__learnMoreBtn: {
-    fontSize: '1.5vw',
   },
   photo: {
     display: 'flex',
@@ -89,14 +81,14 @@ const AuthorOfTheDay = props => {
           />
           <CardContent>
             <Typography
-              className={classes.poetOfTheDayCard__name}
+              className={`${classes.poetOfTheDayCard__name} poet-of-the-day__name`}
               gutterBottom
               variant="h4"
             >
               {name} {surname}
             </Typography>
             <Typography
-              className={classes.poetOfTheDayCard__yearsOfLive}
+              className={`${classes.poetOfTheDayCard__yearsOfLive} poet-of-the-day__years-of-life`}
               variant="h6"
             >
               {yearsOfLife}
@@ -107,14 +99,14 @@ const AuthorOfTheDay = props => {
       <Divider variant="middle" />
       <CardContent>
         <Typography
-          className={classes.poetOfTheDayCard__bio}
+          className={`${classes.poetOfTheDayCard__bio} poet-of-the-day__bio`}
           component="p"
         >{`${biography[0].content}...`}</Typography>
       </CardContent>
 
-      <CardActions>
+      <CardActions className="poet-of-the-day-button-container">
         <Button
-          className={classes.poetOfTheDayCard__learnMoreBtn}
+          className={`${classes.poetOfTheDayCard__learnMoreBtn} poet-of-the-day__learn-more-button`}
           variant="contained"
           size="small"
           color="primary"

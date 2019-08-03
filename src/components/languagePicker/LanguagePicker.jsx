@@ -3,19 +3,15 @@ import { withStyles } from '@material-ui/core/styles';
 import { Select, MenuItem } from '@material-ui/core';
 
 import { supportedLanguages } from './constants';
-import {
-  languagesEvents,
-  languagesStore,
-} from '../../storage';
+import { languagesEvents, languagesStore } from '../../storage';
 
 const styles = {
   languagePicker: {
     position: 'absolute',
     left: '2vw',
-    fontSize: '1vw',
 
     color: '#ffffff',
-    fontFamily: `'PT Sans', sans-serif`
+    fontFamily: `'PT Sans', sans-serif`,
   },
 };
 
@@ -45,10 +41,10 @@ class LanguagePicker extends Component {
   render() {
     const { classes } = this.props;
     const { currentLanguage } = this.state;
-    
+
     return (
       <Select
-        className={classes.languagePicker}
+        className={`${classes.languagePicker} nav-bar__language-picker`}
         value={currentLanguage}
         onChange={this.handleChange}
       >
