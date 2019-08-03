@@ -23,7 +23,7 @@ const useStyles = makeStyles({
   },
 });
 
-const DevelopersList = (props) => {
+const DevelopersList = props => {
   const data = useStaticQuery(
     graphql`
       query developersQuery {
@@ -82,11 +82,11 @@ const DevelopersList = (props) => {
         {developersContentful.map((developer, i) => {
           const { name, surname } = developers[i];
           const photo = developer.developerPhoto.file.url;
-          const { 
+          const {
             id,
-            githubId, 
-            githubLink, 
-            telegramLink, 
+            githubId,
+            githubLink,
+            telegramLink,
             taskComplete,
             taskAtAll,
             teamMembers,
