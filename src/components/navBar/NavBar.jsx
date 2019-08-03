@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from "gatsby"
+import { Link } from 'gatsby';
 import { makeStyles } from '@material-ui/core/styles';
 
 import LanguagePicker from '../languagePicker';
@@ -9,7 +9,6 @@ import blueFlowerLogo from './assets/blue-flower-logo.png';
 const useStyles = makeStyles({
   navBar: {
     position: 'fixed',
-    height: '4vw',
     width: '100%',
     padding: '0 2vw',
     zIndex: 10,
@@ -19,8 +18,7 @@ const useStyles = makeStyles({
     alignItems: 'center',
 
     backgroundColor: '#303030',
-    boxShadow: '1px 1px 12px #000000f0;'
-
+    boxShadow: '1px 1px 12px #000000f0;',
   },
   controlsBar: {
     height: '100%',
@@ -29,12 +27,10 @@ const useStyles = makeStyles({
     justifyContent: 'space-between',
     alignItems: 'center',
 
-    listStyle: 'none'
+    listStyle: 'none',
   },
   controlsBar__flowerLogo: {
-    height: '2.8vw',
-    width: '2.8vw',
-    margin: '0 2vw'
+    margin: '0 2vw',
   },
   controlsBar__controlLinkButton: {
     height: '100%',
@@ -51,9 +47,9 @@ const useStyles = makeStyles({
       color: 'red',
 
       cursor: 'pointer',
-      borderBottom: '0.2vw solid #40c8f4'
-    }
-  }
+      borderBottom: '0.2vw solid #40c8f4',
+    },
+  },
 });
 
 const routingLinkStyle = {
@@ -66,7 +62,7 @@ const routingLinkStyle = {
 
   textDecoration: 'none',
   textTransform: 'uppercase',
-  color: '#ffffff'
+  color: '#ffffff',
 };
 
 const NavBar = props => {
@@ -74,17 +70,17 @@ const NavBar = props => {
     navBar,
     controlsBar,
     controlsBar__flowerLogo,
-    controlsBar__controlLinkButton
+    controlsBar__controlLinkButton,
   } = useStyles();
 
   const { homeLink, poetsListLink } = props;
-  
+
   return (
-    <header className={navBar}>
+    <header className={`${navBar} nav-bar`}>
       <LanguagePicker />
 
-      <ul className={controlsBar}>
-        <li className={controlsBar__controlLinkButton}>
+      <ul className={`${controlsBar} controls-bar`}>
+        <li className={`${controlsBar__controlLinkButton} nav-bar__nav-link`}>
           <Link style={routingLinkStyle} to="/">
             {homeLink}
           </Link>
@@ -96,7 +92,7 @@ const NavBar = props => {
             alt="blue flower"
           />
         </li>
-        <li className={controlsBar__controlLinkButton}>
+        <li className={`${controlsBar__controlLinkButton} nav-bar__nav-link`}>
           <Link style={routingLinkStyle} to="/page-2">
             {poetsListLink}
           </Link>
