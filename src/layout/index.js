@@ -1,5 +1,5 @@
 import Layout from './Layout.jsx';
 
-import './Layout.scss';
+import './layout.scss';
 
 export default Layout;

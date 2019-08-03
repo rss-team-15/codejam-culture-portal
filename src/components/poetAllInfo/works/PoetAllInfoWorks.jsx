@@ -37,11 +37,12 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const PoetAllInfoWorks = props => {
+const PoetAllInfoWorks = (props) => {
   const {
     listOfWorks,
     interface: { title, firstColumnName, secondColumnName },
   } = props;
+
   const classes = useStyles();
 
   return (
