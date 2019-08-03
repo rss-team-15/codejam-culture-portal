@@ -10,6 +10,7 @@ import PoetMap from '../components/poetAllInfo/map';
 import PoetGallery from '../components/poetAllInfo/gallery';
 
 import { languagesStore } from '../storage';
+import './style.scss';
 
 import Layout from '../layout/';
 
@@ -60,7 +61,7 @@ const PoetAllInfo = ({ pageContext }) => {
     galleryTitle,
   } = pageContext.resultData[
     `contentfulPoetPageInterface${lang[0].toUpperCase() + lang.slice(1)}`
-  ];
+    ];
 
   const poetInfo = { name, surname, yearsOfLife, mainPicture };
 

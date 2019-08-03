@@ -42,10 +42,6 @@ main {
   }
 }
 
-.timeline--wrapper .timeline--animate {
-  margin: 15px auto;
-}
-
 @media screen and (max-width: 1980px) {
   main {
     min-height: (100vh - 10vh);
@@ -59,109 +55,42 @@ main {
 }
 
 @media screen and (max-width: 1200px) {
-  .MuiGrid-justify-xs-center .MuiPaper-rounded {
-    padding: 20px;
-    width: 90%;
-  }
-  .bounce-in p {
-    font-size: 3vw;
-  }
-  #gatsby-focus-wrapper  footer {
+  main {
+    min-height: (100vh - 7vh);
+  } 
+  .footer {
     height: 6vh;
     p {
       font-size: 2vh;
     }
-  }
-  .MuiPaper-rounded {
-    h5 {
-      font-size: 5vh;
-    }
-  }
-  main {
-    min-height: (100vh - 7vh);
   }
 }
 
 @media screen and (max-width: 992px) {
-  .MuiGrid-justify-xs-center .MuiPaper-rounded h3 {
-    text-align: center;
-    font-size: 4.5vw;
-  }
-  .MuiGrid-justify-xs-center .MuiPaper-rounded h4 {
-    text-align: center;
-    font-size: 3vw;
-  }
-  .bounce-in p {
-    font-size: 3.5vw;
-  }
 }
 
 @media screen and (max-width: 768px) {
-  .MuiGrid-justify-xs-center .MuiPaper-rounded {
-    width: 100%;
-  }
-  .bounce-in p {
-    font-size: 4vw;
-  }
-  #gatsby-focus-wrapper  footer {
+  .footer {
     height: 6vh;
     p {
       font-size: 2vh;
     }
   }
-  .bounce-in P {
-    margin-bottom: 10px;
-  }
-  .MuiPaper-rounded {
-    h5 {
-      font-size: 3.5vh;
-    }
-  }
-  .MuiPaper-elevation1 {
-    img {
-      display: block;
-      margin: 8px auto;
-      width: 30vh;
-    }  
-  }
 }
 
 @media screen and (max-width: 480px) {
-  .bounce-in p {
-    font-size: 5vw;
-  }
-  #gatsby-focus-wrapper  footer {
+  main {
+    min-height: (100vh - 6.5vh);
+  }  
+  .footer {
     height: 4vh;
     p {
       font-size: 1.5vh;
     }
   }
-  .MuiGrid-justify-xs-center {
-    justify-content: end;
-  }
-  .MuiPaper-rounded {
-    h5 {
-      font-size: 3vh;
-    }
-  }
-  .bounce-in {
-    span {
-      height: 40px;
-      .timeline-item-dateinner {
-        height: 40px;
-        line-height: 40px;
-      }
-    }
-  }
-  main {
-    min-height: (100vh - 6.5vh);
-  }
 }
 
 @media screen and (max-width: 320px) {
-  .bounce-in p {
-    font-size: 5.5vw;
-  }
   main {
     min-height: (100vh - 5vh);
   }
