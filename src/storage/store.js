@@ -4,7 +4,7 @@ import thunkMiddleware from 'redux-thunk';
 import actions from './actions';
 import languagesState from './initState';
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const composeEnhancers = compose;
 
 const middlewares = [thunkMiddleware];
 

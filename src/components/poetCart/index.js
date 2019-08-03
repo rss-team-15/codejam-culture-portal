@@ -1,4 +1,4 @@
-import PoetCart from './PoetCart.jsx';
+import PoetCart from './poetCart.jsx';
 
 import './media-screen.scss';
 
