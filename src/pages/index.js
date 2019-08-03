@@ -1,11 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { Link } from 'gatsby';
 
-import App from '../app/';
-import Layout from '../components/layout';
-import Image from '../components/image';
-import SEO from '../components/seo';
+import Layout from '../layout/';
 
 import Home from '../components/home';
 
@@ -13,10 +9,9 @@ const IndexPage = ({ data }) => {
   const authors = data;
 
   return (
-    <App>
-      <SEO title="Home" />
+    <Layout>
       <Home authors={authors} />
-    </App>
+    </Layout>
   );
 };
 

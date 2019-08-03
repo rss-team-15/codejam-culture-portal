@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
 import NavBar from '../components/navBar';
 
-import { languagesStore, languagesInitState } from '../storage';
+import { languagesStore } from '../storage';
 
-class App extends Component {
+class Layout extends Component {
   constructor(props) {
     super(props);
 
@@ -35,7 +34,6 @@ class App extends Component {
         <footer className='footer'>
           <p>
             © {new Date().getFullYear()}, Built with	&nbsp;
-            {`  `}
           </p>
           <p>
             <a href="https://www.gatsbyjs.org"> Gatsby</a>
@@ -46,8 +44,4 @@ class App extends Component {
   }
 }
 
-App.propTypes = {
-  children: PropTypes.node.isRequired,
-};
-
-export default App;
+export default Layout;

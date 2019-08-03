@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { Link } from 'gatsby';
 
-import App from '../app/';
+import Layout from '../layout/';
 import AuthorsList from '../components/AuthorsList';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
@@ -11,11 +11,11 @@ const SecondPage = ({ data }) => {
   const authors = data;
 
   return (
-    <App>
+    <Layout>
       <SEO title="Page two" />
       <Link to="/">Go back to the homepage</Link>
       <AuthorsList authors={authors} />
-    </App>
+    </Layout>
   );
 };
 
