@@ -1,16 +1,11 @@
 import React from 'react';
-import { withStyles } from '@material-ui/core/styles';
 
-import Grid from '@material-ui/core/Grid';
-import TextField from '@material-ui/core/TextField';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
+import { withStyles } from '@material-ui/core/styles';
+import { Grid, TextField, List, ListItem } from '@material-ui/core/';
 
 import PoetCart from '../PoetCart';
+import { languagesStore } from '../../storage';
 
-import authorsDB from '../../utils/poetsList';
-import { languagesStore, languagesInitState } from '../../storage';
-import { poetsListActions, poetsListEvents } from '../../storage/poetsList';
 
 const styles = {
   container: {
@@ -45,13 +40,12 @@ class AuthorsList extends React.Component {
 
     const {
       activeLanguage: {
-        poetsListBlock: { poetsList, poetsListSearchLabel, poetCardLearnMore },
+        poetsListBlock: { poetsListSearchLabel, poetCardLearnMore },
       },
       lang,
     } = languagesStore.getState();
 
     this.state = {
-      poetsList,
       poetsListSearchLabel,
       poetCardLearnMore,
       authorsList: [...this.props.authors[`allContentfulAuthor${lang[0].toUpperCase() + lang.slice(1)}`].edges],
@@ -90,7 +84,6 @@ class AuthorsList extends React.Component {
       const {
         activeLanguage: {
           poetsListBlock: {
-            poetsList,
             poetsListSearchLabel,
             poetCardLearnMore,
           },
@@ -100,7 +93,7 @@ class AuthorsList extends React.Component {
 
       const authorsList = [...this.props.authors[`allContentfulAuthor${lang[0].toUpperCase() + lang.slice(1)}`].edges]
 
-      this.setState({ poetsList, poetsListSearchLabel, poetCardLearnMore, lang, authorsList });
+      this.setState({ poetsListSearchLabel, poetCardLearnMore, lang, authorsList });
     });
 
     return (

@@ -24,6 +24,7 @@ const useStyles = makeStyles({
 const UsedTechnology = props => {
   const { tecnologyImg, tecnologyName } = props;
   const classes = useStyles();
+  
   return (
     <Card className={classes.technologyCard}>
       <Grid

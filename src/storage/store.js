@@ -4,8 +4,6 @@ import thunkMiddleware from 'redux-thunk';
 import actions from './actions';
 import languagesState from './initState';
 
-import { poetsListReducer, poetsListActions } from './poetsList';
-
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const middlewares = [thunkMiddleware];
@@ -19,31 +17,6 @@ function rootReducer(state = languagesState, act) {
       const contentsActive = state.contents[act.language];
       const lang = act.language;
       return { ...state, activeLanguage, contentsActive, lang };
-    }
-    case poetsListActions.updatePoetsList: {
-      const query = act.query.trim();
-      const activePoets = state.contentsActive.poetsListBlock.poetsList.filter(
-        poet =>
-          `${poet.poetInfo.name} ${poet.poetInfo.surname}`
-            .toLowerCase()
-            .includes(query.toLowerCase())
-      );
-
-      return {
-        ...state,
-        activeLanguage: {
-          navbar: state.activeLanguage.navbar,
-          home: state.activeLanguage.home,
-          poetsListBlock: {
-            poetsList: activePoets,
-            poetsListSearchLabel:
-              state.activeLanguage.poetsListBlock.poetsListSearchLabel,
-            poetCardLearnMore:
-              state.activeLanguage.poetsListBlock.poetCardLearnMore,
-          },
-        },
-        lang: state.lang,
-      };
     }
     default: {
       return state;

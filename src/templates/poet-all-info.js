@@ -11,8 +11,7 @@ import PoetGallery from '../components/poetAllInfo/gallery';
 
 import { languagesStore } from '../storage';
 
-import App from '../app/';
-
+import Layout from '../layout/';
 
 const useStyles = makeStyles(theme => ({
   poetAllInfoContainer: {
@@ -48,7 +47,9 @@ const PoetAllInfo = ({ pageContext }) => {
     listOfWorks,
     placesOfActivity,
     gallery,
-  } = pageContext.resultData[`allContentfulAuthor${lang[0].toUpperCase() + lang.slice(1)}`].edges[indexData].node;
+  } = pageContext.resultData[
+    `allContentfulAuthor${lang[0].toUpperCase() + lang.slice(1)}`
+  ].edges[indexData].node;
 
   const {
     biographyTitle,
@@ -57,9 +58,9 @@ const PoetAllInfo = ({ pageContext }) => {
     secondColumnTitle,
     watchVideoTitle,
     galleryTitle,
-  } = pageContext.resultData[`contentfulPoetPageInterface${lang[0].toUpperCase() + lang.slice(1)}`];
-
-  console.log(pageContext);
+  } = pageContext.resultData[
+    `contentfulPoetPageInterface${lang[0].toUpperCase() + lang.slice(1)}`
+  ];
 
   const poetInfo = { name, surname, yearsOfLife, mainPicture };
 
@@ -70,18 +71,14 @@ const PoetAllInfo = ({ pageContext }) => {
   };
 
   return (
-    <App>
+    <Layout>
       <Grid container className={classes.poetAllInfoContainer} justify="center">
         <Paper className={classes.poetAllInfoRoot}>
           <PoetTitle poetInfo={poetInfo} />
           <PoetBiograpyhy poetBio={biography} title={biographyTitle} />
           <PoetWorks listOfWorks={listOfWorks} interface={tableInterface} />
-          <PoetVideo videoId={videoId} videoTitle={watchVideoTitle}/>
+          <PoetVideo videoId={videoId} videoTitle={watchVideoTitle} />
           <PoetMap
-            googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
-            loadingElement={<div style={{ height: `100%` }} />}
-            containerElement={<div style={{ height: `30vw` }} />}
-            mapElement={<div style={{ height: `100%` }} />}
             markers={placesOfActivity}
             center={placesOfActivity[0].mapLink}
             title="Map"
@@ -89,7 +86,7 @@ const PoetAllInfo = ({ pageContext }) => {
           <PoetGallery images={gallery} title={galleryTitle} />
         </Paper>
       </Grid>
-    </App>
+    </Layout>
   );
 };
 

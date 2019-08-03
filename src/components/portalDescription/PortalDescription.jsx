@@ -1,5 +1,6 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography, Grid, SvgIcon, Button } from '@material-ui/core';
 
@@ -7,11 +8,6 @@ import UsedTechnology from '../usedTechnology';
 
 import belorusianLandscape from './assets/belorusian-landscape.jpg';
 import svgIcons from './assets/svg-icons';
-// import reactIcon from './assets/react-icon.png';
-// import reduxIcon from './assets/redux-icon.png';
-// import materialUiIcon from './assets/material-ui-icon.png';
-
-import constants from './constants';
 
 const useStyles = makeStyles({
   topSection: {
@@ -83,7 +79,7 @@ const PortalDescription = props => {
   );
 
   const technologies = data.allContentfulTechnology.nodes;
-   
+
   const {
     textContent: {
       topSectionHeader,
@@ -93,7 +89,9 @@ const PortalDescription = props => {
       openSourceSectionButton,
     },
   } = props;
+
   const classes = useStyles();
+
   return (
     <React.Fragment>
       {/* Top section with image */}
@@ -151,15 +149,18 @@ const PortalDescription = props => {
           {usedTechnologies}
         </Typography>
         <Grid container justify="space-around" alignItems="center">
-        {
-          technologies.map((tech) => {
+          {technologies.map(tech => {
             const { id, technology, logo } = tech;
             const icon = logo.file.url;
 
-            return <UsedTechnology key={id} tecnologyImg={icon} tecnologyName={technology} />
-          })
-        }
-          
+            return (
+              <UsedTechnology
+                key={id}
+                tecnologyImg={icon}
+                tecnologyName={technology}
+              />
+            );
+          })}
         </Grid>
       </Grid>
 
@@ -184,7 +185,9 @@ const PortalDescription = props => {
           variant="contained"
           color="primary"
           className={classes.openSourceSection__repositoryLinkButton}
-          href={constants.repositoryGithubLink}
+          href="https://github.com/rss-team-15/codejam-culture-portal"
+          alt="To GitHub"
+          target="_blank"
         >
           {openSourceSectionButton}
         </Button>
