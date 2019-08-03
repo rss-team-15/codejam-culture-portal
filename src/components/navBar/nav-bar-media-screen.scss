@@ -1,7 +1,7 @@
 $laptopScreen: 1200px;
 $tabletScreen: 760px;
 
-@media screen and (min-width: $laptopScreen) {
+@media screen and (max-width: $laptopScreen) {
   .nav-bar {
     height: 4vw;
   }
@@ -33,13 +33,13 @@ $tabletScreen: 760px;
   }
 }
 
-@media screen and (max-width: $tabletScreen) {
-  .controls-bar {
-    width: 65vw;
+@media screen and (max-width: 760px) {
+  .nav-bar {
+    height: 7.5vw;
   }
 
-  .blue-flower-logo {
-    display: none;
+  .controls-bar {
+    width: 65vw;
   }
 
   .nav-bar__nav-link {
@@ -48,5 +48,80 @@ $tabletScreen: 760px;
 
   .nav-bar__nav-link a {
     font-size: 2.75vw;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .nav-bar {
+    height: 8vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nav-bar {
+    height: 9vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .nav-bar {
+    height: 10vw;
+  }
+
+  .nav-bar__nav-link a {
+    font-size: 14px;
+  }
+
+  .blue-flower-logo {
+    display: none;
+  }
+
+  .MuiInputBase-root.nav-bar__language-picker {
+    height: 7vw;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .nav-bar {
+    height: 11vw;
+  }
+
+  .MuiInputBase-root.nav-bar__language-picker {
+    height: 8vw;
+  }
+
+  .LanguagePicker-languagePicker-5 {
+    left: 0vw !important;
+  }
+
+  .MuiInputBase-input {
+    padding: 6px 5.8vw 7px 2.5vw !important;
+  }
+
+  .MuiSelect-icon {
+    right: -0.2vw !important;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .nav-bar {
+    height: 13vw;
+  }
+
+  .MuiInputBase-root.nav-bar__language-picker {
+    height: 10vw;
+  }
+
+  .LanguagePicker-languagePicker-5 {
+    left: 0vw !important;
+  }
+
+  .MuiInputBase-input {
+    padding: 6px 15px 7px 6px !important;
+  }
+
+  .MuiSelect-icon {
+    right: -5px !important;
   }
 }

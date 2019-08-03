@@ -1,15 +1,40 @@
-@media screen and (max-width: 840px) {
-  .AuthorsList-form-377 {
+@media screen and (max-width: 1000px) {
+  .search-widget {
     width: 60%;
   }
 }
-@media screen and (max-width: 500px) {
-  .AuthorsList-form-377 {
+@media screen and (max-width: 900px) {
+  .search-widget {
+    width: 65%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .search-widget {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .search-widget {
     width: 80%;
   }
 }
-@media screen and (max-width: 320px) {
-  .AuthorsList-form-377 {
+@media screen and (max-width: 600px) {
+  .search-widget {
+    width: 85%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .search-widget {
     width: 90%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .search-widget {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 320px) {
+  .search-widget {
+    width: 100%;
   }
 }
