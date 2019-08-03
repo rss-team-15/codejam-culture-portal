@@ -18,10 +18,7 @@ body {
   }
 }
 
-.footer {
-  // bottom: 0;
-  // z-index: 20;
-  // width: 100%;
+.footer {  
   height: 4vw;
   background: #303030;
   box-shadow: 0 -1px 12px #000000f0;
@@ -49,6 +46,17 @@ body {
   .bounce-in p {
     font-size: 3vw;
   }
+  #gatsby-focus-wrapper  footer {
+    height: 6vh;
+    p {
+      font-size: 2vh;
+    }
+  }
+  .MuiPaper-rounded {
+    h5 {
+      font-size: 5vh;
+    }
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -69,11 +77,39 @@ body {
   .bounce-in p {
     font-size: 4vw;
   }
+  #gatsby-focus-wrapper  footer {
+    height: 6vh;
+    p {
+      font-size: 2vh;
+    }
+  }
+  .bounce-in P {
+    margin-bottom: 10px;
+  }
+  .MuiPaper-rounded {
+    h5 {
+      font-size: 3.5vh;
+    }
+  }
 }
 
 @media screen and (max-width: 480px) {
   .bounce-in p {
     font-size: 5vw;
+  }
+  #gatsby-focus-wrapper  footer {
+    height: 6vh;
+    p {
+      font-size: 1.5vh;
+    }
+  }
+  .MuiGrid-justify-xs-center {
+    justify-content: end;
+  }
+  .MuiPaper-rounded {
+    h5 {
+      font-size: 3vh;
+    }
   }
 }
 
