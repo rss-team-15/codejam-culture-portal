@@ -1,7 +1,7 @@
 $laptopScreen: 1200px;
 $tabletScreen: 760px;
 
-@media screen and (max-width: $laptopScreen) {
+@media screen and (min-width: $laptopScreen) {
   .nav-bar {
     height: 4vw;
   }
