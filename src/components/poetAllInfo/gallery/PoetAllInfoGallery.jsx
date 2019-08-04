@@ -5,11 +5,9 @@ import { Grid, Typography } from '@material-ui/core';
 
 const useStyles = makeStyles({
   poetGalleryTitle: {
-    marginTop: '3vw',
-    marginBottom: '3vw',
-
-    fontSize: '2vw',
-    color: '#555555',
+    fontFamily: `'PT Sans', 'proxima-nova', sans-serif`,
+    fontWeight: '700',
+    color: '#505050',
   },
 });
 
@@ -30,9 +28,9 @@ const PoetAllInfoGallery = props => {
   return (
     <Grid container direction="column" alignItems="center">
       <Typography
-        className={classes.poetGalleryTitle}
-        variant="h5"
-        component="h5"
+        className={`${classes.poetGalleryTitle} poet-page-gallery-title`}
+        variant="h3"
+        component="h3"
       >
         {title}
       </Typography>

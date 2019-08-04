@@ -16,6 +16,7 @@ import Layout from '../layout/';
 
 const useStyles = makeStyles(theme => ({
   poetAllInfoContainer: {
+    height: '100%',
     paddingTop: '6vw',
     backgroundColor: '#eeeeee',
   },
@@ -73,8 +74,8 @@ const PoetAllInfo = ({ pageContext }) => {
 
   return (
     <Layout>
-      <Grid container className={classes.poetAllInfoContainer} justify="center">
-        <Paper className={classes.poetAllInfoRoot}>
+      <Grid container className={`${classes.poetAllInfoContainer} poet-page-containter`} justify="center">
+        <Paper className={`${classes.poetAllInfoRoot} poet-page-wrapper`}>
           <PoetTitle poetInfo={poetInfo} />
           <PoetBiograpyhy poetBio={biography} title={biographyTitle} />
           <PoetWorks listOfWorks={listOfWorks} interface={tableInterface} />

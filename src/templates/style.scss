@@ -1,76 +1,105 @@
-.timeline--wrapper .timeline--animate {
-  margin: 15px auto;
-}
+// .timeline--wrapper .timeline--animate {
+//   margin: 15px auto;
+// }
 
-@media screen and (max-width: 1200px) {
-  .MuiPaper-rounded {
-    h5 {
-      font-size: 5vh;
-    }
-  }
-  .bounce-in p {
-    font-size: 3vw;
-  }
-  .MuiGrid-justify-xs-center .MuiPaper-rounded {
-    padding: 20px;
-    width: 90%;
-  }
-}
+// @media screen and (max-width: 1200px) {
+//   .MuiPaper-rounded {
+//     h5 {
+//       font-size: 5vh;
+//     }
+//   }
+//   .bounce-in p {
+//     font-size: 3vw;
+//   }
+//   .MuiGrid-justify-xs-center .MuiPaper-rounded {
+//     padding: 20px;
+//     width: 90%;
+//   }
+// }
 
-@media screen and (max-width: 992px) {
-  .MuiGrid-justify-xs-center .MuiPaper-rounded h3 {
-    text-align: center;
-    font-size: 4.5vw;
-  }
-  .MuiGrid-justify-xs-center .MuiPaper-rounded h4 {
-    text-align: center;
-    font-size: 3vw;
-  }
-  .bounce-in p {
-    font-size: 3.5vw;
-  }
-}
+// @media screen and (max-width: 992px) {
+//   .MuiGrid-justify-xs-center .MuiPaper-rounded h3 {
+//     text-align: center;
+//     font-size: 4.5vw;
+//   }
+//   .MuiGrid-justify-xs-center .MuiPaper-rounded h4 {
+//     text-align: center;
+//     font-size: 3vw;
+//   }
+//   .bounce-in p {
+//     font-size: 3.5vw;
+//   }
+// }
 
-@media screen and (max-width: 768px) {
-  .MuiGrid-justify-xs-center .MuiPaper-rounded {
-    width: 100%;
-  }
-  .bounce-in p {
-    font-size: 4vw;
-    margin-bottom: 10px;
-  }
-  .MuiPaper-rounded {
-    h5 {
-      font-size: 3.5vh;
-    }
-  }  
-}
+// @media screen and (max-width: 768px) {
+//   .MuiGrid-justify-xs-center .MuiPaper-rounded {
+//   }
+//   .bounce-in p {
+//     font-size: 4vw;
+//     margin-bottom: 10px;
+//   }
+//   .MuiPaper-rounded {
+//     h5 {
+//       font-size: 3.5vh;
+//     }
+//   }
+// }
 
-@media screen and (max-width: 480px) {
-  .bounce-in p {
-    font-size: 5vw;
-  }
-  .MuiGrid-justify-xs-center {
-    justify-content: end;
-  }
-  .MuiPaper-rounded {
-    h5 {
-      font-size: 3vh;
-    }
-  }
-  .bounce-in {
-    span {
-      height: 40px;
-      .timeline-item-dateinner {
-        height: 40px;
-        line-height: 40px;
-      }
-    }
-  }
-}
+// @media screen and (max-width: 480px) {
+//   .bounce-in p {
+//     font-size: 5vw;
+//   }
+//   .MuiGrid-justify-xs-center {
+//     justify-content: end;
+//   }
+//   .MuiPaper-rounded {
+//     h5 {
+//       font-size: 3vh;
+//     }
+//   }
+//   .bounce-in {
+//     span {
+//       height: 40px;
+//       .timeline-item-dateinner {
+//         height: 40px;
+//         line-height: 40px;
+//       }
+//     }
+//   }
+// }
 
-@media screen and (max-width: 320px) {
-  .bounce-in p {
-    font-size: 5.5vw;
+@media screen and (min-width: 320px) {
+
+
+  .poet-page-containter {
+    padding-top: 18vw !important;
+    padding-bottom: 8vw !important;
+  }
+
+  .poet-page-wrapper {
+    width: 90% !important;
+    padding: 3vw 3vw !important;
+  }
+
+  .poet-page-works-container {
+    height: 122vw;
+  }
+  .poet-page-works-title {
+    font-size: 6.5vw !important;
+  }
+
+  .poet-page-video-button {
+    width: 80%;
+    height: 20vw;
+    margin: 10vw auto;
+    border-radius: 3vw;
+    box-shadow: 0 0 1vw 0 #303030;
+    font-size: 8vw;
+  }
+
+  .poet-page-gallery-title {
+    margin-top: 10vw !important;
+    margin-bottom: 5vw !important;
+    font-size: 6.5vw !important;
   }
 }
