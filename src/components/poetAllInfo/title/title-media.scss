@@ -1,0 +1,106 @@
+@media screen and (min-width: 320px) {
+  .poet-page-title-wrap {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 67vw;
+    margin-bottom: 40px;
+  }
+
+  .poet-page-title-name {
+    font-size: 7vw !important;
+    text-align: center;
+    padding-bottom: 2vw;
+  }
+
+  .poet-page-title-data {
+    font-size: 3.5vw !important;
+  }
+
+  .poet-page-title-photo {
+    width: 100% !important;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .poet-page-title-name {
+    font-size: 6vw !important;
+    padding-bottom: 1.5vw;
+  }
+
+  .poet-page-title-data {
+    font-size: 3vw !important;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .poet-page-title-wrap {
+    height: 60vw;
+  }
+
+  .poet-page-title-name {
+    font-size: 5.5vw !important;
+  }
+
+  .poet-page-title-photo {
+    width: 90% !important;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .poet-page-title-wrap {
+    height: 55vw;
+  }
+
+  .poet-page-title-name {
+    font-size: 5vw !important;
+  }
+
+  .poet-page-title-data {
+    font-size: 2.8vw !important;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .poet-page-title-wrap {
+    flex-direction: row-reverse;
+    height: 30vw;
+  }
+
+  .typography-wrap {
+    width: 35%;
+    height: 85%;
+  }
+
+  .poet-page-title-name {
+    text-align: left;
+    font-size: 4vw !important;
+  }
+
+  .poet-page-title-data {
+    font-size: 2vw !important;
+  }
+
+  .poet-page-title-photo {
+    width: 55% !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .poet-page-title-wrap {
+    width: 90%;
+    height: 20vw;
+  }
+
+  .poet-page-title-name {
+    font-size: 3vw !important;
+  }
+
+  .poet-page-title-data {
+    font-size: 2vw !important;
+  }
+
+  .poet-page-title-photo {
+    width: 40% !important;
+  }
+}
