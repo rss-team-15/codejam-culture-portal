@@ -11,9 +11,15 @@ import {
 } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
+  worksContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+  },
   poetBiographyTitle: {
     marginBottom: '3vw',
-    fontFamily: `'proxima-nova', sans-serif`,
+    fontFamily: `'PT Sans', 'proxima-nova', sans-serif`,
+    fontWeight: '700',
 
     color: '#555555',
     fontSize: '2vw',
@@ -46,11 +52,11 @@ const PoetAllInfoWorks = (props) => {
   const classes = useStyles();
 
   return (
-    <Grid container direction="column" alignItems="center">
+    <Grid className={`${classes.worksContainer} poet-page-works-container`} container direction="column" alignItems="center">
       <Typography
-        className={classes.poetBiographyTitle}
-        variant="h5"
-        component="h5"
+        className={`${classes.poetBiographyTitle} poet-page-works-title`}
+        variant="h3"
+        component="h3"
       >
         {title}
       </Typography>

@@ -114,7 +114,7 @@ class AuthorsList extends React.Component {
         justify="flex-start"
         alignItems="center"
       >
-        <div className={classes.form}>
+        <div className={`search-widget ${classes.form}`}>
           <TextField
             onChange={this.handleChange}
             value={this.state.input}

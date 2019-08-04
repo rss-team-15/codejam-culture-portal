@@ -6,6 +6,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -31,7 +32,6 @@ main {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
   p {
     display: block;
     color: #ffffff;

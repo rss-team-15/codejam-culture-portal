@@ -5,10 +5,8 @@ import ModalVideo from 'react-modal-video';
 
 const styles = {
   watchVideoButton: {
-    marginTop: '3vw',
-    marginBottom: '3vw',
-
-    fontSize: '2.5vw',
+    width: '100%',
+    height: '100%',
   },
 };
 
@@ -37,7 +35,7 @@ class PoetAllInfoVideo extends Component {
     const { videoId, videoTitle } = this.props;
 
     return (
-      <Grid container justify="center">
+      <Grid className="poet-page-video-button" container justify="center">
         <ModalVideo
           channel="youtube"
           isOpen={isOpen}
@@ -45,7 +43,7 @@ class PoetAllInfoVideo extends Component {
           videoId={videoId}
         />
         <Button
-          className={classes.watchVideoButton}
+          className={`${classes.watchVideoButton}`}
           color="secondary"
           onClick={this.openModal}
         >
