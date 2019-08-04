@@ -11,7 +11,14 @@
 
 | time spent | feature |
 | ---------- | ------- |
-| add hours | describe task |
+| 8 hour | "React" study and component creation study |
+| 3 hour | Create "Poet Cart" component |
+| 2 hour | Create media-screen styles for "Author of the day"|
+| 2 hour | Create media-screen styles for "Poet cart"|
+| 3 hour | Create media-screen styles for "nav Bar"|
+| 3 hour | Create media-screen styles for "loyaut"|
+| 4 hour | Create media-screen styles for "Poet all info"|
+
 
 *sannnao*
 
