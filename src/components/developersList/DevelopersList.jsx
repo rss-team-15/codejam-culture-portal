@@ -40,7 +40,7 @@ const DevelopersList = props => {
   const data = useStaticQuery(
     graphql`
       query developersQuery {
-        allContentfulDeveloper {
+        allContentfulDeveloper(sort: {fields: order, order: ASC}) {
           nodes {
             id
             developerPhoto {
@@ -103,8 +103,6 @@ const DevelopersList = props => {
             taskAtAll,
             teamMembers,
           } = developer;
-
-          console.log(taskAtAll, teamMembers, taskComplete)
 
           return (
             <GithubProfile
