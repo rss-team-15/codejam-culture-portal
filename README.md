@@ -46,8 +46,11 @@ _sannnao_
 _ekater1na_
 
 | time spent | feature       |
-| ---------- | ------------- |
-| add hours  | describe task |
+| ---------- | ---------------------------------------------------------------------- |
+| 8 hours    | Search and add content about authors in English                        |
+| 5 hours    | Search and add content about authors in Russian                        |
+| 5 hours    | Search and add content about authors in Belarusian                     |
+| 2 hours    | Interface translation                                                  |
 
 ## Self evaluation:
 
