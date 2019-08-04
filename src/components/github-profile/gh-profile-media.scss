@@ -33,12 +33,34 @@
   .gh-task-wrapper p {
     font-size: 14px;
   }
+
+  .gh-photo {
+    width: 13vw !important;
+    height: 13vw !important;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .gh-gard {
+    width: 24% !important;
+  }
 }
 
 @media screen and (max-width: 600px) {
   .gh-gard {
     width: 40% !important;
     height: 45% !important;
+  }
+
+  .gh-task-wrapper {
+    border: 1px solid #50c878 !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .gh-photo {
+    width: 20vw !important;
+    height: 20vw !important;
   }
 }
 
