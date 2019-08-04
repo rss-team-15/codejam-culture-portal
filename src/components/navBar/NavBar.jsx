@@ -11,7 +11,7 @@ const useStyles = makeStyles({
     position: 'fixed',
     width: '100%',
     padding: '0 2vw',
-    zIndex: 10,
+    zIndex: 1000,
 
     display: 'flex',
     justifyContent: 'center',
