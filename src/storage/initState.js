@@ -41,7 +41,7 @@ const englishContent = {
       learnMoreBtn: 'Learn More',
     },
     developersList: {
-      developersListHeader: 'Project was created by the team of six developers',
+      developersListHeader: 'Project was created by the team of four developers',
       developers: [
         {
           name: 'Aliaksandr',
@@ -91,7 +91,7 @@ const russianContent = {
     },
     developersList: {
       developersListHeader:
-        'Над проектом работала команда из шести разработчиков',
+        'Над проектом работала команда из четырех разработчиков',
       developers: [
         {
           name: 'Александр',
@@ -141,7 +141,7 @@ const belarusianContent = {
     },
     developersList: {
       developersListHeader:
-        'Над праектам працавала каманда з шасці распрацоўшчыкаў',
+        'Над праектам працавала каманда з чатырох распрацоўшчыкаў',
       developers: [
         {
           name: 'Аляксандр',
