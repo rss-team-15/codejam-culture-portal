@@ -35,6 +35,7 @@ _sannnao_
 | 3 hours    | Implement language changing with contentful                            |
 | 3 hours    | Add search through contentful content by name, surname, city           |
 | 8 hours    | Learn and add programmatically create pages                            |
+| 10 hours   | Add adaptive to header and author page                                 |
 
 _ekater1na_
 
