@@ -1,6 +1,6 @@
 import PoetTitle from './PoetAllInfoTitle.jsx';
 
 import 'typeface-roboto';
-import './media-screen.scss';
+import './title-media.scss';
 
 export default PoetTitle;

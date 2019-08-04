@@ -1,5 +1,5 @@
 import PoetAllInfoTimeLine from './PoetAllInfoTimeLine.jsx';
 
-import './media-screen.scss';
+import './timeline-media.scss';
 
 export default PoetAllInfoTimeLine;
