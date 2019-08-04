@@ -5,6 +5,12 @@
   }
 }
 
+@media screen and (max-width: 1000px) {
+  .developers-list-container {
+    height: 50vw !important;
+  }
+}
+
 @media screen and (max-width: 800px) {
   .developers-list-container {
     height: 55vw !important;
@@ -15,6 +21,12 @@
   .developers-list-container__deveolpers-list-header {
     width: 90%;
     font-size: 30px !important;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .developers-list-container {
+    height: 65vw !important;
   }
 }
 
@@ -35,18 +47,26 @@
 }
 
 @media screen and (max-width: 500px) {
+  .developers-list-container {
+    height: 150vw !important;
+  }
+
   .developers-list-container__deveolpers-list-header {
+    height: 15% !important;
     font-size: 20px !important;
+  }
+
+  .developers-list-container__deveolpers-list {
+    height: 85% !important;
   }
 }
 
 @media screen and (max-width: 400px) {
   .developers-list-container {
-    height: 230vw !important;
+    height: 350vw !important;
   }
   .developers-list-container__deveolpers-list-header {
     height: 10% !important;
-    font-size: 14px !important;
   }
 
   .developers-list-container__deveolpers-list {
