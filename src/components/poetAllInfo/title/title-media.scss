@@ -20,6 +20,7 @@
   .poet-page-title-photo {
     width: 100% !important;
   }
+
 }
 
 @media screen and (min-width: 500px) {
@@ -83,24 +84,34 @@
 
   .poet-page-title-photo {
     width: 55% !important;
+    margin: 0 !important;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .poet-page-title-wrap {
-    width: 90%;
-    height: 20vw;
+    justify-content: flex-end;
+    width: 100%;
+    height: 400px;
+  }
+
+  .typography-wrap {
+    width: 400px;
   }
 
   .poet-page-title-name {
-    font-size: 3vw !important;
+    font-size: 50px !important;
+    text-align: center;
   }
 
   .poet-page-title-data {
-    font-size: 2vw !important;
+    font-size: 28px !important;
+    text-align: center;
   }
 
   .poet-page-title-photo {
-    width: 40% !important;
+    width: 700px !important;
+    margin-right: 25px !important;
   }
+
 }

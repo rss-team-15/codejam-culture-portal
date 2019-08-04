@@ -39,10 +39,6 @@
 
 
 @media screen and (min-width: 500px) {
-  .poet-page-bio-title {
-    font-size: 6vw !important;
-  }
-
   .timeline {
     margin: 20px auto;
   }
@@ -77,10 +73,14 @@
   }
 }
 
-@media screen and (min-width: 769px) {
-  .poet-page-bio-title {
-    font-size: 6vw !important;
+@media screen and (min-width: 600px) {
+  .entry .body p {
+    line-height: 1.3em;
+    font-size: 26px;
   }
+}
+
+@media screen and (min-width: 769px) {
 
   .timeline {
     margin: 20px auto;
@@ -107,22 +107,11 @@
   .entry .body {
     margin: 0px 0 50px;
   }
-  .entry .body p {
-    line-height: 1.3em;
-    font-size: 4vw;
-  }
-  .timeline-item-dateinner {
-    font-size: 16px;
-  }
 }
 
 @media screen and (min-width: 1000px) {
-  .poet-page-bio-title {
-    font-size: 4vw !important;
-  }
-
   .timeline {
-    margin: 20px auto;
+    margin: 60px auto;
   }
 
   .timeline--wrapper {
@@ -137,6 +126,6 @@
     margin: 0px 0 50px;
   }
   .entry .body p {
-    font-size: 2.5vw;
+    line-height: 1.4em;
   }
 }
