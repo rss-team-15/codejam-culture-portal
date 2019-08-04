@@ -1,26 +1,55 @@
-$tabletScreen: 760px;
-
-@media screen and (min-width: $tabletScreen) {
-  .developers-list-container {
-    height: 40vw;
-  }
-
-  h2.developers-list-container__deveolpers-list-header {
-    font-size: 4vw;
+@media screen and (max-width: 1200px) {
+  .developers-list-container__deveolpers-list-header {
+    width: 95%;
+    font-size: 35px !important;
   }
 }
 
-@media screen and (max-width: $tabletScreen) {
+@media screen and (max-width: 800px) {
   .developers-list-container {
-    height: 45vw;
+    height: 55vw !important;
   }
+}
 
-  h2.developers-list-container__deveolpers-list-header {
-    font-size: 3vw;
+@media screen and (max-width: 768px) {
+  .developers-list-container__deveolpers-list-header {
+    width: 90%;
+    font-size: 30px !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .developers-list-container {
+    height: 120vw !important;
+  }
+  .developers-list-container__deveolpers-list-header {
+    height: 20% !important;
+    font-size: 25px !important;
   }
 
   .developers-list-container__deveolpers-list {
-    flex-direction: column;
-    height: 40vw;
+    height: 80% !important;
+    flex-wrap: wrap !important;
+    justify-content: space-around !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .developers-list-container__deveolpers-list-header {
+    font-size: 20px !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .developers-list-container {
+    height: 230vw !important;
+  }
+  .developers-list-container__deveolpers-list-header {
+    height: 10% !important;
+    font-size: 14px !important;
+  }
+
+  .developers-list-container__deveolpers-list {
+    height: 90% !important;
   }
 }

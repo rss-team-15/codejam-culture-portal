@@ -6,52 +6,61 @@ import icons from './assets/svg-icons';
 
 const useStyles = makeStyles({
   githubCard: {
-    width: '15vw',
-
-    display: 'inline-block'
+    width: '18%',
+    height: '100%',
   },
+
   githubCardContent: {
-    height: '20vw'
+    
+  },
+
+  actionArea: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    height: '60%',
   },
   githubCardContent__profileImage: {
+    width: '9vw',
     height: '9vw',
-    width: '9vw'
   },
   githubCardContent__profileNickname: {
     marginTop: '1vw',
     marginBottom: 0,
 
-    fontSize: '1.4vw'
+    fontSize: '20px',
   },
   githubCardContent__profileName: {
-    fontSize: '0.81vw'
+    fontSize: '14px',
   },
   profileTasksCreatedArea: {
-    height: '3.25vw'
+    height: '25%',
   },
   profileTasksCreatedWrapper: {
-    height: '2.7vw',
-    width: '2.7vw',
+    height: '50px',
+    width: '50px',
 
-    borderRadius: '100%'
+    borderRadius: '100%',
   },
   profileTasksCreatedWrapper_ok: {
     color: '#50c878',
-    border: '0.1vw solid #50c878'
+    border: '0.1vw solid #50c878',
   },
   profileTasksCreatedWrapper_warning: {
     color: '#ffae42',
-    border: '0.1vw solid #ffae42'
+    border: '0.1vw solid #ffae42',
   },
   profileTasksCreatedWrapper__profileTasksCreated: {
-    fontSize: '1vw'
+    fontSize: '17px',
   },
   profileSocials: {
-    height: '4vw'
+    display: 'flex',
+    alignItems: 'center',
+    height: '15%',
   },
   profileSocials__profileSocialIcon: {
-    height: '1.25vw',
-    width: '1.25vw'
+    height: '20px',
+    width: '20px',
   }
 });
 
@@ -71,8 +80,8 @@ const GithubProfile = props => {
   const classes = useStyles();
   
   return (
-    <Card className={classes.githubCard}>
-      <CardActionArea href={githubLink}>
+    <Card className={`${classes.githubCard} gh-gard`}>
+      <CardActionArea className={classes.actionArea} href={githubLink}>
         <Grid
           className={classes.githubCardContent}
           container
@@ -81,11 +90,11 @@ const GithubProfile = props => {
           alignItems="center"
         >
           <Grid container justify="center" alignItems="center">
-            <Avatar className={classes.githubCardContent__profileImage} src={githubImg} />
+            <Avatar className={`${classes.githubCardContent__profileImage} gh-photo`} src={githubImg} />
           </Grid>
           <Grid container direction="column" justify="center" alignItems="center">
             <Typography
-              className={classes.githubCardContent__profileNickname}
+              className={`${classes.githubCardContent__profileNickname} gh-nick-name`}
               gutterBottom
               variant="h5"
               component="h2"
@@ -93,7 +102,7 @@ const GithubProfile = props => {
               {githubNickname}
             </Typography>
             <Typography
-              className={classes.githubCardContent__profileName}
+              className={`${classes.githubCardContent__profileName} gh-name`}
               variant="body2"
               color="textSecondary"
               component="p"
@@ -104,13 +113,13 @@ const GithubProfile = props => {
         </Grid>
       </CardActionArea>
       <Grid
-        className={classes.profileTasksCreatedArea}
+        className={`${classes.profileTasksCreatedArea}`}
         container
         justify="center"
         alignItems="center"
       >
         <Grid
-          className={`${classes.profileTasksCreatedWrapper} ${
+          className={`${classes.profileTasksCreatedWrapper}  gh-task-wrapper ${
             tasksAll / (teamMembers + 1) < tasksCreated
               ? classes.profileTasksCreatedWrapper_ok
               : classes.profileTasksCreatedWrapper_warning
@@ -129,9 +138,9 @@ const GithubProfile = props => {
           </Typography>
         </Grid>
       </Grid>
-      <CardActionArea href={contactLink}>
-        <Grid className={classes.profileSocials} container justify="center" alignItems="center">
-          <SvgIcon className={classes.profileSocials__profileSocialIcon}>
+      <CardActionArea className={classes.profileSocials} href={contactLink}>
+        <Grid container justify="center" alignItems="center">
+          <SvgIcon className={`${classes.profileSocials__profileSocialIcon} tg-icon`}>
             <path d={icons.telegram} />
           </SvgIcon>
         </Grid>

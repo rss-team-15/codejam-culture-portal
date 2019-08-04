@@ -1,0 +1,50 @@
+@media screen and (max-width: 1200px) {
+  .gh-gard {
+    width: 20% !important;
+  }
+  .gh-task-wrapper {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .gh-task-wrapper p {
+    font-size: 15px;
+  }
+
+}
+
+@media screen and (max-width: 900px) {
+  .gh-gard {
+    width: 22% !important;
+  }
+
+  .tg-icon {
+    width: 16px !important;
+    height: 16px !important;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .gh-task-wrapper {
+    width: 35px !important;
+    height: 35px !important;
+  }
+
+  .gh-task-wrapper p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .gh-gard {
+    width: 40% !important;
+    height: 45% !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .gh-gard {
+    width: 60% !important;
+    height: 24% !important;
+  }
+}
