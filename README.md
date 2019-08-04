@@ -42,6 +42,7 @@ _sannnao_
 | 3 hours    | Add search through contentful content by name, surname, city           |
 | 8 hours    | Learn and add programmatically create pages                            |
 | 10 hours   | Add adaptive to header and author page                                 |
+| 5 hours    | Add adaptive to developer list                                         |
 
 _ekater1na_
 
