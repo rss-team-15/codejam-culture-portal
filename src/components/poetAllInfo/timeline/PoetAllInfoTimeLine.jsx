@@ -10,7 +10,8 @@ const useStyles = makeStyles({
   poetBiographyTitle: {
     fontSize: '2vw',
     color: '#555555',
-    fontFamily: `'proxima-nova', sans-serif`
+    fontFamily: `'PT Sans', 'proxima-nova', sans-serif`,
+    fontWeight: '700',
   },
 });
 
@@ -26,9 +27,9 @@ const PoetAllInfoTimeLine = props => {
         justify="center"
       >
         <Typography
-          className={classes.poetBiographyTitle}
-          variant="h5"
-          component="h5"
+          className={`${classes.poetBiographyTitle} poet-page-bio-title`}
+          variant="h3"
+          component="h3"
         >
           {title}
         </Typography>

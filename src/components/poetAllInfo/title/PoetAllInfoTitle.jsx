@@ -3,17 +3,21 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Typography } from '@material-ui/core';
 
 const useStyles = makeStyles({
+  titleWrap: {
+    display: 'flex',
+  },
   poetName: {
     fontWeight: '200',
     fontSize: '3.5vw',
-    fontFamily: `'proxima-nova', sans-serif`,
-    textShadow: '2px 4px 3px rgba(0,0,0,0.3)'
+    fontFamily: `'PT Sans', 'proxima-nova', sans-serif`,
+    fontWeight: '700',
+    color: '#505050',
   },
   poetYearsOfLife: {
     fontWeight: '200',
     fontSize: '2.5vw',
-    fontFamily: `'proxima-nova', sans-serif`,
-    textShadow: '2px 4px 3px rgba(0,0,0,0.3)'
+    fontFamily: `'PT Sans', 'proxima-nova', sans-serif`,
+    color: '#404040',
   },
   poetPicture: {
     width: '40vw',
@@ -31,19 +35,19 @@ const PoetAllInfoTitle = props => {
   const classes = useStyles();
 
   return (
-    <React.Fragment>
-      <Typography className={classes.poetName} variant="h3" component="h3">
+    <div className={`${classes.titleWrap} poet-page-title-wrap`}>
+      <Typography className={`${classes.poetName} poet-page-title-name`} variant="h2" component="h2">
         {name} {surname}
       </Typography>
       <Typography
-        className={classes.poetYearsOfLife}
+        className={`${classes.poetYearsOfLife} poet-page-title-data`}
         variant="h4"
         component="h4"
       >
         {yearsOfLife}
       </Typography>
-      <img className={classes.poetPicture} src={mainPicture.file.url} alt="" />
-    </React.Fragment>
+      <img className={`${classes.poetPicture} poet-page-title-photo`} src={mainPicture.file.url} alt="" />
+    </div>
   );
 };
 
