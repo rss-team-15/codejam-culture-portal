@@ -1,0 +1,142 @@
+@media screen and (min-width: 320px) {
+  .poet-page-bio-title {
+    font-size: 6.5vw !important;
+  }
+
+  .timeline {
+    margin: 20px auto;
+  }
+
+  .timeline--wrapper {
+    width: 100%;
+    padding: 0;
+  }
+
+  .bounce-in span {
+    height: 30px;
+  }
+  .bounce-in span .timeline-item-dateinner {
+    height: 30px;
+    line-height: 30px;
+  }
+  .timeline-item-date {
+    width: 100%;
+  }
+  .entry .title:before {
+    top: -12%;
+  }
+  .entry .body {
+    margin: 0px 0 50px;
+  }
+  .entry .body p {
+    line-height: 1.3em;
+    font-size: 5.5vw;
+  }
+  .timeline-item-dateinner {
+    font-size: 14px;
+  }
+}
+
+
+@media screen and (min-width: 500px) {
+  .poet-page-bio-title {
+    font-size: 6vw !important;
+  }
+
+  .timeline {
+    margin: 20px auto;
+  }
+
+  .timeline--wrapper {
+    width: 100%;
+    padding: 0;
+  }
+
+  .bounce-in span {
+    height: 40px;
+  }
+  .bounce-in span .timeline-item-dateinner {
+    height: 40px;
+    line-height: 40px;
+  }
+  .timeline-item-date {
+    width: 100%;
+  }
+  .entry .title:before {
+    top: -3%;
+  }
+  .entry .body {
+    margin: 0px 0 50px;
+  }
+  .entry .body p {
+    line-height: 1.3em;
+    font-size: 4.5vw;
+  }
+  .timeline-item-dateinner {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .poet-page-bio-title {
+    font-size: 6vw !important;
+  }
+
+  .timeline {
+    margin: 20px auto;
+  }
+
+  .timeline--wrapper {
+    width: 100%;
+    padding: 0;
+  }
+
+  .bounce-in span {
+    height: 50px;
+  }
+  .bounce-in span .timeline-item-dateinner {
+    height: 50px;
+    line-height: 50px;
+  }
+  .timeline-item-date {
+    width: 90%;
+  }
+  .entry .title:before {
+    top: 15%;
+  }
+  .entry .body {
+    margin: 0px 0 50px;
+  }
+  .entry .body p {
+    line-height: 1.3em;
+    font-size: 4vw;
+  }
+  .timeline-item-dateinner {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .poet-page-bio-title {
+    font-size: 4vw !important;
+  }
+
+  .timeline {
+    margin: 20px auto;
+  }
+
+  .timeline--wrapper {
+    width: 100%;
+    padding: 0;
+  }
+
+  .entry .title:before {
+    top: 15%;
+  }
+  .entry .body {
+    margin: 0px 0 50px;
+  }
+  .entry .body p {
+    font-size: 2.5vw;
+  }
+}
