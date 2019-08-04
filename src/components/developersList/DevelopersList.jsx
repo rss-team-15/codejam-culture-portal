@@ -104,6 +104,8 @@ const DevelopersList = props => {
             teamMembers,
           } = developer;
 
+          console.log(taskAtAll, teamMembers, taskComplete)
+
           return (
             <GithubProfile
               key={id}
