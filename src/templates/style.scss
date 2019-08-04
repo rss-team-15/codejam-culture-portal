@@ -31,6 +31,11 @@
     margin-bottom: 5vw !important;
     font-size: 6.5vw !important;
   }
+
+  
+  .image-gallery {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 500px) {
@@ -59,6 +64,14 @@
 @media screen and (min-width: 700px) {
   .poet-page-containter {
     padding-top: 11vw !important;
+  }
+
+  .image-gallery {
+    width: 90% !important;
+  }
+
+  .image-gallery-thumbnail {
+    width: 18% !important;
   }
 }
 
@@ -94,6 +107,18 @@
   .poet-page-video-button,
   .poet-page-gallery-title {
     font-size: 40px !important;
+  }
+
+  .yandex-map {
+    width: 80% !important;
+  }
+
+  .image-gallery {
+    width: 80% !important;
+  }
+
+  .image-gallery-thumbnail {
+    width: 18% !important;
   }
 }
 
