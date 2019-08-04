@@ -12,6 +12,7 @@ import svgIcons from './assets/svg-icons';
 const useStyles = makeStyles({
   topSection: {
     color: 'white',
+    textShadow: '0 0 19px #000000f0',
 
     backgroundImage: `url(${belorusianLandscape})`,
     backgroundPosition: 'center 60%',

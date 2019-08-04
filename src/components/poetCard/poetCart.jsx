@@ -97,7 +97,15 @@ export default function PoetCart(props) {
           component="p"
           className={classes.textYears}
         >
-          {city} {yearsOfLife}
+          {city}
+        </Typography>
+        <Typography
+          variant="body2"
+          color="textSecondary"
+          component="p"
+          className={classes.textYears}
+        >
+          {yearsOfLife}
         </Typography>
         <CardActions className={classes.wrapperButton}>
           <Link
