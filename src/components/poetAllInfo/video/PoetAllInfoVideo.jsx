@@ -4,9 +4,13 @@ import { Button, Grid } from '@material-ui/core';
 import ModalVideo from 'react-modal-video';
 
 const styles = {
+  videoContainer: {
+    width: '70%',
+  },
   watchVideoButton: {
     width: '100%',
     height: '100%',
+    fontSize: '22px',
   },
 };
 
@@ -35,7 +39,7 @@ class PoetAllInfoVideo extends Component {
     const { videoId, videoTitle } = this.props;
 
     return (
-      <Grid className="poet-page-video-button" container justify="center">
+      <Grid className={`${classes.videoContainer} poet-page-video-button`} container justify="center">
         <ModalVideo
           channel="youtube"
           isOpen={isOpen}
